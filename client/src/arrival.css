@@ -1,0 +1,462 @@
+/* ================= The arrival (intro scene) ================= */
+
+.arrival {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: hidden;
+  background: #050302;
+  user-select: none;
+}
+
+.arrival__wall {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 40%, rgba(0, 0, 0, 0.6)),
+    repeating-linear-gradient(90deg, #1a110b 0 86px, #150d08 86px 88px, #1d130c 88px 170px, #120b07 170px 172px);
+}
+
+.arrival:not(.arrival--door) .arrival__wall {
+  opacity: 1;
+}
+
+.arrival__glow {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 80vw;
+  height: 80vh;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at 50% 35%, rgba(255, 150, 70, 0.3), transparent 60%);
+  animation: flicker 4s infinite, fade-in 1.5s ease both;
+  pointer-events: none;
+}
+
+.arrival__skip {
+  position: absolute;
+  z-index: 10;
+  top: 16px;
+  right: 20px;
+  font-size: 1rem;
+}
+
+.hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-caps);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  animation: breathe 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+
+/* ---------- 1. The door ---------- */
+
+.door {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rain {
+  position: absolute;
+  inset: -20% 0 0 0;
+  background-image: repeating-linear-gradient(100deg, transparent 0 18px, rgba(160, 170, 190, 0.09) 18px 19px, transparent 19px 41px);
+  background-size: 100% 220px;
+  animation: rain 0.45s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes rain {
+  from { background-position: 0 0; }
+  to { background-position: -40px 220px; }
+}
+
+/* A sliver of warm light under the door */
+.door__light {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 260px;
+  height: 6px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(255, 170, 80, 0.9), transparent 70%);
+  box-shadow: 0 0 60px 20px rgba(255, 140, 50, 0.25);
+  animation: flicker 3s infinite;
+}
+
+.door__text {
+  position: relative;
+  max-width: 32ch;
+  margin: 0 16px;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-style: italic;
+  text-align: center;
+  color: var(--parchment);
+  text-shadow: 0 2px 12px #000;
+  min-height: 3em;
+}
+
+/* ---------- shared stage ---------- */
+
+.stage-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 56px 16px 72px;
+  cursor: pointer;
+}
+
+.host-figure {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: rise-in 1.4s ease both;
+}
+
+.host-figure .portrait--host {
+  width: 170px;
+  height: 204px;
+  box-shadow: 0 0 60px rgba(139, 32, 32, 0.5), 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+.host-figure--small {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.55);
+  transform-origin: top center;
+  animation: none;
+  opacity: 0.85;
+}
+
+/* the single candle lighting his face */
+.host-figure__candle {
+  position: absolute;
+  bottom: 38px;
+  left: -26px;
+  width: 8px;
+  height: 16px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: radial-gradient(ellipse at 50% 70%, #fff6d8 0%, #ffc458 35%, #ff7a1a 70%, transparent 75%);
+  box-shadow: 0 0 30px 14px rgba(255, 150, 50, 0.35);
+  animation: flame 1.6s ease-in-out infinite;
+}
+
+.host-figure--small .host-figure__candle {
+  display: none;
+}
+
+/* ---------- dialogue ---------- */
+
+.speech {
+  position: relative;
+  max-width: min(640px, 100%);
+  padding: 14px 20px 16px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(20, 12, 8, 0.85), rgba(10, 6, 4, 0.9));
+  border: 1px solid #3a2617;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  animation: fade-in 0.5s ease both;
+}
+
+.speech--host {
+  border-color: #5e2418;
+}
+
+.speech__speaker {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-caps);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: #d98a6a;
+}
+
+.speech--guest .speech__speaker {
+  color: var(--gold);
+}
+
+.speech__text {
+  display: block;
+  min-height: 1.5em;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.4;
+  quotes: '„' '“';
+}
+
+.speech__direction {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.player-said {
+  margin: 0;
+  font-family: var(--font-caps);
+  letter-spacing: 0.06em;
+  color: var(--parchment-dim);
+}
+
+.gesture {
+  margin: 0;
+  font-style: italic;
+  color: #c9a46a;
+  animation: fade-in 0.8s ease both;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s, transform 0.5s;
+  pointer-events: none;
+}
+
+.choices--visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.choice {
+  font-family: var(--font-body);
+  font-style: italic;
+  letter-spacing: 0;
+  font-size: 1.05rem;
+}
+
+/* ---------- candles lighting ---------- */
+
+.candles--intro {
+  margin-top: 4px;
+}
+
+.candle__flame--off {
+  opacity: 0;
+  animation: none;
+}
+
+.candle__flame--ignite {
+  animation: ignite 0.5s ease-out both, flame 1.6s ease-in-out infinite;
+}
+
+@keyframes ignite {
+  0% { opacity: 0; transform: scale(0.2, 0.2); }
+  60% { opacity: 1; transform: scale(1.3, 1.4); }
+  100% { opacity: 1; transform: scale(1, 1); }
+}
+
+/* ---------- guests ---------- */
+
+.guest-stage {
+  padding-top: 150px;
+}
+
+.guest-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: rise-in 0.9s ease both;
+}
+
+.guest-card__portrait {
+  width: 150px !important;
+  height: 180px !important;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 24px rgba(255, 150, 70, 0.15) !important;
+}
+
+.guest-card__plate {
+  max-width: 280px;
+}
+
+.guest-card__plate strong {
+  font-size: 1.2rem;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -40px;
+  padding: 2px 8px;
+  font-family: var(--font-caps);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #0b0705;
+  background: var(--gold);
+  border-radius: 10px;
+  transform: rotate(8deg);
+}
+
+.arrival__seated {
+  position: absolute;
+  z-index: 3;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  pointer-events: none;
+}
+
+.arrival__seated-guest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.75;
+  animation: fade-in 0.6s ease both;
+}
+
+.arrival__seated-guest .portrait {
+  width: 48px;
+  height: 58px;
+}
+
+.arrival__seated-guest span {
+  font-family: var(--font-caps);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.arrival--role .arrival__seated {
+  bottom: 18px;
+}
+
+.arrival--role .hint {
+  bottom: 100px;
+}
+
+/* ---------- the secret role ---------- */
+
+.role-stage {
+  padding-top: 140px;
+  cursor: default;
+}
+
+.role-flip {
+  width: 210px;
+  height: 290px;
+  padding: 0;
+  background: none;
+  border: none;
+  perspective: 900px;
+  cursor: pointer;
+  animation: slide-card 0.9s ease both 0.3s;
+}
+
+.role-flip:disabled {
+  cursor: default;
+}
+
+@keyframes slide-card {
+  from { opacity: 0; transform: translateY(-120px) rotate(-12deg); }
+  to { opacity: 1; transform: none; }
+}
+
+.role-flip__inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s cubic-bezier(0.3, 1.4, 0.5, 1);
+  transform-style: preserve-3d;
+}
+
+.role-flip--open .role-flip__inner {
+  transform: rotateY(180deg);
+}
+
+.role-flip__back,
+.role-flip__front {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+/* No card-back art yet — a plain dark face */
+.role-flip__back {
+  font-family: var(--font-caps);
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  background: #1c120b;
+  border: 1px solid #5a3b24;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+
+.role-flip__front {
+  transform: rotateY(180deg);
+  color: var(--parchment);
+  text-align: center;
+  background: linear-gradient(180deg, #3d100c, #160605);
+  border: 1px solid #8b3a24;
+  box-shadow: 0 0 40px rgba(139, 32, 32, 0.55), 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+
+.role-flip__front small {
+  font-family: var(--font-caps);
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.role-flip__front strong {
+  font-family: var(--font-caps);
+  font-size: 1.7rem;
+  color: #f0b39a;
+}
+
+.role-flip__front em {
+  font-size: 1rem;
+  color: var(--gold);
+}
+
+.role-flip__front span {
+  font-size: 0.9rem;
+  color: var(--parchment-dim);
+}
+
+@media (max-width: 700px) {
+  .host-figure .portrait--host { width: 120px; height: 144px; }
+  .speech__text { font-size: 1.05rem; }
+  .guest-stage, .role-stage { padding-top: 120px; }
+  .arrival__seated { display: none; }
+}
