@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackhood.Api", "src\Blackhood.Api\Blackhood.Api.csproj", "{0784D80B-5994-4454-A2CB-3AAAFA5C5238}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackhood.Engine", "src\Blackhood.Engine\Blackhood.Engine.csproj", "{8553719A-7FC7-4A03-9F31-2C463173EB1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackhood.Data", "src\Blackhood.Data\Blackhood.Data.csproj", "{9F6FC143-C60C-44EE-9679-90C0316944EA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackhood.Api", "src\Blackhood.Api\Blackhood.Api.csproj", "{0784D80B-5994-4454-A2CB-3AAAFA5C5238}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
