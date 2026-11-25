@@ -50,6 +50,17 @@ dotnet ef migrations add ИмеНаПромяната -p src/Blackhood.Data -s s
 
 Базата се обновява сама при следващо пускане на API-то.
 
+## Проблеми
+
+**`Cannot create file 'C:\Users\<ти>\Blackhood.mdf' because it already exists`** при старт на API-то.
+LocalDB инстанцията е „забравила“ базата, но файловете ѝ са още на диска. Закачи ги обратно (данните се запазват):
+
+```powershell
+sqlcmd -S "(localdb)\MSSQLLocalDB" -E -Q "CREATE DATABASE [Blackhood] ON (FILENAME = N'$env:USERPROFILE\Blackhood.mdf'), (FILENAME = N'$env:USERPROFILE\Blackhood_log.ldf') FOR ATTACH;"
+```
+
+Ако не ти трябват данните, изтрий двата файла `Blackhood.mdf` и `Blackhood_log.ldf` от `%USERPROFILE%` — API-то ще създаде базата наново и ще внесе персонажите.
+
 ## Тестов акаунт (само локално)
 
 | Име | Имейл | Парола | Роля |
