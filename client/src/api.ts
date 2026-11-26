@@ -6,15 +6,15 @@ export class ApiError extends Error {
   }
 }
 
-// Identity error codes → Bulgarian. Anything unknown falls back to the server text.
+// Identity error codes → friendly English. Anything unknown falls back to the server text.
 const identityErrors: Record<string, string> = {
-  DuplicateUserName: 'Това име вече е заето.',
-  DuplicateEmail: 'Този имейл вече е регистриран.',
-  InvalidEmail: 'Невалиден имейл.',
-  InvalidUserName: 'Името може да съдържа само латински букви, цифри и - . _ @ +',
-  PasswordTooShort: 'Паролата трябва да е поне 8 символа.',
-  PasswordRequiresDigit: 'Паролата трябва да съдържа поне една цифра.',
-  PasswordRequiresLower: 'Паролата трябва да съдържа поне една малка буква.',
+  DuplicateUserName: 'That name is already taken.',
+  DuplicateEmail: 'That e-mail is already registered.',
+  InvalidEmail: 'That e-mail is not valid.',
+  InvalidUserName: 'Names may contain only Latin letters, digits and - . _ @ +',
+  PasswordTooShort: 'The password must be at least 8 characters.',
+  PasswordRequiresDigit: 'The password needs at least one digit.',
+  PasswordRequiresLower: 'The password needs at least one lowercase letter.',
 }
 
 async function readError(res: Response): Promise<string> {
@@ -32,7 +32,7 @@ async function readError(res: Response): Promise<string> {
   } catch {
     /* no JSON body */
   }
-  return res.status === 401 ? 'Не си влязъл.' : `Грешка ${res.status}`
+  return res.status === 401 ? 'You are not signed in.' : `Error ${res.status}`
 }
 
 /** multipart/form-data upload (the browser sets the boundary header itself). */

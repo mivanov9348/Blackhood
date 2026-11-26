@@ -2,11 +2,11 @@
   "code": "P03",
   "kind": "Participant",
   "name": "Sir Noah Thorn",
-  "title": "Падналият рицар",
-  "nickname": "Падналият рицар; „Рицарят от Ашфорд“",
-  "gender": "Мъж",
+  "title": "The Fallen Knight",
+  "nickname": "The Fallen Knight; \"the Knight of Ashford\"",
+  "gender": "Male",
   "age": "45",
-  "archetype": "Принципен",
+  "archetype": "Principled",
   "rarity": "Uncommon",
   "status": "Published",
   "tags": [
@@ -31,130 +31,134 @@
     "fearOfLoss": 2
   },
   "origin": {
-    "birthplace": "Торнхолд, граничната крепост на изток",
-    "socialStatus": "Лишен от титла и земи, живее като наемник",
-    "profession": "Някога известен рицар, командир на кавалерия"
+    "birthplace": "Thornhold, the border fortress in the east",
+    "socialStatus": "Stripped of title and lands, lives as a sellsword",
+    "profession": "Once a famous knight, commander of cavalry"
   },
   "appearance": {
-    "face": "Обветрено лице, прав нос, дълбоки бръчки около очите; срязано ухо",
-    "hairAndEyes": "Прошарена кестенява коса, къса; гъста брада; сини уморени очи",
-    "clothing": "Износена броня без герб (гербът е изстърган); стар меч; плащ с кръпки",
-    "build": "Широки рамене, военна стойка дори когато е уморен",
-    "gestures": "Докосва изстъргания герб, когато мисли; никога не сяда с гръб към вратата",
-    "voice": "Нисък, твърд глас; говори кратко и прямо",
-    "firstImpression": "Горд, мрачен човек, който изглежда като рицар дори без титла",
-    "artistNotes": "мястото на изстъргания герб личи като светло петно върху бронята. Носи стар медальон с името на жена си.",
+    "face": "A weathered face, straight nose, deep lines around the eyes; a notched ear",
+    "hairAndEyes": "Short greying chestnut hair; thick beard; tired blue eyes",
+    "clothing": "Worn armour without a crest (the crest has been scraped off); an old sword; a patched cloak",
+    "build": "Broad-shouldered, a soldier's posture even when exhausted",
+    "gestures": "Touches the scraped-off crest when thinking; never sits with his back to the door",
+    "voice": "Low, firm voice; speaks briefly and plainly",
+    "firstImpression": "A proud, grim man who looks like a knight even without a title",
+    "artistNotes": "Where the crest was scraped off, a pale patch shows on the armour. He wears an old locket with his wife's name.",
     "portraitHue": 210
   },
   "backstory": {
-    "biography": "Ноа Торн командва кавалерията при битката при Ашфорд. Когато флангът е обкръжен, той изтегля конниците си, за да спаси хората си, и битката е загубена. Дворът има нужда от виновен и го намира в него: обвинен е в страхливост, лишен от титла и земи. Съпругата му умира в бедност, докато той се опитва да оспори присъдата. Днес е наемник и пазач на кервани.",
-    "whyHere": "Иска да спечели достатъчно, за да откупи титлата си и да върне честта на името си.",
-    "secret": "Че вече не е сигурен дали е постъпил правилно при Ашфорд. Спасил е хората си, но е загубил битката, и тази мисъл не го оставя."
+    "biography": "Noah Thorn led the cavalry at the battle of Ashford. When the flank was surrounded he pulled his riders back to save his men, and the battle was lost. The court needed someone to blame and found him: accused of cowardice, stripped of title and lands. His wife died in poverty while he fought the verdict. Today he is a sellsword and caravan guard.",
+    "whyHere": "He wants to win enough to buy back his title and restore the honour of his name.",
+    "secret": "That he is no longer sure he did the right thing at Ashford. He saved his men but lost the battle, and the thought will not leave him."
   },
   "psychology": {
-    "coreTrait": "Чест",
-    "secondTrait": "Гордост",
-    "weakness": "Гордостта му не му позволява да се оттегли, когато е обиден",
-    "fear": "Да умре като предател, без никой да знае истината",
-    "desire": "Да изчисти името си и рода си",
-    "angers": "Лъжа, страхливост, обиди срещу честта му",
-    "regret": "Смъртта на съпругата си, отстъплението при Ашфорд",
-    "moralLimits": "Не лъже, не краде, не удря невъоръжен",
-    "neverWould": "Да измами някого, който му се е доверил",
-    "wouldForReward": "Да рискува живота си, но не и честта си"
+    "coreTrait": "Honour",
+    "secondTrait": "Pride",
+    "weakness": "His pride will not let him back down when insulted",
+    "fear": "Dying a traitor without anyone knowing the truth",
+    "desire": "To clear his name and his family's",
+    "angers": "Lies, cowardice, insults to his honour",
+    "regret": "His wife's death, the retreat at Ashford",
+    "moralLimits": "Does not lie, does not steal, does not strike an unarmed man",
+    "neverWould": "Deceive someone who trusted him",
+    "wouldForReward": "Risk his life — but not his honour"
   },
   "behavior": {
-    "style": "Защитен / принципен",
-    "stakes": "Предпочита честни залози. Може да рискува много, ако е предизвикан",
-    "deception": "Не мами. Приема блъфа като част от играта, но не и лъжата",
-    "debts": "Плаща дълговете си на всяка цена",
-    "alliances": "Изключително лоялен, ако съюзникът е честен",
-    "whenAttacks": "Когато е обиден или когато защитава съюзник",
-    "whenRetreats": "Когато продължаването би означавало да наруши дума",
-    "onLoss": "Приема загубата с достойнство, но запомня измамата",
-    "onWin": "Скромен, поздравява противниците",
-    "strategyChange": "Когато открие, че съюзник го е излъгал"
+    "style": "Defensive / principled",
+    "stakes": "Prefers honest stakes. Can risk a lot if challenged",
+    "deception": "Does not cheat. Accepts a bluff as part of the game, but not a lie",
+    "debts": "Pays his debts at any cost",
+    "alliances": "Extremely loyal if the ally is honest",
+    "whenAttacks": "When insulted, or defending an ally",
+    "whenRetreats": "When continuing would mean breaking his word",
+    "onLoss": "Accepts defeat with dignity, but remembers a deception",
+    "onWin": "Modest; congratulates his opponents",
+    "strategyChange": "When he finds an ally has lied to him"
   },
   "motives": {
-    "publicGoal": "Да спечели достатъчно, за да откупи титлата си",
-    "hiddenGoal": "Да върне честта на името си и на съпругата си",
-    "personalReason": "Да докаже, че честният човек също може да спечели",
-    "betrayalTrigger": "Нищо, освен ако съюзникът не се окаже лъжец",
-    "helpTrigger": "Ако някой бъде мамен или унижаван несправедливо"
+    "publicGoal": "To win enough to buy back his title",
+    "hiddenGoal": "To restore the honour of his name and his wife's",
+    "personalReason": "To prove an honest man can also win",
+    "betrayalTrigger": "Nothing — unless an ally turns out to be a liar",
+    "helpTrigger": "If someone is cheated or humiliated unfairly"
   },
   "speech": {
-    "register": "Кратки военни изрази, без украси",
-    "favoriteWords": "„Чест“, „дума“, „другари“",
-    "avoidedTopics": "Съпругата си, смъртта ѝ",
-    "howLies": "Почти не лъже. Ако се опита, е очевидно. Мълчи, вместо да лъже",
-    "angerAndFear": "Става тих и пребледнява. Сяда изправен и докосва дръжката на меча"
+    "register": "Short military phrases, no ornament",
+    "favoriteWords": "\"Honour\", \"word\", \"comrades\"",
+    "avoidedTopics": "His wife, her death",
+    "howLies": "Barely lies. When he tries, it is obvious. He keeps silent rather than lie",
+    "angerAndFear": "Goes quiet and pale. Sits upright and touches his sword hilt"
   },
   "mechanics": {
-    "strangeness": "Медальонът с името на жена му се стопля, когато някой на масата лъже. Ноа не знае дали това е дар, или проклятие.",
-    "principle": "Не нарушава дадена дума.",
-    "temptation": "Гордостта му не му позволява да се оттегли, когато е обиден",
-    "ability": "Клетва: сделка с него е обвързваща и без Печат.",
-    "hostRelation": "Омраза — вижда в домакина всичко, което е погубило честта му."
+    "strangeness": "The locket with his wife's name grows warm when someone at the table lies. Noah does not know whether it is a gift or a curse.",
+    "principle": "Never breaks his given word.",
+    "temptation": "His pride will not let him back down when insulted",
+    "ability": "Oath: once per evening he swears his gift is honest — and the host confirms it to the table if it is true.",
+    "hostRelation": "Hatred — he sees in the host everything that destroyed his honour."
   },
   "authorNotes": {
-    "distinctive": "Трагичен, честен герой в игра, пълна с измамници. Морален център на масата.",
-    "immutable": "Честта и съмнението за Ашфорд.",
-    "tunable": "Колко лесно избухва при обиди."
+    "distinctive": "A tragic, honest hero in a game full of cheats. The moral centre of the table.",
+    "immutable": "The honour and the doubt about Ashford.",
+    "tunable": "How easily he flares up at insults."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Ноа Торн. Без сир. Без земи. Но с думата си."
+      "text": "Noah Thorn. No \"sir\". No lands. But I have my word."
     },
     {
       "situation": "Win",
-      "text": "Благодаря ви. Добра игра."
+      "text": "Thank you. A good game."
     },
     {
       "situation": "Loss",
-      "text": "Загубих честно. Това е повече, отколкото някои могат да кажат."
+      "text": "I lost honestly. That is more than some can say."
     },
     {
       "situation": "Accused",
-      "text": "Кажи го пак, но с меч в ръка."
+      "text": "Say that again — with a sword in your hand."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз е обещание. Мога ли да ви вярвам?"
+      "text": "An alliance is a promise. Can I trust you?"
     },
     {
       "situation": "Betrayal",
-      "text": "Значи и ти си като тях."
+      "text": "So you are like them too."
     },
     {
       "situation": "BigBet",
-      "text": "Ако ще залагам, то ще е всичко."
+      "text": "If I stake, I stake everything."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Ноа Торн. Някога „сир“. Казват, че побягнал при Ашфорд — кажете му го в лицето, ако смеете."
+      "text": "Noah Thorn. Once \"sir\". They say he ran at Ashford — say it to his face, if you dare."
     },
     {
       "situation": "MetAgain",
-      "text": "Пак сме на една маса. Добре. Помня как играеш."
+      "text": "At the same table again. Good. I remember how you play."
+    },
+    {
+      "situation": "Death",
+      "text": "Tell them… I did not run."
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Докосва изстъргания герб на бронята",
+      "description": "Touches the scraped-off crest on his armour",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Tilted",
-      "description": "Пребледнява и докосва дръжката на меча",
+      "description": "Turns pale and touches his sword hilt",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Lying",
-      "description": "Когато лъже, гледа встрани — лъже лошо",
+      "description": "Looks away when he lies — he lies badly",
       "fakeable": false,
       "visibleWithoutDossier": false
     }

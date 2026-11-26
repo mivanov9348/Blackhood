@@ -2,11 +2,11 @@
   "code": "P10",
   "kind": "Participant",
   "name": "Bertram Cole",
-  "title": "Ветеранът",
-  "nickname": "Ветеранът; „Старият Коул“",
-  "gender": "Мъж",
+  "title": "The Veteran",
+  "nickname": "The Veteran; \"Old Cole\"",
+  "gender": "Male",
   "age": "56",
-  "archetype": "Оцеляване",
+  "archetype": "Survivor",
   "rarity": "Common",
   "status": "Published",
   "tags": [
@@ -31,124 +31,128 @@
     "fearOfLoss": 2
   },
   "origin": {
-    "birthplace": "Селото Олдбрук",
-    "socialStatus": "Пенсиониран войник, беден",
-    "profession": "Сержант в пехотата, служил в няколко войни"
+    "birthplace": "The village of Oldbrook",
+    "socialStatus": "A retired soldier, poor",
+    "profession": "Infantry sergeant who served in several wars"
   },
   "appearance": {
-    "face": "Набраздено лице, белези, липсващо око с превръзка",
-    "hairAndEyes": "Сива коса, гъста сива брада, кафяво око",
-    "clothing": "Стара военна туника, тежко наметало, сабя",
-    "build": "Едър, стабилен, куцащ",
-    "gestures": "Брои хората в стаята; потрива старата си рана",
-    "voice": "Груб, нисък, войнишки глас",
-    "firstImpression": "Стар войник, който е видял прекалено много",
-    "artistNotes": "носи кесия с войнишки жетони на загиналите си другари.",
+    "face": "A furrowed, scarred face; a missing eye under a patch",
+    "hairAndEyes": "Grey hair, thick grey beard, one brown eye",
+    "clothing": "An old military tunic, a heavy cloak, a sabre",
+    "build": "Big, steady, limping",
+    "gestures": "Counts the people in the room; rubs his old wound",
+    "voice": "A rough, low soldier's voice",
+    "firstImpression": "An old soldier who has seen too much",
+    "artistNotes": "Carries a pouch of the soldier's tokens of his fallen comrades.",
     "portraitHue": 70
   },
   "backstory": {
-    "biography": "Бъртрам е служил трийсет години в кралската пехота. Оцелял е при всички битки, но е загубил всичките си другари. Видял е достатъчно войни, за да знае, че героите рядко са тези, за които пеят песни. Днес живее сам, с малка пенсия, и пие повече, отколкото трябва.",
-    "whyHere": "Няма за какво да живее. Тук може да спечели, за да издържа семействата на загиналите си другари.",
-    "secret": "Че веднъж, в най-тежката си битка, е побягнал. Оцелял е, а момчето до него не."
+    "biography": "Bertram served thirty years in the royal infantry. He survived every battle but lost all his comrades. He has seen enough wars to know that the heroes are rarely the ones in the songs. Today he lives alone on a small pension and drinks more than he should.",
+    "whyHere": "He has nothing to live for. Here he can win enough to support the families of his fallen comrades.",
+    "secret": "That once, in his hardest battle, he ran. He survived; the boy beside him did not."
   },
   "psychology": {
-    "coreTrait": "Оцеляване",
-    "secondTrait": "Лоялност към другарите",
-    "weakness": "Недоверчив към обещания",
-    "fear": "Да умре без смисъл",
-    "desire": "Да направи нещо добро преди да умре",
-    "angers": "Страхливци и предатели",
-    "regret": "Деня, в който е побягнал от бойното поле",
-    "moralLimits": "Не изоставя другарите си",
-    "neverWould": "Да предаде другар",
-    "wouldForReward": "Да рискува живота си за другар"
+    "coreTrait": "Survival",
+    "secondTrait": "Loyalty to comrades",
+    "weakness": "Distrusts promises",
+    "fear": "Dying for nothing",
+    "desire": "To do something good before he dies",
+    "angers": "Cowards and traitors",
+    "regret": "The day he ran from the battlefield",
+    "moralLimits": "Never abandons his comrades",
+    "neverWould": "Betray a comrade",
+    "wouldForReward": "Risk his life for a comrade"
   },
   "behavior": {
-    "style": "Защитен",
-    "stakes": "Внимателни, премерени залози. Никога не залага повече, отколкото може да загуби",
-    "deception": "Не я понася. Ако открие измама, я казва на глас",
-    "debts": "Плаща ги веднага. Дългът за него е рана, която не заздравява",
-    "alliances": "Изключително лоялен към тези, които спазват думата си",
-    "whenAttacks": "Когато другар е в беда или някой лъже открито",
-    "whenRetreats": "Когато рискът е безсмислен. „Мъртвите не харчат злато.“",
-    "onLoss": "Мълчаливо. Отпива глътка и продължава",
-    "onWin": "Без радост, само кимва",
-    "strategyChange": "Ако някой спази дадена дума, може да му се довери"
+    "style": "Defensive",
+    "stakes": "Careful, measured stakes. Never more than he can lose",
+    "deception": "Cannot stand it. If he finds a deception, he says it out loud",
+    "debts": "Pays them at once. A debt is a wound that never heals for him",
+    "alliances": "Extremely loyal to those who keep their word",
+    "whenAttacks": "When a comrade is in trouble or someone lies openly",
+    "whenRetreats": "When the risk is pointless. \"The dead don't spend gold.\"",
+    "onLoss": "Silently. Takes a sip and carries on",
+    "onWin": "Without joy, just a nod",
+    "strategyChange": "If someone keeps their word, he may trust them"
   },
   "motives": {
-    "publicGoal": "Да спечели прилично",
-    "hiddenGoal": "Да осигури пари за семействата на загиналите",
-    "personalReason": "Дълг към мъртвите",
-    "betrayalTrigger": "Нищо",
-    "helpTrigger": "Ако някой е в беда"
+    "publicGoal": "To win a decent sum",
+    "hiddenGoal": "To provide money for the families of the fallen",
+    "personalReason": "A debt to the dead",
+    "betrayalTrigger": "Nothing",
+    "helpTrigger": "If someone is in trouble"
   },
   "speech": {
-    "register": "Груб, кратък, войнишки",
-    "favoriteWords": "„Момче“, „другар“",
-    "avoidedTopics": "Войните",
-    "howLies": "Не лъже",
-    "angerAndFear": "Мълчи и стиска челюст"
+    "register": "Rough, short, soldierly",
+    "favoriteWords": "\"Lad\", \"comrade\"",
+    "avoidedTopics": "The wars",
+    "howLies": "Does not lie",
+    "angerAndFear": "Goes silent and clenches his jaw"
   },
   "mechanics": {
-    "strangeness": "Понякога говори с празния стол до себе си. И столът изскърцва в отговор.",
-    "principle": "Да предаде другар",
-    "temptation": "Недоверчив към обещания",
-    "ability": "Ветеран: оцелява след първото убийство срещу него, ако има Щит в ръката си.",
-    "hostRelation": "Служба — виждал е много командири; домакинът е просто още един."
+    "strangeness": "Sometimes he talks to the empty chair beside him. And the chair creaks in reply.",
+    "principle": "Betray a comrade",
+    "temptation": "Distrusts promises",
+    "ability": "Veteran: survives the first killing blow against him if he holds a Closed Door.",
+    "hostRelation": "Service — he has seen many commanders; the host is just one more."
   },
   "authorNotes": {
-    "distinctive": "Стар войник, за когото думата тежи повече от златото.",
-    "immutable": "Оцеляването, лоялността, мълчаливата вина.",
-    "tunable": "Колко внимателно залага и колко лесно се доверява."
+    "distinctive": "An old soldier for whom a word weighs more than gold.",
+    "immutable": "The survival, the loyalty, the silent guilt.",
+    "tunable": "How carefully he stakes and how easily he trusts."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Бъртрам Коул. Стар войник. Не очаквайте много приказки."
+      "text": "Bertram Cole. Old soldier. Don't expect much talk."
     },
     {
       "situation": "Win",
-      "text": "Добре. Да видим колко ще трае."
+      "text": "Good. Let's see how long it lasts."
     },
     {
       "situation": "Loss",
-      "text": "Виждал съм и по-лошо."
+      "text": "I've seen worse."
     },
     {
       "situation": "Accused",
-      "text": "Кажи го пак, момче."
+      "text": "Say that again, lad."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Думата ти. Нищо друго не ме интересува."
+      "text": "Your word. Nothing else interests me."
     },
     {
       "situation": "Betrayal",
-      "text": "Знаех си."
+      "text": "Knew it."
     },
     {
       "situation": "BigBet",
-      "text": "Рискът е за младите."
+      "text": "Risk is for the young."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Бъртрам Коул. Оцелял е в повече битки, отколкото може да преброи. Тази нощ ще разберем дали е бил късмет, или умение."
+      "text": "Bertram Cole. He has survived more battles than he can count. Tonight we learn whether it was luck or skill."
     },
     {
       "situation": "MetAgain",
-      "text": "Пак ти. Още си жив. Добре."
+      "text": "You again. Still alive. Good."
+    },
+    {
+      "situation": "Death",
+      "text": "Lads… save me a place."
     }
   ],
   "tells": [
     {
       "state": "Afraid",
-      "description": "Потрива старата си рана",
+      "description": "Rubs his old wound",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Брои хората в стаята",
+      "description": "Counts the people in the room",
       "fakeable": false,
       "visibleWithoutDossier": true
     }
@@ -157,8 +161,8 @@
     {
       "to": "P03",
       "value": 40,
-      "story": "Служил е при Ноа Торн при Ашфорд и е жив благодарение на отстъплението му.",
-      "effect": "Никога не обвинява Ноа на Съда."
+      "story": "He served under Noah Thorn at Ashford and is alive because of the retreat.",
+      "effect": "He never turns on Noah."
     }
   ]
 }

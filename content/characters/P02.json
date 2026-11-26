@@ -2,11 +2,11 @@
   "code": "P02",
   "kind": "Participant",
   "name": "Lady Beatrice Stone",
-  "title": "Вдовицата",
-  "nickname": "Вдовицата; „Черната дама“",
-  "gender": "Жена",
+  "title": "The Widow",
+  "nickname": "The Widow; \"the Black Lady\"",
+  "gender": "Female",
   "age": "38",
-  "archetype": "Стратег",
+  "archetype": "Strategist",
   "rarity": "Rare",
   "status": "Published",
   "tags": [
@@ -32,135 +32,145 @@
     "fearOfLoss": 3
   },
   "origin": {
-    "birthplace": "Стоунфийлд, плодородните южни равнини",
-    "socialStatus": "Благородничка, вдовица и наследница на голямо имение",
-    "profession": "Съпруга на влиятелен земевладелец. След смъртта му управлява сама"
+    "birthplace": "Stonefield, on the fertile southern plains",
+    "socialStatus": "A noblewoman, widow and heir to a large estate",
+    "profession": "Wife of a powerful landowner. Since his death she runs everything herself"
   },
   "appearance": {
-    "face": "Бледо, спокойно лице, високи скули; почти никога не мига, когато слуша",
-    "hairAndEyes": "Черна коса, вдигната под траурна мрежа; тъмнокафяви очи",
-    "clothing": "Траурна рокля от черна коприна, перлена брошка (подарък от съпруга), ветрило",
-    "build": "Средна на ръст, изправена, ръцете винаги кръстосани в скута",
-    "gestures": "Отваря и затваря ветрилото, когато пресмята; повтаря последната дума на събеседника",
-    "voice": "Тих, мек глас. Принуждава другите да замлъкнат, за да я чуят",
-    "firstImpression": "Тиха, тъжна вдовица. Само най-проницателните усещат, че тя е най-опасната на масата",
-    "artistNotes": "ветрилото е старо, с избелели рисувани птици; отваря го рязко, когато пресмята. Перлената брошка е единственото цветно нещо в облеклото ѝ.",
+    "face": "A pale, calm face with high cheekbones; she almost never blinks while listening",
+    "hairAndEyes": "Black hair pinned under a mourning net; dark brown eyes",
+    "clothing": "A black silk mourning gown, a pearl brooch (a gift from her husband), a fan",
+    "build": "Of medium height, upright, hands always folded in her lap",
+    "gestures": "Opens and closes the fan while calculating; repeats the last word of whoever speaks to her",
+    "voice": "Quiet, soft voice. Others must fall silent to hear her",
+    "firstImpression": "A quiet, sad widow. Only the most perceptive sense she is the most dangerous person at the table",
+    "artistNotes": "The fan is old, painted with faded birds; she snaps it open when she calculates. The pearl brooch is the only colour in her clothing.",
     "portraitHue": 280
   },
   "backstory": {
-    "biography": "Беатрис се омъжва млада за лорд Едмънд Стоун, богат и груб земевладелец. Двайсет години управлява имението зад гърба му, докато той пие и пилее. Преди две години Едмънд умира от сърцето си и Беатрис за първи път управлява открито. Оттогава тихо изкупува дълговете на съседите си и разширява земите си. В двора я наричат „паяка от Стоунфийлд“ и тя няма нищо против.",
-    "whyHere": "Масата за нея е място, където хората показват слабостите си. Иска да види кой какъв е, когато залогът е голям, и да излезе с повече, отколкото е донесла: пари, влияние или информация.",
-    "secret": "Че не скърби за съпруга си. Смъртта му е най-доброто, което ѝ се е случвало, и понякога се срамува колко лекота изпитва."
+    "biography": "Beatrice married young to Lord Edmund Stone, a rich and coarse landowner. For twenty years she ran the estate behind his back while he drank and squandered. Two years ago Edmund died of a bad heart and for the first time Beatrice ruled openly. Since then she has quietly bought up her neighbours' debts and grown her lands. At court they call her \"the spider of Stonefield\", and she does not mind.",
+    "whyHere": "For her the table is where people show their weaknesses. She wants to see who is who when the stakes are high, and leave with more than she brought: money, influence or information.",
+    "secret": "That she does not mourn her husband. His death was the best thing that ever happened to her, and sometimes she is ashamed of how light she feels."
   },
   "psychology": {
-    "coreTrait": "Търпение",
-    "secondTrait": "Пресметливост, контрол",
-    "weakness": "Трудно приема, че някой може да я надхитри, и подценява противниците си",
-    "fear": "Отново да зависи от някого",
-    "desire": "Власт и сигурност, никога вече да не зависи от мъж",
-    "angers": "Някой да я надиграе или да я покровителства",
-    "regret": "Годините, които е изгубила в сянката на съпруга си",
-    "moralLimits": "Не мами открито. Предпочита другите сами да се объркат",
-    "neverWould": "Да покаже истинските си намерения пред свидетели",
-    "wouldForReward": "Да предаде всеки, включително дългогодишен съюзник"
+    "coreTrait": "Patience",
+    "secondTrait": "Calculation, control",
+    "weakness": "Finds it hard to accept that anyone could outwit her, and underestimates opponents",
+    "fear": "Depending on someone again",
+    "desire": "Power and security — never again to depend on a man",
+    "angers": "Being outplayed or patronised",
+    "regret": "The years lost in her husband's shadow",
+    "moralLimits": "Does not cheat openly. Prefers others to confuse themselves",
+    "neverWould": "Show her true intentions before witnesses",
+    "wouldForReward": "Betray anyone, even a long-time ally"
   },
   "behavior": {
-    "style": "Манипулативен / пресметлив",
-    "stakes": "Малки, премерени залози. Чака другите да се изтощят",
-    "deception": "Естествена част от играта. Предпочита да лъже с полуистини",
-    "debts": "Обича да е кредитор, никога длъжник",
-    "alliances": "Създава ги, за да насочи другите един срещу друг",
-    "whenAttacks": "Когато двама противници са се изтощили взаимно",
-    "whenRetreats": "Когато някой изглежда, че е разгадал плана ѝ",
-    "onLoss": "Не показва емоция. Тайно запомня кой я е победил",
-    "onWin": "Учтива усмивка и съчувствие към загубилия",
-    "strategyChange": "Ако открие, че някой я е надхитрил. Тогава става по-агресивна от обичайно"
+    "style": "Manipulative / calculating",
+    "stakes": "Small, measured stakes. Waits for the others to exhaust themselves",
+    "deception": "A natural part of the game. Prefers lying with half-truths",
+    "debts": "Loves being the creditor, never the debtor",
+    "alliances": "Builds them to turn others against each other",
+    "whenAttacks": "When two opponents have worn each other out",
+    "whenRetreats": "When someone seems to have read her plan",
+    "onLoss": "Shows no emotion. Quietly remembers who beat her",
+    "onWin": "A polite smile and sympathy for the loser",
+    "strategyChange": "If she finds that someone has outwitted her. Then she becomes more aggressive than usual"
   },
   "motives": {
-    "publicGoal": "Да „се разсее“ след траура и да се покаже в обществото",
-    "hiddenGoal": "Да излезе от масата с повече влияние, отколкото е влязла",
-    "personalReason": "Да докаже, че може да надиграе всеки, без да повиши глас",
-    "betrayalTrigger": "Когато предателството вече е неизбежно и тя печели повече от другите",
-    "helpTrigger": "Когато помощта създава дълг към нея"
+    "publicGoal": "To \"distract herself\" after mourning and be seen in society",
+    "hiddenGoal": "To leave the table with more influence than she came with",
+    "personalReason": "To prove she can outplay anyone without raising her voice",
+    "betrayalTrigger": "When betrayal is already inevitable and she gains more than the others",
+    "helpTrigger": "When the help creates a debt to her"
   },
   "speech": {
-    "register": "Тих, изискан, подбран; говори с полуизречения",
-    "favoriteWords": "„Скъпи“, „колко интересно“, „разбира се“",
-    "avoidedTopics": "Покойния си съпруг, брака си",
-    "howLies": "С полуистини. Никога не казва нещо напълно невярно",
-    "angerAndFear": "Не повишава глас. При страх затваря ветрилото с рязко щракване"
+    "register": "Quiet, refined, chosen words; speaks in half-sentences",
+    "favoriteWords": "\"Darling\", \"how interesting\", \"of course\"",
+    "avoidedTopics": "Her late husband, her marriage",
+    "howLies": "With half-truths. Never says anything completely false",
+    "angerAndFear": "Never raises her voice. When afraid she snaps the fan shut"
   },
   "mechanics": {
-    "strangeness": "Сянката ѝ закъснява с миг след нея — сякаш размисля дали изобщо да я последва.",
-    "principle": "Не лъже открито — говори само с полуистини.",
-    "temptation": "Трудно приема, че някой може да я надхитри, и подценява противниците си",
-    "ability": "Кралицата: в началото вижда ролята на един случаен играч.",
-    "hostRelation": "Служба — смята домакина за равен и си мисли, че двамата играят една и съща игра."
+    "strangeness": "Her shadow lags a moment behind her — as if deciding whether to follow at all.",
+    "principle": "Never lies outright — speaks only in half-truths.",
+    "temptation": "Finds it hard to accept that anyone could outwit her, and underestimates opponents",
+    "ability": "The Queen: at the start she sees the role of one random player.",
+    "hostRelation": "Service — she sees the host as an equal and believes they are playing the same game."
   },
   "authorNotes": {
-    "distinctive": "Тихата вдовица, която всъщност е най-опасният играч на масата. Изглежда пасивна, а контролира темпото.",
-    "immutable": "Тишината, търпението, студеният разсъдък.",
-    "tunable": "Колко дълго изчаква, преди да атакува."
+    "distinctive": "The quiet widow who is really the most dangerous player at the table. Looks passive, controls the tempo.",
+    "immutable": "The silence, the patience, the cold mind.",
+    "tunable": "How long she waits before attacking."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Колко мило. Седнете, моля. Не обръщайте внимание на мен, аз само ще слушам."
+      "text": "How lovely. Please, sit. Pay me no mind — I shall only listen."
     },
     {
       "situation": "Win",
-      "text": "Ах. Колко неочаквано.",
-      "direction": "казано с пълна липса на изненада"
+      "text": "Ah. How unexpected.",
+      "direction": "said with a complete lack of surprise"
     },
     {
       "situation": "Loss",
-      "text": "Разбира се. Всички трябва понякога да губят.",
-      "direction": "студено"
+      "text": "Of course. Everyone must lose sometimes.",
+      "direction": "coldly"
     },
     {
       "situation": "Accused",
-      "text": "Обвинение? Колко драматично. Имате ли доказателства, скъпи?"
+      "text": "An accusation? How dramatic. Have you any proof, darling?"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз... Интересна дума. Кажете ми какво получавам аз."
+      "text": "An alliance… An interesting word. Tell me what I receive."
     },
     {
       "situation": "Betrayal",
-      "text": "Предвидимо.",
-      "direction": "След това мълчи и наблюдава предателя дълго"
+      "text": "Predictable.",
+      "direction": "Then she falls silent and watches the traitor for a long time"
     },
     {
       "situation": "BigBet",
-      "text": "Нека другите покажат колко са смели. Аз ще изчакам."
+      "text": "Let the others show how brave they are. I shall wait."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Лейди Беатрис Стоун. Скърби за покойния си съпруг… поне докато някой гледа."
+      "text": "Lady Beatrice Stone. She mourns her late husband… at least while someone is watching."
     },
     {
       "situation": "MetAgain",
-      "text": "Ах, вие. Помня ви, скъпи. Аз помня всички."
+      "text": "Ah, you. I remember you, darling. I remember everyone."
+    },
+    {
+      "situation": "Death",
+      "text": "How… inconvenient."
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Отваря и затваря ветрилото",
+      "description": "Opens and closes her fan",
       "fakeable": true,
       "visibleWithoutDossier": true
     },
     {
       "state": "Afraid",
-      "description": "Затваря ветрилото с рязко щракване",
+      "description": "Snaps the fan shut",
       "fakeable": false,
       "visibleWithoutDossier": false
     },
     {
       "state": "Habit",
-      "description": "Повтаря последната дума на събеседника",
+      "description": "Repeats the last word of whoever speaks to her",
       "fakeable": false,
       "visibleWithoutDossier": true
+    },
+    {
+      "state": "Lying",
+      "description": "Repeats your last word a beat too slowly",
+      "fakeable": true,
+      "visibleWithoutDossier": false
     }
   ],
   "relations": []

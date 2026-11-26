@@ -208,7 +208,7 @@
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.4;
-  quotes: '„' '“';
+  quotes: '“' '”';
 }
 
 .speech__direction {
@@ -459,4 +459,9 @@
   .speech__text { font-size: 1.05rem; }
   .guest-stage, .role-stage { padding-top: 120px; }
   .arrival__seated { display: none; }
+}
+
+.role-flip__front--assassin {
+  background: linear-gradient(180deg, #5a0c08, #1a0403);
+  border-color: #c0402a;
 }

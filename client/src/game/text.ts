@@ -1,42 +1,54 @@
-import type { CardType, Phase, RoleType } from './types'
+import type { Declaration, ItemType, Phase, Role } from './types'
 
-export const cardInfo: Record<CardType, { name: string; glyph: string; base: string }> = {
-  Gold: { name: 'Злато', glyph: '◈', base: 'Стойност за сделки, подкупи и оферти на Домакина' },
-  Dagger: { name: 'Кама', glyph: '†', base: 'Убива — само в ръката на Убиеца. За другите е улика' },
-  Shield: { name: 'Щит', glyph: '⛨', base: 'Блокира едно враждебно действие срещу теб тази нощ' },
-  Eye: { name: 'Око', glyph: '◉', base: 'Виждаш ръката на играч' },
-  Hand: { name: 'Ръка', glyph: '✋', base: 'Взимаш случайна карта от играч' },
-  Seal: { name: 'Печат', glyph: '✠', base: 'Сделката е задължителна — Домакинът наказва нарушителя' },
-  Devil: { name: 'Дяволска карта', glyph: '♆', base: 'Играе се веднага: Домакинът ти прави лично предложение' },
+export const itemInfo: Record<ItemType, { name: string; glyph: string; text: string; chest?: boolean }> = {
+  Dagger: { name: 'Dagger', glyph: '†', text: "Sent by the Assassin, it kills at dawn. From anyone else it's harmless — but −2 gold at the end if you still hold it. Can't be discarded, only given away." },
+  Wine: { name: 'Wine', glyph: '🍷', text: 'When you receive it, learn who sent any one gift tonight.' },
+  ClosedDoor: { name: 'Closed Door', glyph: '🚪', text: 'Play when a gift is announced for you: it goes back to the sender unopened.' },
+  Monocle: { name: 'Monocle', glyph: '🧐', text: "Play during the whisper: secretly see one player's hand." },
+  Bread: { name: 'Bread', glyph: '🍞', text: 'Does nothing. An honest, empty gift.' },
+  Amulet: { name: 'Amulet', glyph: '🧿', text: 'Held at dawn, it stops one death. Then the amulet and the weapon leave the game.', chest: true },
+  Poison: { name: 'Poison', glyph: '⚗', text: 'The receiver dies at the NEXT dawn unless they hold an Amulet. Every death counts towards the Assassin.', chest: true },
+  Mirror: { name: 'Mirror', glyph: '🪞', text: "Play when a gift is announced for you: its effect turns on the sender. The Assassin's dagger finds his own heart.", chest: true },
 }
 
-/** "Една карта — различно действие според ролята". Missing entry = base action. */
-export const roleReading: Partial<Record<RoleType, Partial<Record<CardType, string>>>> = {
-  Assassin: { Gold: 'Подкупи', Dagger: 'Убива', Shield: 'Крие се от Око', Eye: 'Вижда дали целта има Щит' },
-  Inquisitor: { Dagger: 'Доказателство', Eye: 'Вижда ролята, не картите' },
-  Thief: { Gold: 'Твоята цел', Dagger: 'Подхвърляш я в чужда ръка', Eye: 'Вижда колко злато има целта', Hand: 'Избираш картата, анонимно' },
-  Merchant: { Gold: '+1 при размяна', Dagger: 'Продаваш я', Seal: 'Брои за 2 сделки' },
-  Priest: { Gold: 'Откупва душа от Домакина', Dagger: 'Унищожаваш я', Shield: 'Пазиш друг играч', Devil: 'Отказваш без наказание' },
-  Sold: { Gold: 'Подкупва другите да приемат оферти', Dagger: 'Даряваш я на Домакина срещу информация', Seal: 'Подпечатва сделка на Домакина', Devil: 'Тайна задача от Домакина' },
-  Fool: { Dagger: 'Показваш я нарочно — печеливша карта' },
+export const declarationName: Record<Declaration, string> = {
+  Purse: 'a Purse',
+  Bread: 'Bread',
+  Wine: 'Wine',
+  Monocle: 'a Monocle',
+  ClosedDoor: 'a Closed Door',
+  Amulet: 'an Amulet',
+  Mirror: 'a Mirror',
 }
 
-export const roleInfo: Record<RoleType, { name: string; goal: string; skill: string; fears: string }> = {
-  Assassin: { name: 'Убиецът', goal: 'Убий двама играчи и остани неразкрит до края.', skill: 'Само ти можеш да убиваш с Кама.', fears: 'Инквизитора' },
-  Inquisitor: { name: 'Инквизиторът', goal: 'Обвини правилно Убиеца.', skill: 'С Око виждаш роля, не само карти.', fears: 'Убиеца' },
-  Thief: { name: 'Крадецът', goal: 'Завърши с най-много злато и поне 8.', skill: 'Крадеш избрана карта; жертвата не разбира от кого.', fears: 'Търговеца' },
-  Merchant: { name: 'Търговецът', goal: '3 изпълнени сделки и поне 6 злато в края.', skill: '+1 злато от всяка размяна.', fears: 'Крадеца' },
-  Priest: { name: 'Свещеникът', goal: 'До края да е умрял най-много 1 играч.', skill: 'Пазиш със Щит другите, не само себе си.', fears: 'Убиеца' },
-  Sold: { name: 'Продаденият', goal: 'Домакинът да прибере 3 души.', skill: 'Знаеш ролята на един играч от началото.', fears: 'Всички, ако се разбере' },
-  Fool: { name: 'Глупакът', goal: 'Масата да те осъди погрешно за Убиец.', skill: 'Камата в ръката ти е печеливша карта.', fears: 'Инквизитора' },
+export const declarations: Declaration[] = ['Purse', 'Bread', 'Wine', 'Monocle', 'ClosedDoor', 'Amulet', 'Mirror']
+
+/** What you would honestly announce for a card (Dagger and Poison have no honest word). */
+export const honestDeclaration: Partial<Record<ItemType, Declaration>> = {
+  Bread: 'Bread', Wine: 'Wine', Monocle: 'Monocle', ClosedDoor: 'ClosedDoor', Amulet: 'Amulet', Mirror: 'Mirror',
+}
+
+export const roleInfo: Record<Role, { name: string; goal: string; hint: string }> = {
+  Assassin: {
+    name: 'The Assassin',
+    goal: 'Let enough candles go out. Every death counts — however it happens.',
+    hint: "Your daggers kill from the second candle. Disguise them as something pleasant. Beware of mirrors.",
+  },
+  Guest: {
+    name: 'A Guest',
+    goal: "Survive the six candles with fewer deaths than the Assassin needs. Then the living guest with the most gold is the guest of honour.",
+    hint: 'Name the Assassin at the end for +5 gold. A mirror or poison that kills him pays +5 more.',
+  },
 }
 
 export const phaseName: Record<Phase, string> = {
-  Draw: 'Теглене',
-  Table: 'Масата',
-  Night: 'Нощта',
-  Resolution: 'Разрешаване',
-  Whisper: 'Шепот',
-  Court: 'Съдът',
-  Finished: 'Краят',
+  Whisper: 'The whisper',
+  Gifts: 'The gifts',
+  Delivery: 'Delivery',
+  WineChoice: 'Wine',
+  LastWhisper: 'The last whisper',
+  Dawn: 'Dawn',
+  Discard: 'Dawn',
+  Pointing: 'Name the Assassin',
+  Finished: 'The end',
 }

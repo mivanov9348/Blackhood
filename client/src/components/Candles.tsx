@@ -1,7 +1,7 @@
 /** The match timer: six candles, one burns out per round. */
 export function Candles({ total, round }: { total: number; round: number }) {
   return (
-    <div className="candles" aria-label={`Свещ ${round} от ${total}`}>
+    <div className="candles" aria-label={`Candle ${round} of ${total}`}>
       {Array.from({ length: total }, (_, i) => {
         const state = i < round - 1 ? 'out' : i === round - 1 ? 'burning' : 'lit'
         return (

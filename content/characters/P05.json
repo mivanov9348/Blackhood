@@ -2,11 +2,11 @@
   "code": "P05",
   "kind": "Participant",
   "name": "Agnes Reed",
-  "title": "Кръчмарката",
-  "nickname": "Кръчмарката; „Ушите на града“",
-  "gender": "Жена",
+  "title": "The Tavern Keeper",
+  "nickname": "The Tavern Keeper; \"the ears of the town\"",
+  "gender": "Female",
   "age": "31",
-  "archetype": "Наблюдател",
+  "archetype": "Observer",
   "rarity": "Uncommon",
   "status": "Published",
   "tags": [
@@ -32,130 +32,134 @@
     "fearOfLoss": 3
   },
   "origin": {
-    "birthplace": "Пристанищният град Солтмарш",
-    "socialStatus": "Простолюдие, но с влияние сред хората",
-    "profession": "Дъщеря на кръчмар, днес управлява бащината си кръчма „Удавената котва“"
+    "birthplace": "The port town of Saltmarsh",
+    "socialStatus": "A commoner, but with influence among the people",
+    "profession": "A tavern keeper's daughter; now runs her father's tavern, the Drowned Anchor"
   },
   "appearance": {
-    "face": "Кръгло, привлекателно лице, лунички, тънък белег на дясната вежда",
-    "hairAndEyes": "Червеникава коса на плитка, зелени будни очи",
-    "clothing": "Проста рокля, кожен колан с ключове, кърпа на рамото",
-    "build": "Средна на ръст, енергична, винаги в движение",
-    "gestures": "Бърше масата, дори когато не е мръсна; пресмята на пръсти",
-    "voice": "Звучен, шеговит глас с пристанищен говор",
-    "firstImpression": "Весела, приветлива жена, която изглежда, че слуша повече, отколкото говори",
-    "artistNotes": "носи малка тетрадка в престилката, в която записва дългове и слухове.",
+    "face": "A round, pretty face, freckles, a thin scar on the right eyebrow",
+    "hairAndEyes": "Reddish hair in a braid, lively green eyes",
+    "clothing": "A simple dress, a leather belt of keys, a cloth on her shoulder",
+    "build": "Medium height, energetic, always moving",
+    "gestures": "Wipes the table even when it is clean; counts on her fingers",
+    "voice": "A ringing, joking voice with a dockside accent",
+    "firstImpression": "A cheerful, welcoming woman who seems to listen more than she talks",
+    "artistNotes": "Keeps a small notebook in her apron where she writes down debts and rumours.",
     "portraitHue": 150
   },
   "backstory": {
-    "biography": "Агнес е израснала сред пияници, моряци, търговци и войници в кръчмата на баща си. Научила е, че пиян човек казва повече, отколкото трезв би признал под мъчение. След смъртта на баща си поема кръчмата заедно с дълговете ѝ към местния лихвар. Днес познава половината град по име, а другата половина по слухове.",
-    "whyHere": "Лихварят иска да вземе кръчмата ѝ за дълга. Тя е дошла да спечели парите, а и да чуе нещо, което може да ѝ свърши работа.",
-    "secret": "Колко голям е дългът ѝ и колко близо е до това да загуби кръчмата. Също, че понякога продава чутото на онзи, който плати най-добре."
+    "biography": "Agnes grew up among drunks, sailors, merchants and soldiers in her father's tavern. She learned that a drunk man says more than a sober one would admit under torture. When her father died she took over the tavern along with his debts to the local moneylender. Today she knows half the town by name and the other half by rumour.",
+    "whyHere": "The moneylender wants her tavern for the debt. She came to win the money — and to hear something useful.",
+    "secret": "How big her debt is and how close she is to losing the tavern. Also, that she sometimes sells what she hears to whoever pays best."
   },
   "psychology": {
-    "coreTrait": "Наблюдателност",
-    "secondTrait": "Търговски инстинкт",
-    "weakness": "Обича да знае повече от другите и понякога казва твърде много",
-    "fear": "Да загуби кръчмата, единственото, което има",
-    "desire": "Да запази кръчмата и независимостта си",
-    "angers": "Надменни хора, които не плащат сметката",
-    "regret": "Че понякога продава тайни на хора, които не ги заслужават",
-    "moralLimits": "Не издава тайни на приятели. Тайните на непознати са стока",
-    "neverWould": "Да предаде истински приятел",
-    "wouldForReward": "Да продаде информация на всеки"
+    "coreTrait": "Observation",
+    "secondTrait": "A trader's instinct",
+    "weakness": "Loves knowing more than others and sometimes says too much",
+    "fear": "Losing the tavern, the only thing she has",
+    "desire": "To keep the tavern and her independence",
+    "angers": "Haughty people who don't pay their bill",
+    "regret": "That she sometimes sells secrets about people who didn't deserve it",
+    "moralLimits": "Never gives away friends' secrets. Strangers' secrets are merchandise",
+    "neverWould": "Betray a true friend",
+    "wouldForReward": "Sell information to anyone"
   },
   "behavior": {
-    "style": "Социален / наблюдателен",
-    "stakes": "Умерени. Обича да вижда какво правят другите",
-    "deception": "Мами с информация, рядко с карти",
-    "debts": "Има дълг и я притеснява",
-    "alliances": "Съюзи на базата на информация",
-    "whenAttacks": "Когато знае слабост на противник",
-    "whenRetreats": "Когато вижда, че някой е по-добре информиран",
-    "onLoss": "Прибира се мълчаливо. Започва да наблюдава отново",
-    "onWin": "Весела, черпи",
-    "strategyChange": "Нова информация"
+    "style": "Social / observant",
+    "stakes": "Moderate. Likes to see what the others do",
+    "deception": "Cheats with information, rarely with cards",
+    "debts": "Has a debt and it worries her",
+    "alliances": "Alliances built on information",
+    "whenAttacks": "When she knows an opponent's weakness",
+    "whenRetreats": "When she sees someone is better informed",
+    "onLoss": "Withdraws quietly. Starts watching again",
+    "onWin": "Cheerful, buys a round",
+    "strategyChange": "New information"
   },
   "motives": {
-    "publicGoal": "Да спечели добре",
-    "hiddenGoal": "Да изплати дълга си и да запази кръчмата",
-    "personalReason": "Да запази кръчмата",
-    "betrayalTrigger": "Ако някой ѝ предложи да изплати дълга ѝ",
-    "helpTrigger": "Ако някой, когото харесва, е в беда"
+    "publicGoal": "To win well",
+    "hiddenGoal": "To pay off her debt and keep the tavern",
+    "personalReason": "To keep the tavern",
+    "betrayalTrigger": "If someone offers to pay off her debt",
+    "helpTrigger": "If someone she likes is in trouble"
   },
   "speech": {
-    "register": "Жив, пристанищен говор, шеги",
-    "favoriteWords": "„Скъпи“, „приятелю“, „баща ми казваше“",
-    "avoidedTopics": "Дълга си, баща си",
-    "howLies": "Със смях и шеги",
-    "angerAndFear": "Става студена и сериозна, гласът ѝ се снишава"
+    "register": "Lively dockside talk, jokes",
+    "favoriteWords": "\"Darling\", \"friend\", \"my father used to say\"",
+    "avoidedTopics": "Her debt, her father",
+    "howLies": "With laughter and jokes",
+    "angerAndFear": "Turns cold and serious, her voice drops"
   },
   "mechanics": {
-    "strangeness": "Чува разговор от другия край на всяка зала. Понякога — дори шепота на домакина.",
-    "principle": "Да предаде истински приятел",
-    "temptation": "Обича да знае повече от другите и понякога казва твърде много",
-    "ability": "Подслушване: веднъж на партия научава шепота на домакина към друг играч.",
-    "hostRelation": "Страх — знае слуховете за тази маса по-добре от всеки."
+    "strangeness": "She can hear a conversation from the far end of any hall. Sometimes even the host's whispers.",
+    "principle": "Betray a true friend",
+    "temptation": "Loves knowing more than others and sometimes says too much",
+    "ability": "Eavesdrop: once per evening she learns what the host whispered to another player.",
+    "hostRelation": "Fear — she knows the rumours about this table better than anyone."
   },
   "authorNotes": {
-    "distinctive": "Информационен център на масата. Може да бъде ключов съюзник или опасен враг.",
-    "immutable": "Наблюдателността, кръчмата, дългът.",
-    "tunable": "Колко бързо разгадава противниците и колко често се изпуска."
+    "distinctive": "The information hub of the table. Can be a key ally or a dangerous enemy.",
+    "immutable": "The observation, the tavern, the debt.",
+    "tunable": "How fast she reads opponents and how often she lets things slip."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Добре дошли! Сядайте, сядайте. Тук всеки е приятел, докато не си плати сметката."
+      "text": "Welcome! Sit, sit. Everyone's a friend here — until they pay the bill."
     },
     {
       "situation": "Win",
-      "text": "Ха! Тази вечер черпя аз!"
+      "text": "Ha! Drinks are on me tonight!"
     },
     {
       "situation": "Loss",
-      "text": "Е, кръчмата си има лоши нощи. Утре ще е по-добре."
+      "text": "Well, a tavern has its bad nights. Tomorrow will be better."
     },
     {
       "situation": "Accused",
-      "text": "Аз? Скъпи, аз само наливам и слушам."
+      "text": "Me? Darling, I only pour and listen."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? Хайде, но първо ми кажи нещо, което не знам."
+      "text": "An alliance? Go on — but first tell me something I don't know."
     },
     {
       "situation": "Betrayal",
-      "text": "Ах, значи такива сме. Добре. Ще го запомня."
+      "text": "Ah, so that's how it is. Fine. I'll remember."
     },
     {
       "situation": "BigBet",
-      "text": "Хм, рисковано. Но баща ми казваше: който не рискува, не пие."
+      "text": "Hm, risky. But my father used to say: who never risks, never drinks."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Агнес Рийд от „Удавената котва“. Каквото кажете пред нея, утре го знае целият Солтмарш."
+      "text": "Agnes Reed of the Drowned Anchor. Whatever you say in front of her, all of Saltmarsh knows by morning."
     },
     {
       "situation": "MetAgain",
-      "text": "О, ти пак! Сядай, сметката ти още стои."
+      "text": "Oh, you again! Sit down — your tab is still open."
+    },
+    {
+      "situation": "Death",
+      "text": "Somebody… mind the tavern."
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Пресмята на пръсти под масата",
+      "description": "Counts on her fingers under the table",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Lying",
-      "description": "Шегува се повече от обикновено",
+      "description": "Jokes more than usual",
       "fakeable": true,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Бърше масата, дори когато не е мръсна",
+      "description": "Wipes the table even when it is clean",
       "fakeable": false,
       "visibleWithoutDossier": true
     }
@@ -164,8 +168,8 @@
     {
       "to": "P12",
       "value": -70,
-      "story": "Годфри Мот е лихварят, който иска да вземе кръчмата ѝ за дълга на баща ѝ.",
-      "effect": "Агнес насочва Ръка срещу Годфри при първа възможност."
+      "story": "Godfrey Mott is the moneylender who wants to take her tavern for her father's debt.",
+      "effect": "Agnes turns her attacks on Godfrey at the first chance."
     }
   ]
 }

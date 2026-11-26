@@ -2,11 +2,11 @@
   "code": "P04",
   "kind": "Participant",
   "name": "Oswin Miller",
-  "title": "Ковачът",
-  "nickname": "Ковачът; „Чука“",
-  "gender": "Мъж",
+  "title": "The Blacksmith",
+  "nickname": "The Blacksmith; \"the Hammer\"",
+  "gender": "Male",
   "age": "50",
-  "archetype": "Директен",
+  "archetype": "Direct",
   "rarity": "Common",
   "status": "Published",
   "tags": [
@@ -31,136 +31,140 @@
     "fearOfLoss": 4
   },
   "origin": {
-    "birthplace": "Селото Хемсби край гората",
-    "socialStatus": "Занаятчия, уважаван член на селската общност",
-    "profession": "Ковач цял живот, син на ковач"
+    "birthplace": "The village of Hemsby by the forest",
+    "socialStatus": "A craftsman, respected in the village community",
+    "profession": "A smith all his life, son of a smith"
   },
   "appearance": {
-    "face": "Червендалесто лице, изгаряния по ръцете и врата, малък белег на брадата",
-    "hairAndEyes": "Плешив, рижа брада, тъмни внимателни очи",
-    "clothing": "Кожена престилка, груба вълнена риза, тежки ботуши, ковашки клещи на колана",
-    "build": "Широк, мускулест, леко прегърбен",
-    "gestures": "Почесва брадата си, когато мисли; трака с пръсти по масата като с чук",
-    "voice": "Дълбок, бавен глас с провинциален говор",
-    "firstImpression": "Прост, но надежден човек, който не се впечатлява от титли",
-    "artistNotes": "носи малък подкован амулет. Ръцете му са тъмни от сажди, които не се измиват.",
+    "face": "A ruddy face, burns on his arms and neck, a small scar on the chin",
+    "hairAndEyes": "Bald, red beard, dark watchful eyes",
+    "clothing": "A leather apron, a coarse wool shirt, heavy boots, smith's tongs on his belt",
+    "build": "Broad, muscular, slightly stooped",
+    "gestures": "Scratches his beard when thinking; drums his fingers on the table like a hammer",
+    "voice": "Deep, slow voice with a country accent",
+    "firstImpression": "A simple but reliable man who is not impressed by titles",
+    "artistNotes": "Wears a small horseshoe amulet. His hands are dark with soot that never washes off.",
     "portraitHue": 25
   },
   "backstory": {
-    "biography": "Осуин е прекарал целия си живот в ковачницата на баща си. Кове подкови, сечива и брони за всеки, който плати честно. Веднъж е бил измамен от пътуващ търговец с гнило желязо и оттогава не вярва на гладки приказки. Сега селото е обременено с данък, а синът му е болен и има нужда от скъпо лечение.",
-    "whyHere": "Не за богатство, а за да плати лечението на сина си. Някой му е казал, че тук „се плаща добре“ за смелост.",
-    "secret": "Не крие много. Не казва колко отчаяно му трябват парите."
+    "biography": "Oswin has spent his whole life in his father's forge, making horseshoes, tools and armour for anyone who pays honestly. Once a travelling merchant cheated him with rotten iron, and since then he distrusts smooth talk. Now the village is crushed by taxes and his son is ill and needs expensive treatment.",
+    "whyHere": "Not for riches, but to pay for his son's treatment. Someone told him courage \"pays well\" here.",
+    "secret": "He hides little. He does not say how desperately he needs the money."
   },
   "psychology": {
-    "coreTrait": "Здрав разум",
-    "secondTrait": "Недоверчивост",
-    "weakness": "Не разбира политически игри и не вижда сложни капани",
-    "fear": "Синът му да умре заради неговата неспособност",
-    "desire": "Да спаси сина си",
-    "angers": "Измамници, надменни благородници",
-    "regret": "Малко неща. Боли го, че е зает в ковачницата и не е бил до сина си",
-    "moralLimits": "Не краде, не лъже, не наранява",
-    "neverWould": "Да изостави приятел в беда",
-    "wouldForReward": "Да рискува всичко, ако това ще спаси сина му"
+    "coreTrait": "Common sense",
+    "secondTrait": "Distrust",
+    "weakness": "Does not understand political games and does not see complex traps",
+    "fear": "That his son dies because of his failure",
+    "desire": "To save his son",
+    "angers": "Cheats, haughty noblemen",
+    "regret": "Little. It hurts that work kept him from his son's side",
+    "moralLimits": "Does not steal, lie or hurt",
+    "neverWould": "Abandon a friend in trouble",
+    "wouldForReward": "Risk everything if it saves his son"
   },
   "behavior": {
-    "style": "Защитен / директен",
-    "stakes": "Малки, честни залози. Голям залог само ако трябва",
-    "deception": "Не мами. Не вярва на тези, които мамят",
-    "debts": "Плаща ги веднага. Не обича да дължи",
-    "alliances": "Съюзява се трудно, но остава верен",
-    "whenAttacks": "Когато е сигурен, че ще спечели",
-    "whenRetreats": "Когато не разбира какво става",
-    "onLoss": "Мрачно приема. Не става агресивен",
-    "onWin": "Скромно, малко неудобно",
-    "strategyChange": "Само ако съюзник му покаже по-ясен път"
+    "style": "Defensive / direct",
+    "stakes": "Small, honest stakes. Big only if he must",
+    "deception": "Does not cheat. Does not trust those who do",
+    "debts": "Pays at once. Hates owing",
+    "alliances": "Slow to ally, but stays loyal",
+    "whenAttacks": "When he is sure he will win",
+    "whenRetreats": "When he does not understand what is happening",
+    "onLoss": "Takes it grimly. Does not turn aggressive",
+    "onWin": "Modest, a little awkward",
+    "strategyChange": "Only if an ally shows him a clearer path"
   },
   "motives": {
-    "publicGoal": "Да спечели прилично и да се прибере",
-    "hiddenGoal": "Да спечели сума, достатъчна за лечението на сина си",
-    "personalReason": "Синът му",
-    "betrayalTrigger": "Ако някой заплаши сина му или го излъже сериозно",
-    "helpTrigger": "Ако види, че някой е измамен"
+    "publicGoal": "To win a decent sum and go home",
+    "hiddenGoal": "To win enough for his son's treatment",
+    "personalReason": "His son",
+    "betrayalTrigger": "If someone threatens his son or lies to him badly",
+    "helpTrigger": "If he sees someone being cheated"
   },
   "speech": {
-    "register": "Прост, провинциален, без сложни думи",
-    "favoriteWords": "„Приятелю“, „хм“, „както казваше баща ми“",
-    "avoidedTopics": "Сина си (освен с приятели)",
-    "howLies": "Лошо. Изчервява се",
-    "angerAndFear": "Става тих и сключва юмруци"
+    "register": "Plain, rural, no fancy words",
+    "favoriteWords": "\"Friend\", \"hm\", \"as my father used to say\"",
+    "avoidedTopics": "His son (except with friends)",
+    "howLies": "Badly. He blushes",
+    "angerAndFear": "Goes quiet and clenches his fists"
   },
   "mechanics": {
-    "strangeness": "Огънят в огнището се навежда към него, когато влезе — като към стар познат.",
-    "principle": "Да изостави приятел в беда",
-    "temptation": "Не разбира политически игри и не вижда сложни капани",
-    "ability": "Наковалня: веднъж на партия Щитът му блокира и второ враждебно действие.",
-    "hostRelation": "Невежество — мисли, че домакинът е просто богат стопанин."
+    "strangeness": "The fire in the hearth leans towards him when he walks in — like towards an old friend.",
+    "principle": "Abandon a friend in trouble",
+    "temptation": "Does not understand political games and does not see complex traps",
+    "ability": "Anvil: once per evening his amulet stops a second death too.",
+    "hostRelation": "Ignorance — he thinks the host is just a rich innkeeper."
   },
   "authorNotes": {
-    "distinctive": "Обикновен човек в свят на интриги, с емоционална мотивация.",
-    "immutable": "Директността и любовта към сина му.",
-    "tunable": "Колко лесно бива подмамен и колко дълго помни измама."
+    "distinctive": "An ordinary man in a world of intrigue, with an emotional motive.",
+    "immutable": "The directness and the love for his son.",
+    "tunable": "How easily he is fooled and how long he remembers a deception."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Осуин. Ковач. Не ме бъркайте с лорд."
+      "text": "Oswin. Smith. Don't mistake me for a lord."
     },
     {
       "situation": "Win",
-      "text": "Е, това не беше лошо."
+      "text": "Well, that wasn't bad."
     },
     {
       "situation": "Loss",
-      "text": "Хм. Значи днес не е мой ден."
+      "text": "Hm. Not my day, then."
     },
     {
       "situation": "Accused",
-      "text": "Аз? Не съм те докоснал, приятелю. Погледни ръцете си."
+      "text": "Me? I never touched you, friend. Look at your own hands."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз... добре. Но ако ме излъжеш, ще съжаляваш."
+      "text": "An alliance… fine. But lie to me and you'll regret it."
     },
     {
       "situation": "Betrayal",
-      "text": "Знаех си. Никога не вярвай на гладка уста."
+      "text": "Knew it. Never trust a smooth tongue."
     },
     {
       "situation": "BigBet",
-      "text": "Хм. Много е... Но синът ми има нужда."
+      "text": "Hm. That's a lot… But my son needs it."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Осуин Милър, ковач от Хемсби. Честен човек. Чудно какво търси на моята маса."
+      "text": "Oswin Miller, smith of Hemsby. An honest man. One wonders what he seeks at my table."
     },
     {
       "situation": "MetAgain",
-      "text": "Хм. Пак ти, приятелю."
+      "text": "Hm. You again, friend."
+    },
+    {
+      "situation": "Death",
+      "text": "Tell the boy… his father tried."
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Почесва рижата си брада",
+      "description": "Scratches his red beard",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Lying",
-      "description": "Изчервява се",
+      "description": "Blushes",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Tilted",
-      "description": "Замлъква и сключва юмруци",
+      "description": "Goes quiet and clenches his fists",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Трака с пръсти по масата като с чук",
+      "description": "Drums his fingers on the table like a hammer",
       "fakeable": false,
       "visibleWithoutDossier": true
     }

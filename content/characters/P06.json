@@ -2,11 +2,11 @@
   "code": "P06",
   "kind": "Participant",
   "name": "Tobias Greaves",
-  "title": "Търговецът",
-  "nickname": "Търговецът; „Везната“",
-  "gender": "Мъж",
+  "title": "The Merchant",
+  "nickname": "The Merchant; \"the Scales\"",
+  "gender": "Male",
   "age": "47",
-  "archetype": "Пресметлив",
+  "archetype": "Calculating",
   "rarity": "Uncommon",
   "status": "Published",
   "tags": [
@@ -31,130 +31,134 @@
     "fearOfLoss": 4
   },
   "origin": {
-    "birthplace": "Без постоянно място, пътува по търговските пътища",
-    "socialStatus": "Богат търговец без титла",
-    "profession": "Пътуващ търговец и посредник"
+    "birthplace": "Nowhere in particular — he travels the trade roads",
+    "socialStatus": "A wealthy merchant without a title",
+    "profession": "Travelling merchant and middleman"
   },
   "appearance": {
-    "face": "Месесто лице, малки хитри очи, усмивка с един златен зъб",
-    "hairAndEyes": "Сресана, намазана коса, тънки мустаци, кафяви очи",
-    "clothing": "Пъстри, скъпи дрехи, кесии на колана, малка везна",
-    "build": "Пълен, но подвижен, леко наведен напред",
-    "gestures": "Претегля всичко с поглед; пипа монетите, за да провери дали са истински",
-    "voice": "Мазен, бърз, убедителен глас",
-    "firstImpression": "Приятен, сладкодумен търговец, но всички пазят кесиите си",
-    "artistNotes": "везната му е леко разкалибрирана в негова полза.",
+    "face": "A fleshy face, small sly eyes, a smile with one gold tooth",
+    "hairAndEyes": "Oiled, combed hair, a thin moustache, brown eyes",
+    "clothing": "Colourful, expensive clothes, purses on his belt, a small pair of scales",
+    "build": "Stout but nimble, leaning slightly forward",
+    "gestures": "Weighs everything with his eyes; fingers coins to check they are real",
+    "voice": "An oily, fast, persuasive voice",
+    "firstImpression": "A pleasant, smooth-talking merchant — yet everyone guards their purse",
+    "artistNotes": "His scales are slightly miscalibrated in his favour.",
     "portraitHue": 45
   },
   "backstory": {
-    "biography": "Тобиас пътува от град на град и продава всичко: подправки, платове, оръжия и слухове. Сделките му винаги са законни на хартия, но рядко честни. Не пита откъде идва стоката, стига цената да е добра. Има по един длъжник във всеки град и по един недоволен клиент във всеки втори.",
-    "whyHere": "Вижда масата като пазар. Тук има богати и отчаяни хора и той иска да купува евтино и да продава скъпо.",
-    "secret": "Че голяма част от богатството му идва от сделки, които не биха издържали на внимателна проверка."
+    "biography": "Tobias travels from town to town selling everything: spices, cloth, weapons and rumours. His deals are always legal on paper but rarely honest. He never asks where the goods come from as long as the price is right. He has a debtor in every town and an unhappy customer in every other one.",
+    "whyHere": "He sees the table as a market. There are rich and desperate people here, and he wants to buy cheap and sell dear.",
+    "secret": "That much of his wealth comes from deals that would not survive careful inspection."
   },
   "psychology": {
-    "coreTrait": "Пресметливост",
-    "secondTrait": "Алчност",
-    "weakness": "Вярва, че всеки има цена, и подценява принципните хора",
-    "fear": "Да загуби богатството си",
-    "desire": "Да стане най-богатият търговец в кралството",
-    "angers": "Нарушени договори, когато са в негова вреда",
-    "regret": "Почти нищо",
-    "moralLimits": "Не нарушава договор, когато е в негова полза",
-    "neverWould": "Да подари нещо безплатно",
-    "wouldForReward": "Почти всичко"
+    "coreTrait": "Calculation",
+    "secondTrait": "Greed",
+    "weakness": "Believes everyone has a price and underestimates principled people",
+    "fear": "Losing his wealth",
+    "desire": "To become the richest merchant in the kingdom",
+    "angers": "Broken contracts — when they hurt him",
+    "regret": "Almost nothing",
+    "moralLimits": "Never breaks a contract while it profits him",
+    "neverWould": "Give anything away for free",
+    "wouldForReward": "Almost anything"
   },
   "behavior": {
-    "style": "Пресметлив",
-    "stakes": "Залага, само когато шансът е изчислен",
-    "deception": "Приема я като част от търговията",
-    "debts": "Обича да дава заеми с лихва",
-    "alliances": "Съюзите са договори. Спазва ги, докато са изгодни",
-    "whenAttacks": "Когато противникът е отчаян",
-    "whenRetreats": "Когато рискът е по-голям от печалбата",
-    "onLoss": "Преизчислява стратегията",
-    "onWin": "Иска още",
-    "strategyChange": "Нова изгодна сделка"
+    "style": "Calculating",
+    "stakes": "Only when the odds are calculated",
+    "deception": "Part of trade",
+    "debts": "Loves lending at interest",
+    "alliances": "Alliances are contracts. Kept while profitable",
+    "whenAttacks": "When the opponent is desperate",
+    "whenRetreats": "When the risk outweighs the profit",
+    "onLoss": "Recalculates his strategy",
+    "onWin": "Wants more",
+    "strategyChange": "A new profitable deal"
   },
   "motives": {
-    "publicGoal": "Да търгува с всички",
-    "hiddenGoal": "Да излезе от масата с повече, отколкото е влязъл, и с нови длъжници",
-    "personalReason": "Печалба",
-    "betrayalTrigger": "По-добра сделка",
-    "helpTrigger": "Ако помощта създаде дълг"
+    "publicGoal": "To trade with everyone",
+    "hiddenGoal": "To leave with more than he came with — and new debtors",
+    "personalReason": "Profit",
+    "betrayalTrigger": "A better deal",
+    "helpTrigger": "If the help creates a debt"
   },
   "speech": {
-    "register": "Търговски, бърз, убедителен",
-    "favoriteWords": "„Сделка“, „цена“, „договор“",
-    "avoidedTopics": "Произхода на стоките си",
-    "howLies": "Убедително и уверено. Има отговор за всичко",
-    "angerAndFear": "Говори по-бързо и пресмята нервно"
+    "register": "Commercial, fast, persuasive",
+    "favoriteWords": "\"Deal\", \"price\", \"contract\"",
+    "avoidedTopics": "Where his goods come from",
+    "howLies": "Convincingly and confidently. Has an answer for everything",
+    "angerAndFear": "Talks faster and calculates nervously"
   },
   "mechanics": {
-    "strangeness": "Везната му се накланя сама, миг преди някой на масата да излъже за цена.",
-    "principle": "Не подарява нищо безплатно.",
-    "temptation": "Вярва, че всеки има цена, и подценява принципните хора",
-    "ability": "Посредник: веднъж на партия разменя карти между двама други играчи срещу 1 злато.",
-    "hostRelation": "Дълг — вижда в домакина най-големия клиент, когото някога е имал."
+    "strangeness": "His scales tip by themselves a moment before someone at the table lies about a price.",
+    "principle": "Never gives anything away for free.",
+    "temptation": "Believes everyone has a price and underestimates principled people",
+    "ability": "Middleman: once per evening he swaps cards between two other players for 1 gold.",
+    "hostRelation": "Debt — he sees the host as the biggest customer he has ever had."
   },
   "authorNotes": {
-    "distinctive": "Чисто търговски персонаж: за него всяка ръка е пазар, а всеки играч е клиент.",
-    "immutable": "Алчността и пресметливостта.",
-    "tunable": "Колко агресивно предлага сделки и заеми."
+    "distinctive": "A pure trader: every hand is a market and every player a customer.",
+    "immutable": "The greed and the calculation.",
+    "tunable": "How aggressively he offers deals and loans."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Добър вечер! Тобиас Грийвс, на вашите услуги. Всичко има цена, приятели."
+      "text": "Good evening! Tobias Greaves, at your service. Everything has a price, friends."
     },
     {
       "situation": "Win",
-      "text": "Отлична сделка! Отлична!"
+      "text": "Excellent deal! Excellent!"
     },
     {
       "situation": "Loss",
-      "text": "Хм. Временна загуба. Пазарът се колебае."
+      "text": "Hm. A temporary loss. The market fluctuates."
     },
     {
       "situation": "Accused",
-      "text": "Аз? Аз съм честен търговец. Имам документи!"
+      "text": "Me? I am an honest merchant. I have papers!"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? Разбира се! Колко ще ми платите?"
+      "text": "An alliance? Of course! How much will you pay me?"
     },
     {
       "situation": "Betrayal",
-      "text": "Договорът беше ясен. Ще си платите."
+      "text": "The contract was clear. You will pay."
     },
     {
       "situation": "BigBet",
-      "text": "Изчислено. Влизам."
+      "text": "Calculated. I'm in."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Тобиас Грийвс, Везната. Ще ви продаде собствените ви ботуши — и ще ви убеди, че е било изгодно."
+      "text": "Tobias Greaves, the Scales. He will sell you your own boots — and convince you it was a bargain."
     },
     {
       "situation": "MetAgain",
-      "text": "А, стар клиент! Цените са малко вдигнати, нали разбирате."
+      "text": "Ah, a returning customer! Prices have gone up a little, you understand."
+    },
+    {
+      "situation": "Death",
+      "text": "Put it… on my account."
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Пипа монетите, за да провери дали са истински",
+      "description": "Fingers his coins to check they are real",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "PlanningBetrayal",
-      "description": "Става прекалено учтив",
+      "description": "Becomes far too polite",
       "fakeable": true,
       "visibleWithoutDossier": false
     },
     {
       "state": "Afraid",
-      "description": "Говори по-бързо и пресмята нервно",
+      "description": "Talks faster and calculates nervously",
       "fakeable": false,
       "visibleWithoutDossier": true
     }
@@ -163,8 +167,8 @@
     {
       "to": "P07",
       "value": -40,
-      "story": "Сайлъс му дължи пари от три града насам.",
-      "effect": "Тобиас често насочва Ръка срещу Сайлъс."
+      "story": "Silas has owed him money for three towns now.",
+      "effect": "Tobias often turns his attacks on Silas."
     }
   ]
 }

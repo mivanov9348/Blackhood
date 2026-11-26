@@ -1,4 +1,4 @@
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Blackhood.Data;
 using Microsoft.AspNetCore.Identity;
 
@@ -26,7 +26,7 @@ public static class AdminAccess
             var users = ctx.HttpContext.RequestServices.GetRequiredService<UserManager<AppUser>>();
             var user = await users.GetUserAsync(ctx.HttpContext.User);
             if (user is null || !await users.IsInRoleAsync(user, Role))
-                return Results.Problem("Само за администратори.", statusCode: StatusCodes.Status403Forbidden);
+                return Results.Problem("Admins only.", statusCode: StatusCodes.Status403Forbidden);
             return await next(ctx);
         });
         return group;

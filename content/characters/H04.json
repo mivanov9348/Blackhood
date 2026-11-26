@@ -2,11 +2,11 @@
   "code": "H04",
   "kind": "Host",
   "name": "The Keeper",
-  "title": "Пазителят",
-  "nickname": "Пазителят; „Ключарят“",
-  "gender": "Неясен",
-  "age": "Неизвестна",
-  "archetype": "Строг и безпристрастен",
+  "title": "The Keeper",
+  "nickname": "The Keeper; \"the Keybearer\"",
+  "gender": "Unclear",
+  "age": "Unknown",
+  "archetype": "Strict and impartial",
   "rarity": "Unique",
   "status": "Published",
   "tags": [
@@ -31,92 +31,92 @@
     "fearOfLoss": 1
   },
   "origin": {
-    "birthplace": "Неизвестно",
-    "socialStatus": "Домакин, пазител на вратата и на книгата със залозите",
-    "profession": "Бивш стражар и писар; никой не знае подробности"
+    "birthplace": "Unknown",
+    "socialStatus": "Host; keeper of the door and of the book of stakes",
+    "profession": "Former guard and clerk; no one knows the details"
   },
   "appearance": {
-    "face": "Невидимо. Лицето е скрито в сянката на качулката",
-    "hairAndEyes": "Не се вижда",
-    "clothing": "Тежко сиво наметало с качулка, голям стар ключ на врата, кожени ръкавици",
-    "build": "Висок, неподвижен",
-    "gestures": "Стои винаги до вратата; не мърда, докато някой не наруши правило",
-    "voice": "Тих, равен, глух глас; говори само когато е нужно",
-    "firstImpression": "Мълчалива, тревожна фигура, която всички забравят, докато не проговори",
-    "artistNotes": "ключът на врата му е от вратата на страноприемницата. Носи дебела книга, в която записва всеки залог и всяко обещание на масата.",
+    "face": "Invisible. The face is hidden in the shadow of the hood",
+    "hairAndEyes": "Not visible",
+    "clothing": "A heavy grey hooded cloak, a big old key around the neck, leather gloves",
+    "build": "Tall, motionless",
+    "gestures": "Always stands by the door; does not move until someone breaks a rule",
+    "voice": "A quiet, flat, muffled voice; speaks only when necessary",
+    "firstImpression": "A silent, unsettling figure everyone forgets until it speaks",
+    "artistNotes": "The key around the neck opens the inn's door. Carries a thick book in which every stake and every promise at the table is written down.",
     "portraitHue": 220
   },
   "backstory": {
-    "biography": "Никой не знае много за Пазителя. Казват, че е бил стражар, после писар в съда, и че е напуснал и двете, защото хората нарушават правилата твърде лесно. Той не се шегува, не заплашва и не обяснява правилата повече от необходимото. При него няма случайни прошки.",
-    "whyHere": "Пази вратата, реда и книгата със залозите. Вярва, че масата има смисъл само ако правилата важат за всички.",
-    "secret": "Кой е бил преди. И дали самият той някога е нарушил правило."
+    "biography": "No one knows much about the Keeper. They say he was a guard, then a court clerk, and that he left both because people break rules too easily. He does not joke, does not threaten, and does not explain the rules more than necessary. With him there are no accidental pardons.",
+    "whyHere": "He keeps the door, the order and the book of stakes. He believes the table means something only if the rules apply to everyone.",
+    "secret": "Who he was before. And whether he himself ever broke a rule."
   },
   "psychology": {
-    "coreTrait": "Безпристрастност",
-    "secondTrait": "Неумолимост",
-    "weakness": "Не прави изключения дори когато трябва",
-    "fear": "Хаоса",
-    "desire": "Ред",
-    "angers": "Нарушени обещания",
-    "regret": "Никаква",
-    "moralLimits": "Спазва правилата за всички, включително за себе си",
-    "neverWould": "Да прости дълг без основание",
-    "wouldForReward": "Нищо. Не приема награди"
+    "coreTrait": "Impartiality",
+    "secondTrait": "Relentlessness",
+    "weakness": "Makes no exceptions even when he should",
+    "fear": "Chaos",
+    "desire": "Order",
+    "angers": "Broken promises",
+    "regret": "None",
+    "moralLimits": "Applies the rules to everyone, himself included",
+    "neverWould": "Forgive a debt without reason",
+    "wouldForReward": "Nothing. Accepts no rewards"
   },
   "behavior": {
-    "style": "Защитен / наказателен",
-    "stakes": "Не залага",
-    "deception": "Не я използва. Посочва я, ако е нарушение",
-    "debts": "Записва ги и ги събира",
-    "alliances": "Не",
-    "whenAttacks": "Само при нарушено правило или неизпълнен дълг",
-    "whenRetreats": "Никога",
-    "onLoss": "Няма",
-    "onWin": "Няма",
-    "strategyChange": "Само ново правило, обявено в началото на вечерта"
+    "style": "Defensive / punitive",
+    "stakes": "Does not stake",
+    "deception": "Does not use it. Points it out if it breaks a rule",
+    "debts": "Writes them down and collects them",
+    "alliances": "No",
+    "whenAttacks": "Only when a rule is broken or a debt unpaid",
+    "whenRetreats": "Never",
+    "onLoss": "None",
+    "onWin": "None",
+    "strategyChange": "Only a new rule announced at the start of the evening"
   },
   "motives": {
-    "publicGoal": "Да пази правилата",
-    "hiddenGoal": "Всеки залог да бъде платен",
-    "personalReason": "Вярата, че редът е по-важен от хората",
+    "publicGoal": "To keep the rules",
+    "hiddenGoal": "For every stake to be paid",
+    "personalReason": "The belief that order matters more than people",
     "betrayalTrigger": "—",
-    "helpTrigger": "Никога"
+    "helpTrigger": "Never"
   },
   "speech": {
-    "register": "Кратък, сух, безличен",
-    "favoriteWords": "„Записано“, „дълг“, „правилото“",
-    "avoidedTopics": "Себе си",
-    "howLies": "Не лъже",
-    "angerAndFear": "Не показва"
+    "register": "Short, dry, impersonal",
+    "favoriteWords": "\"Recorded\", \"debt\", \"the rule\"",
+    "avoidedTopics": "Himself",
+    "howLies": "Does not lie",
+    "angerAndFear": "Never shows them"
   },
   "mechanics": {
-    "strangeness": "Книгата му записва обещания, които още не са изречени.",
-    "principle": "Да прости дълг без основание",
-    "temptation": "Не прави изключения дори когато трябва",
+    "strangeness": "His book records promises that have not been spoken yet.",
+    "principle": "Forgive a debt without reason",
+    "temptation": "Makes no exceptions even when he should",
     "ability": "",
     "hostRelation": "—"
   },
   "authorNotes": {
-    "distinctive": "Безличният съдник: тих, неумолим, справедлив.",
-    "immutable": "Безпристрастността и мълчанието.",
-    "tunable": "Колко строг е при дребни нарушения."
+    "distinctive": "The faceless judge: quiet, relentless, fair.",
+    "immutable": "The impartiality and the silence.",
+    "tunable": "How strict he is about small offences."
   },
   "host": {
-    "presentation": "Като пазач на вратата",
-    "trueNature": "Сух, педантичен човек, за когото редът е всичко",
-    "wantsFromGuests": "Спазване на правилата",
-    "neverReveals": "Миналото и името си",
-    "rulesAttitude": "Свято ги пази",
-    "punishment": "Обявява нарушението на глас и изисква то да бъде поправено",
-    "temptations": "Никакви",
-    "price": "Нищо, освен дълга",
-    "amused": "Нищо",
-    "angered": "Нарушени обещания и хаос",
-    "wouldBreakRules": "Нищо",
-    "hostingStyle": "Стои до вратата, мълчи и се намесва само при нарушение. Обявява наказанията с една-две думи.",
-    "sampleOffers": "Не предлага изкушения. Предлага само изплащане на дълг: „Дългът може да бъде платен сега. Или по-късно, с лихва.“",
-    "trueStory": "Някога е загубил всичко, защото някой е нарушил дадена дума. Оттогава пази думите на другите.",
-    "changedRule": "Нощните обявления казват само смъртите; нарушен Печат струва душата. Играе се без Глупак.",
+    "presentation": "As the keeper of the door",
+    "trueNature": "A dry, pedantic man for whom order is everything",
+    "wantsFromGuests": "That they keep the rules",
+    "neverReveals": "His past and his name",
+    "rulesAttitude": "Keeps them sacred",
+    "punishment": "Announces the offence aloud and demands it be put right",
+    "temptations": "None",
+    "price": "Nothing but the debt",
+    "amused": "Nothing",
+    "angered": "Broken promises and chaos",
+    "wouldBreakRules": "Nothing",
+    "hostingStyle": "Stands by the door, silent, and steps in only when a rule is broken. Announces penalties in a word or two.",
+    "sampleOffers": "Offers no temptations. Only the settling of a debt: \"The debt can be paid now. Or later, with interest.\"",
+    "trueStory": "Once he lost everything because someone broke their word. Since then he keeps the words of others.",
+    "changedRule": "Dawn announces only the deaths — broken amulets and the heaviest purse stay secret.",
     "generosity": 1,
     "cruelty": 5,
     "verbosity": 1,
@@ -126,63 +126,63 @@
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Вратите са отворени. Дълговете – не."
+      "text": "The doors are open. The debts are not."
     },
     {
       "situation": "Win",
-      "text": "Записано."
+      "text": "Recorded."
     },
     {
       "situation": "Loss",
-      "text": "Записано."
+      "text": "Recorded."
     },
     {
       "situation": "Accused",
-      "text": "Правилата са ясни."
+      "text": "The rules are clear."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Не."
+      "text": "No."
     },
     {
       "situation": "Betrayal",
-      "text": "Обещанието е нарушено. Дългът е записан."
+      "text": "The promise is broken. The debt is recorded."
     },
     {
       "situation": "BigBet",
-      "text": "Залогът е приет. Последствията също."
+      "text": "The stake is accepted. So are the consequences."
     },
     {
       "situation": "MetAgain",
-      "text": "Името ви вече е в книгата."
+      "text": "Your name is already in the book."
     },
     {
       "situation": "IntroReplyWho",
-      "text": "Пазителят. Пиша. Помня."
+      "text": "The Keeper. I write. I remember."
     },
     {
       "situation": "IntroReplyBegin",
-      "text": "Правилата важат от този миг."
+      "text": "The rules apply from this moment."
     },
     {
       "situation": "IntroReplySilent",
-      "text": "Отбелязано."
+      "text": "Noted."
     },
     {
       "situation": "RoleDeal",
-      "text": "Ролята ви е записана. Не може да бъде променена."
+      "text": "Your role is recorded. It cannot be changed."
     }
   ],
   "tells": [
     {
       "state": "Habit",
-      "description": "Стои до вратата и не мърда",
+      "description": "Stands by the door and does not move",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Tilted",
-      "description": "Помръдва едва когато някой наруши правило",
+      "description": "Moves only when someone breaks a rule",
       "fakeable": false,
       "visibleWithoutDossier": true
     }

@@ -5,8 +5,8 @@ import { Embers } from './components/Embers'
 import CharacterEditor from './pages/admin/CharacterEditor'
 import CharacterList from './pages/admin/CharacterList'
 import AuthPage from './pages/AuthPage'
-import MainMenu from './pages/MainMenu'
-import TavernTable from './pages/TavernTable'
+import GiftsTable from './pages/GiftsTable'
+import TavernHall from './pages/TavernHall'
 
 function RequireAuth({ children, admin = false }: { children: ReactNode; admin?: boolean }) {
   const { user, loading } = useAuth()
@@ -20,7 +20,7 @@ function Loading() {
   return (
     <div className="screen screen--center">
       <Embers />
-      <p className="loading">Свещите се палят…</p>
+      <p className="loading">The candles are being lit…</p>
     </div>
   )
 }
@@ -31,8 +31,8 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={loading ? <Loading /> : user ? <Navigate to="/" replace /> : <AuthPage />} />
-      <Route path="/" element={<RequireAuth><MainMenu /></RequireAuth>} />
-      <Route path="/table/:matchId" element={<RequireAuth><TavernTable /></RequireAuth>} />
+      <Route path="/" element={<RequireAuth><TavernHall /></RequireAuth>} />
+      <Route path="/gifts/:matchId" element={<RequireAuth><GiftsTable /></RequireAuth>} />
       <Route path="/admin" element={<RequireAuth admin><CharacterList /></RequireAuth>} />
       <Route path="/admin/characters/new" element={<RequireAuth admin><CharacterEditor /></RequireAuth>} />
       <Route path="/admin/characters/:code" element={<RequireAuth admin><CharacterEditor /></RequireAuth>} />

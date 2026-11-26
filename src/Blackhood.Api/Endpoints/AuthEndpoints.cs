@@ -1,4 +1,4 @@
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Blackhood.Api.Characters;
 using Blackhood.Data;
 using Microsoft.AspNetCore.Identity;
@@ -8,7 +8,7 @@ namespace Blackhood.Api.Endpoints;
 
 public sealed record RegisterRequest(string UserName, string Email, string Password);
 public sealed record LoginRequest(string UserName, string Password);
-public sealed record UserResponse(string Id, string UserName, string Email, bool IsAdmin);
+public sealed record UserResponse(string Id, string UserName, string Email, bool IsAdmin, int Gold);
 
 public static class AuthEndpoints
 {
@@ -38,12 +38,12 @@ public static class AuthEndpoints
             var user = await users.FindByNameAsync(req.UserName.Trim())
                        ?? await users.FindByEmailAsync(req.UserName.Trim());
             if (user is null)
-                return Results.Problem("Грешно име или парола.", statusCode: StatusCodes.Status401Unauthorized);
+                return Results.Problem("Wrong name or password.", statusCode: StatusCodes.Status401Unauthorized);
 
             var result = await signIn.PasswordSignInAsync(user, req.Password, isPersistent: true, lockoutOnFailure: true);
             if (!result.Succeeded)
                 return Results.Problem(
-                    result.IsLockedOut ? "Профилът е временно заключен." : "Грешно име или парола.",
+                    result.IsLockedOut ? "The account is temporarily locked." : "Wrong name or password.",
                     statusCode: StatusCodes.Status401Unauthorized);
 
             return Results.Ok(await ToResponse(user, users));
@@ -63,5 +63,5 @@ public static class AuthEndpoints
     }
 
     private static async Task<UserResponse> ToResponse(AppUser u, UserManager<AppUser> users) =>
-        new(u.Id, u.UserName ?? "", u.Email ?? "", await users.IsInRoleAsync(u, AdminAccess.Role));
+        new(u.Id, u.UserName ?? "", u.Email ?? "", await users.IsInRoleAsync(u, AdminAccess.Role), u.Gold);
 }

@@ -2,11 +2,11 @@
   "code": "P07",
   "kind": "Participant",
   "name": "Silas Crowe",
-  "title": "Комарджията",
-  "nickname": "Комарджията; „Гарвана“",
-  "gender": "Мъж",
+  "title": "The Gambler",
+  "nickname": "The Gambler; \"the Crow\"",
+  "gender": "Male",
   "age": "36",
-  "archetype": "Блъфьор",
+  "archetype": "Bluffer",
   "rarity": "Rare",
   "status": "Published",
   "tags": [
@@ -31,131 +31,135 @@
     "fearOfLoss": 1
   },
   "origin": {
-    "birthplace": "Неизвестно. Твърди, че е роден „на масата, между две раздавания“",
-    "socialStatus": "Без обществено положение, но известно име в комарджийските бърлоги",
-    "profession": "Професионален картоиграч"
+    "birthplace": "Unknown. Claims he was born \"at the table, between two deals\"",
+    "socialStatus": "No standing at all, but a known name in the gambling dens",
+    "profession": "Professional card player"
   },
   "appearance": {
-    "face": "Тясно, бледо лице с остри скули; тънка, нахална усмивка, която никога не стига до очите",
-    "hairAndEyes": "Черна коса до раменете, небрежна четина; черни, блестящи, почти немигащи очи",
-    "clothing": "Черно палто с червена подплата, червена жилетка, евтини пръстени на всеки пръст; винаги носи свое тесте карти",
-    "build": "Слаб и гъвкав; седи отпуснат, полулегнал на стола",
-    "gestures": "Върти стара монета между кокалчетата си; намига на противника точно преди да залага",
-    "voice": "Дрезгав, ироничен глас; обича да провокира и да коментира чуждите ходове",
-    "firstImpression": "Очарователен мошеник, на когото не бива да се вярва, и който сам го казва",
-    "artistNotes": "монетата, която върти, е от непознато чуждо сечение, изтъркана почти до гладко. Никога не я залага. Ако някой я вземе, Сайлъс губи самообладание за първи път.",
+    "face": "A narrow, pale face with sharp cheekbones; a thin, cheeky smile that never reaches his eyes",
+    "hairAndEyes": "Shoulder-length black hair, careless stubble; black, glittering, almost unblinking eyes",
+    "clothing": "A black coat with red lining, a red waistcoat, cheap rings on every finger; always carries his own deck",
+    "build": "Thin and supple; lounges half-lying in his chair",
+    "gestures": "Spins an old coin across his knuckles; winks at his opponent just before betting",
+    "voice": "A husky, ironic voice; loves to provoke and comment on others' moves",
+    "firstImpression": "A charming rogue you should not trust — and who tells you so himself",
+    "artistNotes": "The coin he spins is of some unknown foreign minting, worn almost smooth. He never stakes it. If anyone takes it, Silas loses his composure for the first time.",
     "portraitHue": 355
   },
   "backstory": {
-    "biography": "Сайлъс израства по улиците и рано научава, че картите са по-верни от хората. Играе в кръчми, дворци и пристанища, но истински го привлича рискът, не парите. Печели цели състояния и ги губи още същата нощ. Монетата, която върти, е първото нещо, което някога е спечелил на карти.",
-    "whyHere": "Тръпката. Чул е, че тук залозите са по-високи, отколкото където и да било другаде, а противниците са интересни.",
-    "secret": "Че е затънал в дългове из половината кралство и че тази вечер играе с последните си пари."
+    "biography": "Silas grew up on the streets and learned early that cards are more faithful than people. He has played in taverns, palaces and ports, but it is the risk that draws him, not the money. He wins fortunes and loses them the same night. The coin he spins was the first thing he ever won at cards.",
+    "whyHere": "The thrill. He heard the stakes here are higher than anywhere else and the opponents interesting.",
+    "secret": "That he is buried in debt across half the kingdom and tonight he plays with his last money."
   },
   "psychology": {
-    "coreTrait": "Любов към риска",
-    "secondTrait": "Ирония и самоувереност",
-    "weakness": "Блъфира дори когато няма нужда и не може да устои на голям залог",
-    "fear": "Скуката и обикновения, предвидим живот",
-    "desire": "Перфектния блъф срещу достоен противник",
-    "angers": "Скучни, предвидими хора и такива, които се оплакват от загуба",
-    "regret": "Почти нищо. Понякога момчето, на което е показал картите и което после е изгубило всичко",
-    "moralLimits": "Не мами деца, бедни и хора, които няма какво да губят",
-    "neverWould": "Да играе „на сигурно“",
-    "wouldForReward": "Всичко, дори да заложи себе си още веднъж"
+    "coreTrait": "Love of risk",
+    "secondTrait": "Irony and self-confidence",
+    "weakness": "Bluffs even when he doesn't need to and cannot resist a big stake",
+    "fear": "Boredom and an ordinary, predictable life",
+    "desire": "The perfect bluff against a worthy opponent",
+    "angers": "Boring, predictable people and those who whine about losing",
+    "regret": "Almost nothing. Sometimes the boy he showed his cards to, who then lost everything",
+    "moralLimits": "Does not cheat children, the poor, or people with nothing to lose",
+    "neverWould": "Play it safe",
+    "wouldForReward": "Anything — even stake himself once more"
   },
   "behavior": {
-    "style": "Хаотичен / блъфьорски",
-    "stakes": "Колкото по-големи, толкова по-добре. Залага, за да види реакциите",
-    "deception": "Изкуство. Уважава добре изпълнена измама, дори срещу себе си",
-    "debts": "Има ги навсякъде и не се притеснява от тях",
-    "alliances": "Временни и забавни. Напуска ги, когато станат скучни",
-    "whenAttacks": "Когато усети, че някой се страхува",
-    "whenRetreats": "Почти никога. Само ако усети, че противникът го е разгадал напълно",
-    "onLoss": "Смее се и веднага иска реванш",
-    "onWin": "Подиграва се добродушно и вдига следващия залог",
-    "strategyChange": "Скука или противник, който го е разгадал"
+    "style": "Chaotic / bluffing",
+    "stakes": "The bigger the better. Bets to see the reactions",
+    "deception": "An art. Respects a well-played deception, even against himself",
+    "debts": "Has them everywhere and doesn't worry",
+    "alliances": "Temporary and fun. Leaves them when they get boring",
+    "whenAttacks": "When he senses someone is afraid",
+    "whenRetreats": "Almost never. Only if he feels completely read",
+    "onLoss": "Laughs and immediately wants a rematch",
+    "onWin": "Teases good-naturedly and raises the next stake",
+    "strategyChange": "Boredom, or an opponent who has read him"
   },
   "motives": {
-    "publicGoal": "Да се забавлява и да покаже, че е най-добрият картоиграч",
-    "hiddenGoal": "Да изиграе перфектния блъф срещу достоен противник",
-    "personalReason": "Тръпката и страхът, че времето му за големи игри изтича",
-    "betrayalTrigger": "По-интересна игра или по-голям залог другаде",
-    "helpTrigger": "Ако е забавно или ако човекът го е впечатлил"
+    "publicGoal": "To have fun and show he is the best card player",
+    "hiddenGoal": "To play the perfect bluff against a worthy opponent",
+    "personalReason": "The thrill, and the fear that his time for big games is running out",
+    "betrayalTrigger": "A more interesting game or a bigger stake elsewhere",
+    "helpTrigger": "If it's fun or the person impressed him"
   },
   "speech": {
-    "register": "Ироничен, жив, провокативен, пълен с игрови изрази",
-    "favoriteWords": "„Красота“, „защо не“, „скъпи мой“",
-    "avoidedTopics": "Дълговете си, детството си",
-    "howLies": "Перфектно. Понякога казва истината по начин, по който звучи като лъжа",
-    "angerAndFear": "Смее се по-силно. При страх спира да върти монетата"
+    "register": "Ironic, lively, provocative, full of gaming slang",
+    "favoriteWords": "\"Beautiful\", \"why not\", \"my dear\"",
+    "avoidedTopics": "His debts, his childhood",
+    "howLies": "Perfectly. Sometimes tells the truth in a way that sounds like a lie",
+    "angerAndFear": "Laughs louder. When afraid he stops spinning the coin"
   },
   "mechanics": {
-    "strangeness": "Монетата му е от държава, която не съществува на никоя карта. И винаги пада на ръба.",
-    "principle": "Да играе „на сигурно“",
-    "temptation": "Не може да устои на голям залог — „двойно или нищо“.",
-    "ability": "Ръкав: веднъж на партия взима 2 карти от пазара.",
-    "hostRelation": "Възхищение — единственият на масата, когото домакинът истински забавлява."
+    "strangeness": "His coin is from a country that is on no map. And it always lands on its edge.",
+    "principle": "Play it safe",
+    "temptation": "Cannot resist a big stake — \"double or nothing\".",
+    "ability": "Sleeve: once per evening he sends two gifts instead of one.",
+    "hostRelation": "Admiration — the only one at the table who truly amuses the host."
   },
   "authorNotes": {
-    "distinctive": "Хаотичен комарджия, който играе заради самата игра. Казва ти да не му вярваш и е прав.",
-    "immutable": "Любовта към риска и иронията.",
-    "tunable": "Колко често блъфира и колко лесно се хваща на голям залог."
+    "distinctive": "A chaotic gambler who plays for the game itself. He tells you not to trust him, and he is right.",
+    "immutable": "The love of risk and the irony.",
+    "tunable": "How often he bluffs and how easily he takes a big stake."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Сайлъс Кроу. Не ми вярвайте. Наистина, недейте."
+      "text": "Silas Crowe. Don't trust me. Really, don't."
     },
     {
       "situation": "Win",
-      "text": "Ха! Видяхте ли лицето му? Красота!"
+      "text": "Ha! Did you see his face? Beautiful!"
     },
     {
       "situation": "Loss",
-      "text": "Ох. Загубих. Но признайте, че беше красиво."
+      "text": "Oh. I lost. But admit it — it was beautiful."
     },
     {
       "situation": "Accused",
-      "text": "Аз? Винаги. Но точно този път не.",
-      "direction": "или пък да"
+      "text": "Me? Always. But not this time.",
+      "direction": "or maybe he did"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? Колко романтично. Добре, но ще ви предам, когато стане скучно."
+      "text": "An alliance? How romantic. Fine — but I'll betray you when it gets boring."
     },
     {
       "situation": "Betrayal",
-      "text": "Ах! Браво! Наистина не го очаквах. Пие ми се с вас."
+      "text": "Ah! Bravo! I really didn't see that coming. I'd drink with you."
     },
     {
       "situation": "BigBet",
-      "text": "Всичко. Защо не? Животът е кратък, а моят особено."
+      "text": "Everything. Why not? Life is short, and mine especially."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Сайлъс Кроу, Гарвана. Ще ви каже да не му вярвате. Това е единственото вярно нещо, което ще чуете от него."
+      "text": "Silas Crowe, the Crow. He will tell you not to trust him. It is the only true thing you will hear from him."
     },
     {
       "situation": "MetAgain",
-      "text": "Ха! Пак ти. Обичам повторенията — толкова са скучни, че стават забавни."
+      "text": "Ha! You again. I love repeats — they're so boring they become fun."
+    },
+    {
+      "situation": "Death",
+      "text": "Ha… finally… a stake worth losing."
     }
   ],
   "tells": [
     {
       "state": "Lying",
-      "description": "Върти монетата между кокалчетата си",
+      "description": "Spins the coin between his knuckles",
       "fakeable": true,
       "visibleWithoutDossier": true
     },
     {
       "state": "Afraid",
-      "description": "Спира да върти монетата",
+      "description": "Stops spinning the coin",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Confident",
-      "description": "Намига точно преди да заложи",
+      "description": "Winks just before he bets",
       "fakeable": true,
       "visibleWithoutDossier": false
     }

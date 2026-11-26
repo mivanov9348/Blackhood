@@ -2,11 +2,11 @@
   "code": "P08",
   "kind": "Participant",
   "name": "Mara Flint",
-  "title": "Сянката",
-  "nickname": "Сянката",
-  "gender": "Жена",
+  "title": "The Shadow",
+  "nickname": "The Shadow",
+  "gender": "Female",
   "age": "27",
-  "archetype": "Коварна",
+  "archetype": "Sly",
   "rarity": "Uncommon",
   "status": "Published",
   "tags": [
@@ -31,125 +31,135 @@
     "fearOfLoss": 3
   },
   "origin": {
-    "birthplace": "Улиците на Солтмарш, без дом",
-    "socialStatus": "Без дом и без покровител, живее на пътя",
-    "profession": "Куриер и вестоносец; носи писма и пратки между градовете, без да задава въпроси"
+    "birthplace": "The streets of Saltmarsh, no home",
+    "socialStatus": "No home and no patron, lives on the road",
+    "profession": "Courier and messenger; carries letters and parcels between towns without asking questions"
   },
   "appearance": {
-    "face": "Слабо, остро лице, бърз поглед, тънък белег през устната",
-    "hairAndEyes": "Късо подстригана тъмна коса, сиво-зелени очи",
-    "clothing": "Тъмна качулка, стегнат кожен елек, много скрити джобове, кожена чанта за писма",
-    "build": "Ниска, жилава, винаги седи близо до изхода",
-    "gestures": "Брои изходите в стаята; върти в пръсти дребни предмети от масата, без да ги поглежда",
-    "voice": "Тих, дрезгав глас, говори кратко и с подигравка",
-    "firstImpression": "Безобидно момиче от улицата, което вижда повече, отколкото показва",
-    "artistNotes": "на пръстите си носи три различни евтини пръстена, спечелени на зарове. Винаги сяда така, че да вижда вратата.",
+    "face": "A thin, sharp face, quick eyes, a thin scar across the lip",
+    "hairAndEyes": "Short-cropped dark hair, grey-green eyes",
+    "clothing": "A dark hood, a tight leather vest, many hidden pockets, a leather letter bag",
+    "build": "Short, wiry, always sits near the exit",
+    "gestures": "Counts the exits in the room; turns small objects from the table between her fingers without looking at them",
+    "voice": "A quiet, husky voice; speaks briefly and mockingly",
+    "firstImpression": "A harmless street girl who sees more than she shows",
+    "artistNotes": "Wears three different cheap rings won at dice. Always sits where she can see the door.",
     "portraitHue": 160
   },
   "backstory": {
-    "biography": "Мара никога не е имала дом. Майка ѝ я оставя на пристанището и улиците я научават да оцелява, преди да се научи да чете. Днес носи писма и пратки между градовете: бързо, тихо и без въпроси. Работи сама и никога не се привързва към никого.",
-    "whyHere": "Пари за нов живот. Иска да спечели достатъчно, за да спре да бяга от град на град.",
-    "secret": "Откъде е и колко ѝ липсва място, което да нарече дом."
+    "biography": "Mara never had a home. Her mother left her at the docks and the streets taught her to survive before she learned to read. Today she carries letters and parcels between towns: fast, quiet, no questions. She works alone and never gets attached to anyone.",
+    "whyHere": "Money for a new life. She wants to win enough to stop running from town to town.",
+    "secret": "Where she comes from, and how much she misses a place she could call home."
   },
   "psychology": {
-    "coreTrait": "Хитрост",
-    "secondTrait": "Независимост",
-    "weakness": "Не вярва на никого и отблъсква дори тези, които искат да ѝ помогнат",
-    "fear": "Да бъде хваната в клетка: от закон, дълг или човек",
-    "desire": "Свобода и достатъчно злато, за да не зависи от никого",
-    "angers": "Да бъде третирана като боклук",
-    "regret": "Хората, които е напуснала, без да се сбогува",
-    "moralLimits": "Не мами деца и болни",
-    "neverWould": "Да остане на едно място дълго",
-    "wouldForReward": "Да наруши почти всяко обещание"
+    "coreTrait": "Cunning",
+    "secondTrait": "Independence",
+    "weakness": "Trusts no one and pushes away even those who want to help",
+    "fear": "Being caged — by law, debt or a person",
+    "desire": "Freedom, and enough gold to depend on no one",
+    "angers": "Being treated like rubbish",
+    "regret": "The people she left without saying goodbye",
+    "moralLimits": "Does not cheat children or the sick",
+    "neverWould": "Stay in one place for long",
+    "wouldForReward": "Break almost any promise"
   },
   "behavior": {
-    "style": "Манипулативен / коварен",
-    "stakes": "Малки, бързи залози. Предпочита да изчака грешка на другите",
-    "deception": "Начин на живот",
-    "debts": "Не взема заеми. Не иска никой да има власт над нея",
-    "alliances": "Краткотрайни. Винаги първа напуска съюз",
-    "whenAttacks": "Когато противникът е разсеян",
-    "whenRetreats": "Когато някой я подозира",
-    "onLoss": "Изчезва от фокус, чака",
-    "onWin": "Не показва радост",
-    "strategyChange": "Ако бъде разкрита"
+    "style": "Manipulative / sly",
+    "stakes": "Small, quick stakes. Prefers to wait for others' mistakes",
+    "deception": "A way of life",
+    "debts": "Never borrows. Wants no one to have power over her",
+    "alliances": "Short-lived. Always the first to leave an alliance",
+    "whenAttacks": "When the opponent is distracted",
+    "whenRetreats": "When someone suspects her",
+    "onLoss": "Drops out of focus, waits",
+    "onWin": "Shows no joy",
+    "strategyChange": "If she is exposed"
   },
   "motives": {
-    "publicGoal": "Да спечели малко и да изчезне",
-    "hiddenGoal": "Да спечели достатъчно за нов живот и да изчезне",
-    "personalReason": "Свободата",
-    "betrayalTrigger": "Винаги, ако печелбата е голяма",
-    "helpTrigger": "Ако някой ѝ е помогнал, без да иска нищо в замяна"
+    "publicGoal": "To win a little and disappear",
+    "hiddenGoal": "To win enough for a new life and disappear",
+    "personalReason": "Freedom",
+    "betrayalTrigger": "Always, if the gain is big",
+    "helpTrigger": "If someone helped her without asking for anything in return"
   },
   "speech": {
-    "register": "Кратки, улични изрази",
-    "favoriteWords": "„Хм“, „нормално“",
-    "avoidedTopics": "Детството си",
-    "howLies": "Спокойно, гледайки в очите",
-    "angerAndFear": "Става много тиха и се отдръпва"
+    "register": "Short street phrases",
+    "favoriteWords": "\"Hm\", \"normal\"",
+    "avoidedTopics": "Her childhood",
+    "howLies": "Calmly, looking you in the eye",
+    "angerAndFear": "Goes very quiet and withdraws"
   },
   "mechanics": {
-    "strangeness": "Никой не я видя да влиза. Просто вече е седнала, когато се обърнеш.",
-    "principle": "Да остане на едно място дълго",
-    "temptation": "Не вярва на никого и отблъсква дори тези, които искат да ѝ помогнат",
-    "ability": "Сянка: веднъж на партия нощното ѝ действие не може да бъде видяно с Око.",
-    "hostRelation": "Страх — домакинът е клетка, а тя мрази клетките."
+    "strangeness": "Nobody saw her come in. She is simply already seated when you turn around.",
+    "principle": "Stay in one place for long",
+    "temptation": "Trusts no one and pushes away even those who want to help",
+    "ability": "Shadow: once per evening her night action cannot be seen with a Monocle.",
+    "hostRelation": "Fear — the host is a cage, and she hates cages."
   },
   "authorNotes": {
-    "distinctive": "Самотна, недоверчива и хитра. Винаги е на една крачка от вратата.",
-    "immutable": "Хитростта, независимостта и самотата.",
-    "tunable": "Колко рано напуска съюзи."
+    "distinctive": "Lonely, distrustful and cunning. Always one step from the door.",
+    "immutable": "The cunning, the independence and the loneliness.",
+    "tunable": "How early she leaves alliances."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Мара. Просто Мара. Не ме питайте откъде съм."
+      "text": "Mara. Just Mara. Don't ask where I'm from."
     },
     {
       "situation": "Win",
-      "text": "Хм. Добре."
+      "text": "Hm. Fine."
     },
     {
       "situation": "Loss",
-      "text": "Ще си го върна. Винаги го правя."
+      "text": "I'll get it back. I always do."
     },
     {
       "situation": "Accused",
-      "text": "Аз? Гледайте собствените си карти, преди да обвинявате."
+      "text": "Me? Look at your own cards before you accuse anyone."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? Докато ми е изгодно."
+      "text": "An alliance? As long as it pays."
     },
     {
       "situation": "Betrayal",
-      "text": "Нормално. Всички го правят."
+      "text": "Normal. Everyone does it."
     },
     {
       "situation": "BigBet",
-      "text": "Рисковано. Харесва ми."
+      "text": "Risky. I like it."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Мара Флинт, Сянката. Носи чужди писма и чужди тайни. Пазете кесиите си."
+      "text": "Mara Flint, the Shadow. She carries other people's letters and other people's secrets. Guard your purses."
     },
     {
       "situation": "MetAgain",
-      "text": "…Пак ти."
+      "text": "…You again."
+    },
+    {
+      "situation": "Death",
+      "text": "Should have… sat by the door."
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Върти в пръсти дребни предмети от масата, без да ги поглежда",
+      "description": "Turns small objects from the table between her fingers without looking at them",
       "fakeable": true,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Брои изходите в стаята",
+      "description": "Counts the exits in the room",
       "fakeable": false,
+      "visibleWithoutDossier": true
+    },
+    {
+      "state": "Lying",
+      "description": "Holds your gaze a moment too long",
+      "fakeable": true,
       "visibleWithoutDossier": true
     }
   ],

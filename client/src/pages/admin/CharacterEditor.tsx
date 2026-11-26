@@ -11,16 +11,16 @@ import {
 type Tab = 'basic' | 'appearance' | 'story' | 'psychology' | 'attributes' | 'behavior' | 'speech' | 'mechanics' | 'host' | 'notes'
 
 const tabs: { id: Tab; label: string; hostOnly?: boolean }[] = [
-  { id: 'basic', label: 'Основни' },
-  { id: 'appearance', label: 'Външен вид' },
-  { id: 'story', label: 'История' },
-  { id: 'psychology', label: 'Психология' },
-  { id: 'attributes', label: 'Атрибути' },
-  { id: 'behavior', label: 'Поведение и мотиви' },
-  { id: 'speech', label: 'Реч и реплики' },
-  { id: 'mechanics', label: 'Знаци и механика' },
-  { id: 'host', label: 'Домакин', hostOnly: true },
-  { id: 'notes', label: 'Бележки' },
+  { id: 'basic', label: 'Basics' },
+  { id: 'appearance', label: 'Appearance' },
+  { id: 'story', label: 'Story' },
+  { id: 'psychology', label: 'Psychology' },
+  { id: 'attributes', label: 'Attributes' },
+  { id: 'behavior', label: 'Behaviour & motives' },
+  { id: 'speech', label: 'Speech & lines' },
+  { id: 'mechanics', label: 'Tells & mechanics' },
+  { id: 'host', label: 'Host', hostOnly: true },
+  { id: 'notes', label: 'Notes' },
 ]
 
 export default function CharacterEditor() {
@@ -105,10 +105,10 @@ export default function CharacterEditor() {
         ? await api<EditorResponse>('/api/admin/characters', { method: 'POST', body: doc })
         : await api<EditorResponse>(`/api/admin/characters/${doc.code}`, { method: 'PUT', body: doc })
       applyResponse(r)
-      setMessage({ kind: 'ok', text: 'Запазено.' })
+      setMessage({ kind: 'ok', text: 'Saved.' })
       if (isNew) navigate(`/admin/characters/${r.document.code}`, { replace: true })
     } catch (e) {
-      setMessage({ kind: 'error', text: e instanceof Error ? e.message : 'Грешка при запис.' })
+      setMessage({ kind: 'error', text: e instanceof Error ? e.message : 'Could not save.' })
     } finally {
       setSaving(false)
     }
@@ -128,13 +128,13 @@ export default function CharacterEditor() {
 
   async function remove() {
     if (!doc || isNew) return
-    if (!window.confirm(`Да изтрия ли ${doc.code} · ${doc.name} от базата? Това не може да се върне (JSON файлът в content/ остава).`)) return
+    if (!window.confirm(`Delete ${doc.code} · ${doc.name} from the database? This cannot be undone (the JSON file in content/ stays).`)) return
     try {
       await api(`/api/admin/characters/${doc.code}`, { method: 'DELETE' })
       setDirty(false)
       navigate('/admin')
     } catch (e) {
-      setMessage({ kind: 'error', text: e instanceof Error ? e.message : 'Грешка при изтриване.' })
+      setMessage({ kind: 'error', text: e instanceof Error ? e.message : 'Could not delete.' })
     }
   }
 
@@ -142,9 +142,9 @@ export default function CharacterEditor() {
     if (!doc || isNew) return
     try {
       const r = await api<{ file: string }>(`/api/admin/characters/${doc.code}/export`, { method: 'POST' })
-      setMessage({ kind: 'ok', text: `Записано в ${r.file}` + (dirty ? ' (без незапазените промени!)' : '') })
+      setMessage({ kind: 'ok', text: `Written to ${r.file}` + (dirty ? ' (without your unsaved changes!)' : '') })
     } catch (e) {
-      setMessage({ kind: 'error', text: e instanceof Error ? e.message : 'Грешка при експорт.' })
+      setMessage({ kind: 'error', text: e instanceof Error ? e.message : 'Could not export.' })
     }
   }
 
@@ -156,9 +156,9 @@ export default function CharacterEditor() {
       await upload(`/api/admin/characters/${doc.code}/portrait`, file)
       setHasPortrait(true)
       setPortraitVersion(Date.now())
-      setMessage({ kind: 'ok', text: 'Портретът е качен.' })
+      setMessage({ kind: 'ok', text: 'Portrait uploaded.' })
     } catch (err) {
-      setMessage({ kind: 'error', text: err instanceof Error ? err.message : 'Грешка при качване.' })
+      setMessage({ kind: 'error', text: err instanceof Error ? err.message : 'Could not upload.' })
     }
   }
 
@@ -171,8 +171,8 @@ export default function CharacterEditor() {
   if (!doc)
     return (
       <div className="admin">
-        {message ? <p className="form-error">{message.text}</p> : <p className="loading">Зареждам…</p>}
-        <Link className="link" to="/admin">← Към списъка</Link>
+        {message ? <p className="form-error">{message.text}</p> : <p className="loading">Loading…</p>}
+        <Link className="link" to="/admin">← Back to the list</Link>
       </div>
     )
 
@@ -182,12 +182,12 @@ export default function CharacterEditor() {
   return (
     <div className="admin admin--editor">
       <header className="admin__bar">
-        <Link className="link" to="/admin" onClick={(e) => dirty && !window.confirm('Има незапазени промени. Да изляза ли?') && e.preventDefault()}>
-          ← Персонажи
+        <Link className="link" to="/admin" onClick={(e) => dirty && !window.confirm('You have unsaved changes. Leave anyway?') && e.preventDefault()}>
+          ← Characters
         </Link>
         <h1>
-          <span className="admin__code">{doc.code}</span> {doc.name || 'Нов персонаж'}
-          {dirty && <span className="admin__dirty" title="Незапазени промени">●</span>}
+          <span className="admin__code">{doc.code}</span> {doc.name || 'New character'}
+          {dirty && <span className="admin__dirty" title="Unsaved changes">●</span>}
         </h1>
         <div className="admin__actions">
           <label className="status-toggle">
@@ -196,12 +196,12 @@ export default function CharacterEditor() {
               checked={doc.status === 'Published'}
               onChange={(e) => update((d) => void (d.status = e.target.checked ? 'Published' : 'Draft'))}
             />
-            <span>{doc.status === 'Published' ? 'Публикуван' : 'Чернова'}</span>
+            <span>{doc.status === 'Published' ? 'Published' : 'Draft'}</span>
           </label>
-          {!isNew && <button className="btn btn--small" onClick={exportJson}>Експорт в JSON</button>}
-          {!isNew && <button className="btn btn--small btn--danger" onClick={remove}>Изтрий</button>}
+          {!isNew && <button className="btn btn--small" onClick={exportJson}>Export to JSON</button>}
+          {!isNew && <button className="btn btn--small btn--danger" onClick={remove}>Delete</button>}
           <button className="btn btn--small btn--primary" onClick={save} disabled={saving || validation.errors.length > 0}>
-            {saving ? 'Записвам…' : 'Запази (Ctrl+S)'}
+            {saving ? 'Saving…' : 'Save (Ctrl+S)'}
           </button>
         </div>
       </header>
@@ -220,39 +220,39 @@ export default function CharacterEditor() {
         <main className="editor__form">
           {tab === 'basic' && (
             <>
-              <Group title="Идентичност">
+              <Group title="Identity">
                 <div className="grid2">
-                  <Field label="Код" value={doc.code} onChange={(v) => update((d) => void (d.code = v.toUpperCase()))} disabled={!isNew} hint={isNew ? 'P.. за участник, H.. за домакин. Не се сменя след запис.' : undefined} />
+                  <Field label="Code" value={doc.code} onChange={(v) => update((d) => void (d.code = v.toUpperCase()))} disabled={!isNew} hint={isNew ? 'P.. for a participant, H.. for a host. Cannot be changed after saving.' : undefined} />
                   <label className="field">
-                    <span>Вид</span>
+                    <span>Kind</span>
                     <select value={doc.kind} disabled={!isNew} onChange={(e) => update((d) => {
                       d.kind = e.target.value as CharacterKind
                       d.host = d.kind === 'Host' ? (d.host ?? { generosity: 3, cruelty: 3, verbosity: 3, capriciousness: 3, partiality: 3 }) : null
                     })}>
-                      <option value="Participant">Участник на масата</option>
-                      <option value="Host">Домакин</option>
+                      <option value="Participant">Table participant</option>
+                      <option value="Host">Host</option>
                     </select>
                   </label>
-                  <Field label="Име" value={doc.name} onChange={(v) => update((d) => void (d.name = v))} />
-                  <Field label="Титла (на табелката)" value={doc.title} onChange={(v) => update((d) => void (d.title = v))} hint="Напр. „Надменният лорд“" />
-                  <Field label="Прякори" value={doc.nickname} onChange={(v) => update((d) => void (d.nickname = v))} />
-                  <Field label="Архетип" value={doc.archetype} onChange={(v) => update((d) => void (d.archetype = v))} />
-                  <Field label="Пол" value={doc.gender} onChange={(v) => update((d) => void (d.gender = v))} />
-                  <Field label="Възраст" value={doc.age} onChange={(v) => update((d) => void (d.age = v))} />
+                  <Field label="Name" value={doc.name} onChange={(v) => update((d) => void (d.name = v))} />
+                  <Field label="Title (on the nameplate)" value={doc.title} onChange={(v) => update((d) => void (d.title = v))} hint="E.g. “The Haughty Lord”" />
+                  <Field label="Nicknames" value={doc.nickname} onChange={(v) => update((d) => void (d.nickname = v))} />
+                  <Field label="Archetype" value={doc.archetype} onChange={(v) => update((d) => void (d.archetype = v))} />
+                  <Field label="Gender" value={doc.gender} onChange={(v) => update((d) => void (d.gender = v))} />
+                  <Field label="Age" value={doc.age} onChange={(v) => update((d) => void (d.age = v))} />
                   <label className="field">
-                    <span>Рядкост</span>
+                    <span>Rarity</span>
                     <select value={doc.rarity} onChange={(e) => update((d) => void (d.rarity = e.target.value as CharacterDoc['rarity']))}>
-                      <option value="Common">Common (бюджет 15)</option>
-                      <option value="Uncommon">Uncommon (бюджет 17)</option>
-                      <option value="Rare">Rare (бюджет 18)</option>
-                      <option value="Unique">Unique (без бюджет)</option>
+                      <option value="Common">Common (budget 15)</option>
+                      <option value="Uncommon">Uncommon (budget 17)</option>
+                      <option value="Rare">Rare (budget 18)</option>
+                      <option value="Unique">Unique (no budget)</option>
                     </select>
                   </label>
                   <Field
-                    label="Етикети"
+                    label="Tags"
                     value={doc.tags.join(', ')}
                     onChange={(v) => update((d) => void (d.tags = v.split(',').map((t) => t.trim()).filter(Boolean)))}
-                    hint={`Разделени със запетая. Напр.: ${tagSuggestions.join(', ')}`}
+                    hint={`Comma-separated. E.g.: ${tagSuggestions.join(', ')}`}
                   />
                 </div>
               </Group>
@@ -262,26 +262,26 @@ export default function CharacterEditor() {
 
           {tab === 'appearance' && (
             <>
-              <Group title="Портрет">
+              <Group title="Portrait">
                 <div className="portrait-editor">
                   <Portrait hue={Number(doc.appearance.portraitHue ?? 30)} host={isHost} code={doc.code} hasImage={hasPortrait} version={portraitVersion} />
                   <div className="portrait-editor__controls">
                     {isNew ? (
-                      <p className="muted">Запази персонажа, за да качиш портрет.</p>
+                      <p className="muted">Save the character before uploading a portrait.</p>
                     ) : (
                       <div className="row">
                         <label className="btn btn--small">
-                          {hasPortrait ? 'Смени портрета' : 'Качи портрет'}
+                          {hasPortrait ? 'Replace portrait' : 'Upload portrait'}
                           <input type="file" accept="image/png,image/jpeg,image/webp" hidden onChange={onPortrait} />
                         </label>
-                        {hasPortrait && <button className="btn btn--small" onClick={removePortrait}>Махни</button>}
+                        {hasPortrait && <button className="btn btn--small" onClick={removePortrait}>Remove</button>}
                       </div>
                     )}
                     <label className="field">
-                      <span>Оттенък на силуета (докато няма портрет): {doc.appearance.portraitHue ?? 30}</span>
+                      <span>Silhouette hue (until there is a portrait): {doc.appearance.portraitHue ?? 30}</span>
                       <input type="range" min={0} max={360} value={Number(doc.appearance.portraitHue ?? 30)} onChange={(e) => update((d) => void (d.appearance.portraitHue = Number(e.target.value)))} />
                     </label>
-                    <p className="muted">PNG, JPEG или WebP до 5 MB, портретен формат (5:6). Файлът се пази в content/portraits/.</p>
+                    <p className="muted">PNG, JPEG or WebP up to 5 MB, portrait format (5:6). Stored in content/portraits/.</p>
                   </div>
                 </div>
               </Group>
@@ -294,7 +294,7 @@ export default function CharacterEditor() {
 
           {tab === 'attributes' && (
             <>
-              <Group title={`Умения (1–5) — сума ${skillSum}${skillBudget ? ` / бюджет ${skillBudget}` : ''}`}>
+              <Group title={`Skills (1–5) — total ${skillSum}${skillBudget ? ` / budget ${skillBudget}` : ''}`}>
                 {skillBudget && (
                   <div className="budget">
                     <div className={`budget__bar ${skillSum === skillBudget ? 'budget__bar--ok' : skillSum > skillBudget ? 'budget__bar--over' : ''}`} style={{ width: `${Math.min(100, (skillSum / skillBudget) * 100)}%` }} />
@@ -304,13 +304,13 @@ export default function CharacterEditor() {
                   <Slider key={s.key} label={s.label} hint={s.hint} value={doc.skills[s.key]} onChange={(v) => update((d) => void (d.skills[s.key] = v))} />
                 ))}
               </Group>
-              <Group title="Подбуди (1–5, без бюджет — поне две крайни)">
+              <Group title="Drives (1–5, no budget — at least two extreme)">
                 {driveDefs.map((s) => (
                   <Slider key={s.key} label={s.label} value={doc.drives[s.key]} onChange={(v) => update((d) => void (d.drives[s.key] = v))} />
                 ))}
               </Group>
               {isHost && doc.host && (
-                <Group title="Атрибути на домакина (1–5)">
+                <Group title="Host attributes (1–5)">
                   {hostAttrDefs.map((s) => (
                     <Slider key={s.key} label={s.label} hint={'hint' in s ? s.hint : undefined} value={Number(doc.host![s.key] ?? 3)} onChange={(v) => update((d) => void (d.host![s.key] = v))} />
                   ))}
@@ -348,8 +348,8 @@ export default function CharacterEditor() {
         <aside className="editor__side">
           <Preview doc={doc} hasPortrait={hasPortrait} portraitVersion={portraitVersion} />
           <div className="checks">
-            <h3>Проверки</h3>
-            {validation.errors.length === 0 && validation.warnings.length === 0 && <p className="check check--ok">✓ Всички проверки минават.</p>}
+            <h3>Checks</h3>
+            {validation.errors.length === 0 && validation.warnings.length === 0 && <p className="check check--ok">✓ All checks pass.</p>}
             {validation.errors.map((e, i) => <p key={`e${i}`} className="check check--error">✕ {e}</p>)}
             {validation.warnings.map((w, i) => <p key={`w${i}`} className="check check--warn">⚠ {w}</p>)}
           </div>
@@ -437,43 +437,43 @@ function LinesEditor({ lines, isHost, update }: { lines: LineDoc[]; isHost: bool
   const defaultSituation = isHost ? 'IntroReplyWho' : 'FirstMeeting'
 
   return (
-    <Group title={`Реплики (${lines.length})`}>
-      <p className="muted">Въведението ползва: {isHost ? 'Първа среща, отговорите на трите избора, Раздаване на ролята, Повторна среща' : 'Домакинът го представя, Първа среща, Повторна среща'}.</p>
+    <Group title={`Lines (${lines.length})`}>
+      <p className="muted">The arrival uses: {isHost ? 'First meeting, the three replies, Role deal, Met again' : 'Host introduction, First meeting, Met again, Death'}.</p>
       {indexed.map(({ l, i }) => (
         <div key={i} className="line-row">
           <select value={l.situation} onChange={(e) => update((d) => void (d.lines[i].situation = e.target.value as LineDoc['situation']))}>
             {lineSituations.map((s) => <option key={s} value={s}>{situationLabel[s]}</option>)}
           </select>
-          <textarea rows={2} value={l.text} placeholder="Репликата…" onChange={(e) => update((d) => void (d.lines[i].text = e.target.value))} />
-          <input value={l.direction ?? ''} placeholder="Сценична бележка (по желание)" onChange={(e) => update((d) => void (d.lines[i].direction = e.target.value || null))} />
-          <button className="icon-btn" title="Махни" onClick={() => update((d) => void d.lines.splice(i, 1))}>✕</button>
+          <textarea rows={2} value={l.text} placeholder="The line…" onChange={(e) => update((d) => void (d.lines[i].text = e.target.value))} />
+          <input value={l.direction ?? ''} placeholder="Stage direction (optional)" onChange={(e) => update((d) => void (d.lines[i].direction = e.target.value || null))} />
+          <button className="icon-btn" title="Remove" onClick={() => update((d) => void d.lines.splice(i, 1))}>✕</button>
         </div>
       ))}
-      <button className="btn btn--small" onClick={() => update((d) => void d.lines.push({ situation: defaultSituation, text: '' }))}>+ Реплика</button>
+      <button className="btn btn--small" onClick={() => update((d) => void d.lines.push({ situation: defaultSituation, text: '' }))}>+ Line</button>
     </Group>
   )
 }
 
 function TellsEditor({ tells, update }: { tells: TellDoc[]; update: Update }) {
   return (
-    <Group title={`Издайнически знаци (${tells.length})`}>
-      <p className="muted">Видимо действие, вързано с вътрешно състояние. Първият видим знак се показва във въведението.</p>
+    <Group title={`Tells (${tells.length})`}>
+      <p className="muted">A visible action tied to an inner state. The first visible tell is shown in the arrival; Lying tells can flash when the character lies in Gifts.</p>
       {tells.map((t, i) => (
         <div key={i} className="tell-row">
           <select value={t.state} onChange={(e) => update((d) => void (d.tells[i].state = e.target.value as TellDoc['state']))}>
             {tellStates.map((s) => <option key={s} value={s}>{tellStateLabel[s]}</option>)}
           </select>
-          <input value={t.description} placeholder="Напр. „Върти монетата между кокалчетата си“" onChange={(e) => update((d) => void (d.tells[i].description = e.target.value))} />
-          <label className="check-inline" title="Може да го покаже и фалшиво (висока Хитрост)">
-            <input type="checkbox" checked={t.fakeable} onChange={(e) => update((d) => void (d.tells[i].fakeable = e.target.checked))} /> фалшив
+          <input value={t.description} placeholder="E.g. “Spins the coin between his knuckles”" onChange={(e) => update((d) => void (d.tells[i].description = e.target.value))} />
+          <label className="check-inline" title="Can show it falsely (high Cunning)">
+            <input type="checkbox" checked={t.fakeable} onChange={(e) => update((d) => void (d.tells[i].fakeable = e.target.checked))} /> fakeable
           </label>
-          <label className="check-inline" title="Вижда се от първата среща, без досие">
-            <input type="checkbox" checked={t.visibleWithoutDossier} onChange={(e) => update((d) => void (d.tells[i].visibleWithoutDossier = e.target.checked))} /> видим
+          <label className="check-inline" title="Visible from the first meeting, without the dossier">
+            <input type="checkbox" checked={t.visibleWithoutDossier} onChange={(e) => update((d) => void (d.tells[i].visibleWithoutDossier = e.target.checked))} /> visible
           </label>
-          <button className="icon-btn" title="Махни" onClick={() => update((d) => void d.tells.splice(i, 1))}>✕</button>
+          <button className="icon-btn" title="Remove" onClick={() => update((d) => void d.tells.splice(i, 1))}>✕</button>
         </div>
       ))}
-      <button className="btn btn--small" onClick={() => update((d) => void d.tells.push({ state: 'Habit', description: '', fakeable: false, visibleWithoutDossier: true }))}>+ Знак</button>
+      <button className="btn btn--small" onClick={() => update((d) => void d.tells.push({ state: 'Habit', description: '', fakeable: false, visibleWithoutDossier: true }))}>+ Tell</button>
     </Group>
   )
 }
@@ -481,21 +481,21 @@ function TellsEditor({ tells, update }: { tells: TellDoc[]; update: Update }) {
 function RelationsEditor({ relations, self, others, update }: { relations: RelationDoc[]; self: string; others: CharacterSummary[]; update: Update }) {
   const options = others.filter((o) => o.code !== self && o.kind === 'Participant')
   return (
-    <Group title={`Специални връзки (${relations.length})`}>
-      <p className="muted">Само връзки с история. Стойност от −100 (вражда) до +100 (съюз).</p>
+    <Group title={`Special relations (${relations.length})`}>
+      <p className="muted">Only relations with a story. Value from −100 (feud) to +100 (alliance).</p>
       {relations.map((r, i) => (
         <div key={i} className="relation-row">
           <select value={r.to} onChange={(e) => update((d) => void (d.relations[i].to = e.target.value))}>
-            <option value="">— избери —</option>
+            <option value="">— choose —</option>
             {options.map((o) => <option key={o.code} value={o.code}>{o.code} · {o.name}</option>)}
           </select>
           <input type="number" min={-100} max={100} value={r.value} onChange={(e) => update((d) => void (d.relations[i].value = Number(e.target.value)))} />
-          <input value={r.story} placeholder="История" onChange={(e) => update((d) => void (d.relations[i].story = e.target.value))} />
-          <input value={r.effect} placeholder="Ефект на масата" onChange={(e) => update((d) => void (d.relations[i].effect = e.target.value))} />
-          <button className="icon-btn" title="Махни" onClick={() => update((d) => void d.relations.splice(i, 1))}>✕</button>
+          <input value={r.story} placeholder="Story" onChange={(e) => update((d) => void (d.relations[i].story = e.target.value))} />
+          <input value={r.effect} placeholder="Effect at the table" onChange={(e) => update((d) => void (d.relations[i].effect = e.target.value))} />
+          <button className="icon-btn" title="Remove" onClick={() => update((d) => void d.relations.splice(i, 1))}>✕</button>
         </div>
       ))}
-      <button className="btn btn--small" onClick={() => update((d) => void d.relations.push({ to: '', value: 0, story: '', effect: '' }))}>+ Връзка</button>
+      <button className="btn btn--small" onClick={() => update((d) => void d.relations.push({ to: '', value: 0, story: '', effect: '' }))}>+ Relation</button>
     </Group>
   )
 }
@@ -508,7 +508,7 @@ function Preview({ doc, hasPortrait, portraitVersion }: { doc: CharacterDoc; has
 
   return (
     <div className="preview">
-      <h3>Преглед — на масата</h3>
+      <h3>Preview — at the table</h3>
       <div className="preview__seat">
         <Portrait hue={Number(doc.appearance.portraitHue ?? 30)} host={doc.kind === 'Host'} code={doc.code} hasImage={hasPortrait} version={portraitVersion} />
         <div className="nameplate">
@@ -518,14 +518,14 @@ function Preview({ doc, hasPortrait, portraitVersion }: { doc: CharacterDoc; has
       </div>
       {doc.kind === 'Participant' ? (
         <div className="preview__intro">
-          {hostIntro && <p className="preview__host">Домакинът: <q>{hostIntro.text}</q></p>}
+          {hostIntro && <p className="preview__host">The host: <q>{hostIntro.text}</q></p>}
           {first && <p><q>{first.text}</q>{first.direction && <small> ({first.direction})</small>}</p>}
           {gesture && <p className="gesture">*{gesture}*</p>}
         </div>
       ) : (
         <div className="preview__intro">{first && <p><q>{first.text}</q></p>}</div>
       )}
-      {doc.mechanics.strangeness && <p className="preview__strange"><span>Странното:</span> {String(doc.mechanics.strangeness)}</p>}
+      {doc.mechanics.strangeness && <p className="preview__strange"><span>The Strange:</span> {String(doc.mechanics.strangeness)}</p>}
     </div>
   )
 }

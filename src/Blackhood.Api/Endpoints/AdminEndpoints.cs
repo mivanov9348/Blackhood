@@ -1,4 +1,4 @@
-using Blackhood.Api.Characters;
+﻿using Blackhood.Api.Characters;
 using Blackhood.Data;
 using Blackhood.Data.Characters;
 using Microsoft.EntityFrameworkCore;
@@ -52,7 +52,7 @@ public static class AdminEndpoints
 
             var code = doc.Code.Trim().ToUpperInvariant();
             if (await db.Characters.AnyAsync(c => c.Code == code))
-                return Results.Conflict(new { message = $"Вече има персонаж с код {code}." });
+                return Results.Conflict(new { message = $"A character with code {code} already exists." });
 
             var entity = new Character();
             entity.ApplyDocument(doc);
@@ -70,7 +70,7 @@ public static class AdminEndpoints
         {
             code = code.ToUpperInvariant();
             if (!string.Equals(doc.Code.Trim(), code, StringComparison.OrdinalIgnoreCase))
-                return Results.BadRequest(new { message = "Кодът на персонажа не може да се сменя." });
+                return Results.BadRequest(new { message = "A character's code cannot be changed." });
 
             var validation = CharacterValidator.Validate(doc);
             if (!validation.IsValid) return Results.UnprocessableEntity(validation);
@@ -81,7 +81,7 @@ public static class AdminEndpoints
                 .FirstOrDefaultAsync(c => c.Code == code);
             if (entity is null) return Results.NotFound();
             if (entity.Version != doc.Version)
-                return Results.Conflict(new { message = "Някой друг е променил персонажа междувременно. Презареди страницата." });
+                return Results.Conflict(new { message = "Someone else changed this character in the meantime. Reload the page." });
 
             entity.ApplyDocument(doc);
             entity.ApplyRelations(doc, await db.Characters.ToDictionaryAsync(c => c.Code, c => c.Id));
@@ -128,9 +128,9 @@ public static class AdminEndpoints
         admin.MapPost("/characters/{code}/portrait", async (string code, IFormFile file, BlackhoodDbContext db, ContentPaths paths) =>
         {
             if (file.Length is 0 or > MaxPortraitBytes)
-                return Results.BadRequest(new { message = "Файлът трябва да е до 5 MB." });
+                return Results.BadRequest(new { message = "The file must be 5 MB or smaller." });
             if (!AllowedImageTypes.Contains(file.ContentType))
-                return Results.BadRequest(new { message = "Позволени са PNG, JPEG и WebP." });
+                return Results.BadRequest(new { message = "PNG, JPEG and WebP are allowed." });
 
             var entity = await db.Characters.Include(c => c.Assets).FirstOrDefaultAsync(c => c.Code == code.ToUpperInvariant());
             if (entity is null) return Results.NotFound();

@@ -4,7 +4,7 @@ import { Embers } from '../components/Embers'
 import { Portrait } from '../components/Portrait'
 import { useTypewriter } from '../components/useTypewriter'
 import { roleInfo } from '../game/text'
-import type { MatchView, OpponentView } from '../game/types'
+import type { GiftsResponse, GiftsView, SeatView } from '../game/types'
 import '../arrival.css'
 
 type Choice = 'who' | 'begin' | 'silent'
@@ -17,16 +17,17 @@ type Step =
   | { kind: 'role' }
 
 const choices: { id: Choice; label: string }[] = [
-  { id: 'who', label: '„Кой сте вие?“' },
-  { id: 'begin', label: '„Да започваме.“' },
-  { id: 'silent', label: '…мълчиш' },
+  { id: 'who', label: '“Who are you?”' },
+  { id: 'begin', label: '“Let’s begin.”' },
+  { id: 'silent', label: '…stay silent' },
 ]
 
 /**
- * The arrival scene: the door, the host, the four guests one by one, then the secret role.
+ * The arrival scene: the door, the host, the guests one by one, then the secret role.
  * Purely presentational — everything shown here is public except the player's own role.
  */
-export default function Arrival({ match, onDone }: { match: MatchView; onDone: (view: MatchView) => void }) {
+export default function Arrival({ match, onDone }: { match: GiftsView; onDone: (r: GiftsResponse) => void }) {
+  const guests = useMemo(() => match.players.filter((p) => !p.isMe), [match.players])
   const [step, setStep] = useState<Step>({ kind: 'door' })
   const [busy, setBusy] = useState(false)
 
@@ -34,7 +35,7 @@ export default function Arrival({ match, onDone }: { match: MatchView; onDone: (
     if (busy) return
     setBusy(true)
     try {
-      onDone(await api<MatchView>(`/api/singleplayer/matches/${match.id}/intro-complete`, { method: 'POST' }))
+      onDone(await api<GiftsResponse>(`/api/gifts/matches/${match.id}/intro-complete`, { method: 'POST' }))
     } catch {
       setBusy(false)
     }
@@ -48,14 +49,14 @@ export default function Arrival({ match, onDone }: { match: MatchView; onDone: (
         case 'reply':
           return { kind: 'guest', index: 0 }
         case 'guest':
-          return s.index + 1 < match.opponents.length ? { kind: 'guest', index: s.index + 1 } : { kind: 'role' }
+          return s.index + 1 < guests.length ? { kind: 'guest', index: s.index + 1 } : { kind: 'role' }
         default:
           return s
       }
     })
-  }, [match.opponents.length])
+  }, [guests.length])
 
-  const seated = step.kind === 'guest' ? match.opponents.slice(0, step.index) : step.kind === 'role' ? match.opponents : []
+  const seated = step.kind === 'guest' ? guests.slice(0, step.index) : step.kind === 'role' ? guests : []
 
   return (
     <div className={`arrival arrival--${step.kind}`}>
@@ -65,17 +66,17 @@ export default function Arrival({ match, onDone }: { match: MatchView; onDone: (
       <div className="vignette" />
 
       <button className="arrival__skip link" onClick={finishIntro} disabled={busy}>
-        Пропусни ›
+        Skip ›
       </button>
 
       {step.kind === 'door' && <Door onNext={next} />}
       {step.kind === 'host' && <HostGreeting match={match} onChoose={(choice) => setStep({ kind: 'reply', choice })} />}
       {step.kind === 'reply' && <HostReply match={match} choice={step.choice} onNext={next} />}
-      {step.kind === 'guest' && <GuestEntrance key={step.index} match={match} guest={match.opponents[step.index]} onNext={next} />}
+      {step.kind === 'guest' && <GuestEntrance key={step.index} match={match} guest={guests[step.index]} onNext={next} />}
       {step.kind === 'role' && <RoleDeal match={match} onSit={finishIntro} busy={busy} />}
 
       {seated.length > 0 && (
-        <div className="arrival__seated" aria-label="Вече седнали">
+        <div className="arrival__seated" aria-label="Already seated">
           {seated.map((o) => (
             <div key={o.seat} className="arrival__seated-guest">
               <Portrait hue={o.portraitHue} code={o.code} hasImage={o.hasPortrait} />
@@ -112,7 +113,7 @@ function useAdvance(done: boolean, finish: () => void, onNext: (() => void) | nu
 }
 
 function Door({ onNext }: { onNext: () => void }) {
-  const text = 'Страноприемницата не е на никоя карта. И все пак ти я намери.'
+  const text = 'The inn is on no map. And yet you found it.'
   const { shown, done, finish } = useTypewriter(text, 45)
   const advance = useAdvance(done, finish, onNext)
 
@@ -121,12 +122,12 @@ function Door({ onNext }: { onNext: () => void }) {
       <div className="rain" aria-hidden="true" />
       <div className="door__light" aria-hidden="true" />
       <p className="door__text">{shown}</p>
-      {done && <span className="hint">натисни, за да влезеш</span>}
+      {done && <span className="hint">click to step inside</span>}
     </div>
   )
 }
 
-function HostFigure({ match, small = false }: { match: MatchView; small?: boolean }) {
+function HostFigure({ match, small = false }: { match: GiftsView; small?: boolean }) {
   const h = match.host
   return (
     <div className={small ? 'host-figure host-figure--small' : 'host-figure'}>
@@ -134,13 +135,13 @@ function HostFigure({ match, small = false }: { match: MatchView; small?: boolea
       <Portrait hue={h.portraitHue} host code={h.code} hasImage={h.hasPortrait} />
       <div className="nameplate nameplate--host">
         <strong>{h.name}</strong>
-        <span>{h.title}</span>
+        <span>The host</span>
       </div>
     </div>
   )
 }
 
-function HostGreeting({ match, onChoose }: { match: MatchView; onChoose: (c: Choice) => void }) {
+function HostGreeting({ match, onChoose }: { match: GiftsView; onChoose: (c: Choice) => void }) {
   const { shown, done, finish } = useTypewriter(match.host.intro.greeting)
   useAdvance(done, finish, null)
 
@@ -159,7 +160,7 @@ function HostGreeting({ match, onChoose }: { match: MatchView; onChoose: (c: Cho
   )
 }
 
-function HostReply({ match, choice, onNext }: { match: MatchView; choice: Choice; onNext: () => void }) {
+function HostReply({ match, choice, onNext }: { match: GiftsView; choice: Choice; onNext: () => void }) {
   const i = match.host.intro
   const reply = choice === 'who' ? i.replyWho : choice === 'begin' ? i.replyBegin : i.replySilent
   const { shown, done, finish } = useTypewriter(reply)
@@ -168,15 +169,15 @@ function HostReply({ match, choice, onNext }: { match: MatchView; choice: Choice
   return (
     <div className="stage-center" onClick={advance}>
       <HostFigure match={match} />
-      <p className="player-said">Ти: {choices.find((c) => c.id === choice)!.label}</p>
+      <p className="player-said">You: {choices.find((c) => c.id === choice)!.label}</p>
       <Speech speaker={match.host.name} text={shown} />
       <CandleRow lit={done} total={match.totalCandles} />
-      {done && <span className="hint">Гостите пристигат…</span>}
+      {done && <span className="hint">The guests are arriving…</span>}
     </div>
   )
 }
 
-function GuestEntrance({ match, guest, onNext }: { match: MatchView; guest: OpponentView; onNext: () => void }) {
+function GuestEntrance({ match, guest, onNext }: { match: GiftsView; guest: SeatView; onNext: () => void }) {
   const intro = guest.intro!
   // Returning guests skip the host's introduction — they get a short greeting.
   const lines = useMemo(
@@ -198,7 +199,7 @@ function GuestEntrance({ match, guest, onNext }: { match: MatchView; guest: Oppo
           <strong>{guest.name}</strong>
           <span>{guest.title}</span>
         </div>
-        {guest.metBefore && <span className="badge">Срещали сте се</span>}
+        {guest.metBefore && <span className="badge">Met before</span>}
       </div>
 
       <Speech
@@ -208,12 +209,12 @@ function GuestEntrance({ match, guest, onNext }: { match: MatchView; guest: Oppo
         direction={!isHostLine && done ? intro.direction : null}
       />
       {!isHostLine && done && intro.gesture && <p className="gesture">*{intro.gesture.charAt(0).toLowerCase() + intro.gesture.slice(1)}*</p>}
-      {done && <span className="hint">{last ? 'следващ гост' : 'продължи'}</span>}
+      {done && <span className="hint">{last ? 'next guest' : 'continue'}</span>}
     </div>
   )
 }
 
-function RoleDeal({ match, onSit, busy }: { match: MatchView; onSit: () => void; busy: boolean }) {
+function RoleDeal({ match, onSit, busy }: { match: GiftsView; onSit: () => void; busy: boolean }) {
   const [flipped, setFlipped] = useState(false)
   const { shown, done, finish } = useTypewriter(match.host.intro.roleDeal)
   const role = roleInfo[match.me.role]
@@ -224,24 +225,24 @@ function RoleDeal({ match, onSit, busy }: { match: MatchView; onSit: () => void;
       <HostFigure match={match} small />
       <Speech speaker={match.host.name} text={shown} onClick={finish} />
 
-      <button className={flipped ? 'role-flip role-flip--open' : 'role-flip'} onClick={() => setFlipped(true)} disabled={!done || flipped} aria-label="Обърни картата">
+      <button className={flipped ? 'role-flip role-flip--open' : 'role-flip'} onClick={() => setFlipped(true)} disabled={!done || flipped} aria-label="Turn the card over">
         <span className="role-flip__inner">
-          <span className="role-flip__back">Тайна роля</span>
-          <span className="role-flip__front">
-            <small>Ти си</small>
+          <span className="role-flip__back">Secret role</span>
+          <span className={`role-flip__front role-flip__front--${match.me.role.toLowerCase()}`}>
+            <small>You are</small>
             <strong>{role.name}</strong>
             <em>{role.goal}</em>
-            <span>{role.skill}</span>
+            <span>{role.hint}</span>
           </span>
         </span>
       </button>
 
       {flipped ? (
         <button className="btn btn--primary" onClick={onSit} disabled={busy}>
-          Седни на масата
+          Take your seat
         </button>
       ) : (
-        done && <span className="hint">обърни картата</span>
+        done && <span className="hint">turn the card over</span>
       )}
     </div>
   )

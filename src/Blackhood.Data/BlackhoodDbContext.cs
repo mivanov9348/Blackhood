@@ -19,11 +19,14 @@ public sealed class BlackhoodDbContext(DbContextOptions<BlackhoodDbContext> opti
     {
         base.OnModelCreating(builder);
 
+        builder.Entity<AppUser>().Property(u => u.Gold).HasDefaultValue(AppUser.StartingGold);
+
         builder.Entity<MatchRecord>(e =>
         {
             e.HasKey(m => m.Id);
             e.Property(m => m.Mode).HasConversion<string>().HasMaxLength(20);
             e.Property(m => m.StateJson).IsRequired();
+            e.Property(m => m.Game).HasMaxLength(20).HasDefaultValue(GameKinds.Legacy);
             e.HasOne(m => m.User)
                 .WithMany(u => u.Matches)
                 .HasForeignKey(m => m.UserId)

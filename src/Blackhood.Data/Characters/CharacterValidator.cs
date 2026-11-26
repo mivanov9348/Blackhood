@@ -8,12 +8,12 @@ public sealed record ValidationResult(IReadOnlyList<string> Errors, IReadOnlyLis
 }
 
 /// <summary>
-/// Errors block saving. Warnings are the design checks from concept v0.4 ("Проверки преди
-/// персонажът да влезе в играта") — shown in the editor, but the author decides.
+/// Errors block saving. Warnings are the design checks from the concept ("checks before a
+/// character enters the game") — shown in the editor, but the author decides.
 /// </summary>
 public static partial class CharacterValidator
 {
-    /// <summary>Skill budget per rarity (concept: Обикновен 15 / Опасен 17 / Елитен 18). Unique = no budget.</summary>
+    /// <summary>Skill budget per rarity (Common 15 / Uncommon 17 / Rare 18). Unique = no budget.</summary>
     public static int? SkillBudget(Rarity rarity) => rarity switch
     {
         Rarity.Common => 15,
@@ -31,47 +31,51 @@ public static partial class CharacterValidator
         var warnings = new List<string>();
 
         if (!CodePattern().IsMatch(d.Code.Trim().ToUpperInvariant()))
-            errors.Add("Кодът трябва да е P или H + 2–3 цифри (напр. P14, H06).");
+            errors.Add("The code must be P or H followed by 2–3 digits (e.g. P14, H06).");
         else if (d.Code.Trim().ToUpperInvariant()[0] != (d.Kind == CharacterKind.Host ? 'H' : 'P'))
-            errors.Add("Участниците са с код P.., домакините — с H..");
-        if (string.IsNullOrWhiteSpace(d.Name)) errors.Add("Името е задължително.");
-        if (string.IsNullOrWhiteSpace(d.Title)) errors.Add("Титлата (прякорът на табелката) е задължителна.");
+            errors.Add("Participants use P.. codes, hosts use H.. codes.");
+        if (string.IsNullOrWhiteSpace(d.Name)) errors.Add("The name is required.");
+        if (string.IsNullOrWhiteSpace(d.Title)) errors.Add("The title (shown on the nameplate) is required.");
 
         var skills = new[] { d.Skills.Insight, d.Skills.Calculation, d.Skills.Cunning, d.Skills.Charisma, d.Skills.Composure };
         var drives = new[] { d.Drives.Greed, d.Drives.Boldness, d.Drives.Loyalty, d.Drives.Revenge, d.Drives.Patience, d.Drives.Ambition, d.Drives.Pride, d.Drives.FearOfLoss };
         if (skills.Concat(drives).Any(v => v is < 1 or > 5))
-            errors.Add("Уменията и подбудите са между 1 и 5.");
+            errors.Add("Skills and drives must be between 1 and 5.");
         if (d.Host is { } h && new[] { h.Generosity, h.Cruelty, h.Verbosity, h.Capriciousness, h.Partiality }.Any(v => v is < 1 or > 5))
-            errors.Add("Атрибутите на домакина са между 1 и 5.");
+            errors.Add("Host attributes must be between 1 and 5.");
         if (d.Appearance.PortraitHue is < 0 or > 360)
-            errors.Add("Оттенъкът на портрета е 0–360.");
+            errors.Add("The portrait hue must be 0–360.");
 
         if (d.Kind == CharacterKind.Participant)
         {
             if (SkillBudget(d.Rarity) is { } budget && skills.Sum() != budget)
-                warnings.Add($"Сумата на уменията е {skills.Sum()}, а бюджетът за {d.Rarity} е {budget}.");
+                warnings.Add($"Skills add up to {skills.Sum()}; the {d.Rarity} budget is {budget}.");
             if (!skills.Any(v => v <= 2))
-                warnings.Add("Няма умение ≤ 2 — всеки персонаж трябва да има слабост.");
+                warnings.Add("No skill at 2 or below — every character needs a weakness.");
             if (d.Rarity == Rarity.Common && skills.Count(v => v == 5) > 1)
-                warnings.Add("Common персонаж има повече от едно умение на 5.");
+                warnings.Add("A Common character has more than one skill at 5.");
             if (drives.Count(v => v is 1 or 5) < 2)
-                warnings.Add("По-малко от две подбуди са крайни (1 или 5) — персонажът няма личност.");
+                warnings.Add("Fewer than two drives are extreme (1 or 5) — the character has no personality.");
             if (d.Tells.Count == 0)
-                warnings.Add("Няма издайнически знаци.");
+                warnings.Add("No tells.");
             else if (d.Rarity != Rarity.Rare && !d.Tells.Any(t => t.VisibleWithoutDossier))
-                warnings.Add("Поне един знак трябва да се вижда без досие.");
+                warnings.Add("At least one tell should be visible without the dossier.");
+            if (!d.Tells.Any(t => t.State == TellState.Lying))
+                warnings.Add("No 'Lying' tell — in Gifts the table can never catch this character lying.");
             if (!d.Lines.Any(l => l.Situation == LineSituation.FirstMeeting))
-                warnings.Add("Липсва реплика за първа среща (нужна за въведението).");
+                warnings.Add("Missing a first-meeting line (needed for the arrival).");
             if (!d.Lines.Any(l => l.Situation == LineSituation.HostIntroduction))
-                warnings.Add("Липсва реплика, с която домакинът го представя.");
+                warnings.Add("Missing the line the host introduces them with.");
+            if (!d.Lines.Any(l => l.Situation == LineSituation.Death))
+                warnings.Add("Missing a death line.");
             if (string.IsNullOrWhiteSpace(d.Mechanics.Strangeness))
-                warnings.Add("„Странното“ не е попълнено.");
+                warnings.Add("'The Strange' is empty.");
         }
         else
         {
             foreach (var s in new[] { LineSituation.FirstMeeting, LineSituation.IntroReplyWho, LineSituation.IntroReplyBegin, LineSituation.IntroReplySilent, LineSituation.RoleDeal })
                 if (!d.Lines.Any(l => l.Situation == s))
-                    warnings.Add($"Домакинът няма реплика за {s} (нужна за въведението).");
+                    warnings.Add($"The host has no {s} line (needed for the arrival).");
         }
 
         return new ValidationResult(errors, warnings);

@@ -2,11 +2,11 @@
   "code": "P09",
   "kind": "Participant",
   "name": "Robin Sallow",
-  "title": "Поклонникът",
-  "nickname": "Поклонникът; „Брат Робин“",
-  "gender": "Мъж",
+  "title": "The Pilgrim",
+  "nickname": "The Pilgrim; \"Brother Robin\"",
+  "gender": "Male",
   "age": "34",
-  "archetype": "Социален манипулатор",
+  "archetype": "Social manipulator",
   "rarity": "Uncommon",
   "status": "Published",
   "tags": [
@@ -31,124 +31,128 @@
     "fearOfLoss": 2
   },
   "origin": {
-    "birthplace": "Твърди, че е от манастир на север. Всъщност е от Солтмарш",
-    "socialStatus": "Пътуващ поклонник и проповедник, живее от милостиня",
-    "profession": "Странстващ проповедник, разказвач на притчи и истории за чудеса"
+    "birthplace": "Claims to come from a monastery in the north. Actually from Saltmarsh",
+    "socialStatus": "A wandering pilgrim and preacher, lives on alms",
+    "profession": "Wandering preacher, teller of parables and miracle stories"
   },
   "appearance": {
-    "face": "Кротко, мило лице, широка усмивка, „добри“ очи",
-    "hairAndEyes": "Светлокестенява коса, къса брада, сини очи",
-    "clothing": "Прост сив плащ на поклонник, тояга, дървен медальон със светец",
-    "build": "Строен, леко приведен, „смирен“",
-    "gestures": "Благославя всички; докосва медальона, когато преувеличава",
-    "voice": "Мек, топъл, убедителен глас",
-    "firstImpression": "Добродушен, свят човек, на когото всеки би се изповядал",
-    "artistNotes": "дървеният медальон е изтъркан от докосване; под плаща носи хубави кожени ботуши, които не подхождат на скромния му вид.",
+    "face": "A meek, kind face, a broad smile, \"good\" eyes",
+    "hairAndEyes": "Light brown hair, short beard, blue eyes",
+    "clothing": "A simple grey pilgrim's cloak, a staff, a wooden medallion of a saint",
+    "build": "Slim, slightly stooped, \"humble\"",
+    "gestures": "Blesses everyone; touches the medallion when he exaggerates",
+    "voice": "A soft, warm, persuasive voice",
+    "firstImpression": "A good-natured, holy man anyone would confess to",
+    "artistNotes": "The wooden medallion is worn smooth from touching; under the cloak he wears fine leather boots that do not suit his humble look.",
     "portraitHue": 100
   },
   "backstory": {
-    "biography": "Робин е израснал в Солтмарш като син на бедна перачка. Рано разбира, че хората дават повече на свят човек, отколкото на бедно дете. Облича плащ на поклонник и тръгва по пътищата да разказва притчи и истории за чудеса. Вярата му е наполовина истинска, наполовина роля, и отдавна сам не знае коя половина е по-голяма.",
-    "whyHere": "Пари и публика. Масата е пълна с хора, които имат какво да губят и имат нужда някой да ги утеши.",
-    "secret": "Че е от Солтмарш, че обича удобствата повече, отколкото проповядва, и че понякога сам вярва в историите си."
+    "biography": "Robin grew up in Saltmarsh, the son of a poor washerwoman. He learned early that people give more to a holy man than to a poor child. He put on a pilgrim's cloak and took to the roads telling parables and miracle stories. His faith is half real, half role, and he has long stopped knowing which half is larger.",
+    "whyHere": "Money and an audience. The table is full of people with something to lose who need someone to comfort them.",
+    "secret": "That he is from Saltmarsh, that he loves comfort more than he preaches, and that sometimes he believes his own stories."
   },
   "psychology": {
-    "coreTrait": "Чар",
-    "secondTrait": "Лицемерие",
-    "weakness": "Вярва прекалено много в собствените си истории",
-    "fear": "Да бъде разкрит публично",
-    "desire": "Да живее богато, но да продължи да бъде обичан като светец",
-    "angers": "Да бъде разобличен",
-    "regret": "Майка си, която е изоставил",
-    "moralLimits": "Не наранява физически",
-    "neverWould": "Да признае лъжа доброволно",
-    "wouldForReward": "Да изиграе всеки, дори приятел"
+    "coreTrait": "Charm",
+    "secondTrait": "Hypocrisy",
+    "weakness": "Believes his own stories far too much",
+    "fear": "Being exposed in public",
+    "desire": "To live richly and still be loved like a saint",
+    "angers": "Being unmasked",
+    "regret": "His mother, whom he abandoned",
+    "moralLimits": "Does not hurt anyone physically",
+    "neverWould": "Admit a lie voluntarily",
+    "wouldForReward": "Play anyone, even a friend"
   },
   "behavior": {
-    "style": "Социален / манипулативен",
-    "stakes": "Умерени, представя ги като „Божия воля“",
-    "deception": "Изкуство на живота",
-    "debts": "Взема и рядко връща",
-    "alliances": "Създава ги лесно, предава ги лесно",
-    "whenAttacks": "Когато жертвата е емоционално уязвима",
-    "whenRetreats": "Когато някой започне да го разпитва",
-    "onLoss": "„Божия воля“",
-    "onWin": "„Благословия“",
-    "strategyChange": "Ако бъде разкрит"
+    "style": "Social / manipulative",
+    "stakes": "Moderate; presents them as \"God's will\"",
+    "deception": "The art of living",
+    "debts": "Takes and rarely repays",
+    "alliances": "Makes them easily, betrays them easily",
+    "whenAttacks": "When the victim is emotionally vulnerable",
+    "whenRetreats": "When someone starts questioning him",
+    "onLoss": "\"God's will\"",
+    "onWin": "\"A blessing\"",
+    "strategyChange": "If he is exposed"
   },
   "motives": {
-    "publicGoal": "Да „благослови“ масата",
-    "hiddenGoal": "Да спечели доверието и парите на най-богатия и уплашен човек на масата",
-    "personalReason": "Пари",
-    "betrayalTrigger": "Винаги, ако се появи по-голяма жертва",
-    "helpTrigger": "Ако помощта изгради образа му"
+    "publicGoal": "To \"bless\" the table",
+    "hiddenGoal": "To win the trust and money of the richest, most frightened person at the table",
+    "personalReason": "Money",
+    "betrayalTrigger": "Always, if a bigger victim appears",
+    "helpTrigger": "If helping builds his image"
   },
   "speech": {
-    "register": "Мек, религиозен, изпълнен с притчи",
-    "favoriteWords": "„Братко“, „сестро“, „Божия воля“",
-    "avoidedTopics": "Произхода си, Солтмарш",
-    "howLies": "С пълно убеждение и пресилена искреност",
-    "angerAndFear": "Гневът се появява като „свещен гняв“; при страх се моли"
+    "register": "Soft, religious, full of parables",
+    "favoriteWords": "\"Brother\", \"sister\", \"God's will\"",
+    "avoidedTopics": "His origins, Saltmarsh",
+    "howLies": "With full conviction and exaggerated sincerity",
+    "angerAndFear": "Anger comes out as \"holy wrath\"; when afraid he prays"
   },
   "mechanics": {
-    "strangeness": "Свещите до него горят по-ярко, когато лъже, и по-тъмно, когато казва истината.",
-    "principle": "Да признае лъжа доброволно",
-    "temptation": "Вярва прекалено много в собствените си истории",
-    "ability": "Благословия: веднъж на партия отменя едно обвинение срещу себе си на Масата.",
-    "hostRelation": "Невежество — вярва, че може да „покръсти“ домакина."
+    "strangeness": "The candles near him burn brighter when he lies, and dimmer when he tells the truth.",
+    "principle": "Admit a lie voluntarily",
+    "temptation": "Believes his own stories far too much",
+    "ability": "Blessing: once per evening he turns away one gift sent to him, without a door.",
+    "hostRelation": "Ignorance — he believes he can convert the host."
   },
   "authorNotes": {
-    "distinctive": "Чаровен лицемер в одеждите на светец. Не знаеш кога вярва и кога играе.",
-    "immutable": "Лицемерието, чарът и благословиите.",
-    "tunable": "Колко убедителен е и колко лесно го разобличават."
+    "distinctive": "A charming hypocrite in a saint's robes. You never know when he believes and when he plays.",
+    "immutable": "The hypocrisy, the charm and the blessings.",
+    "tunable": "How convincing he is and how easily he is unmasked."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Мир вам, братя и сестри. Аз съм само скромен пътник."
+      "text": "Peace be with you, brothers and sisters. I am only a humble traveller."
     },
     {
       "situation": "Win",
-      "text": "Благословия! Небесата бяха с мен."
+      "text": "A blessing! Heaven was with me."
     },
     {
       "situation": "Loss",
-      "text": "Божия воля. Приемам смирено."
+      "text": "God's will. I accept it humbly."
     },
     {
       "situation": "Accused",
-      "text": "Как може... аз съм само беден поклонник!"
+      "text": "How could… I am only a poor pilgrim!"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюзът е свещено нещо, братко."
+      "text": "An alliance is a sacred thing, brother."
     },
     {
       "situation": "Betrayal",
-      "text": "Ще се моля за душата ти."
+      "text": "I shall pray for your soul."
     },
     {
       "situation": "BigBet",
-      "text": "Небесата ще решат."
+      "text": "Heaven will decide."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Брат Робин, поклонник. Обиколил е всички светилища на кралството… поне в разказите си."
+      "text": "Brother Robin, a pilgrim. He has visited every shrine in the kingdom… at least in his stories."
     },
     {
       "situation": "MetAgain",
-      "text": "Мир вам отново, братко. Небето ни събира пак."
+      "text": "Peace be with you again, brother. Heaven brings us together once more."
+    },
+    {
+      "situation": "Death",
+      "text": "Now… I will find out… whether it was true."
     }
   ],
   "tells": [
     {
       "state": "Lying",
-      "description": "Докосва дървения медальон, когато преувеличава",
+      "description": "Touches his wooden medallion when he exaggerates",
       "fakeable": true,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Благославя всички",
+      "description": "Blesses everyone",
       "fakeable": false,
       "visibleWithoutDossier": true
     }

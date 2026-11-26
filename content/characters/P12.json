@@ -2,11 +2,11 @@
   "code": "P12",
   "kind": "Participant",
   "name": "Godfrey Mott",
-  "title": "Скръндзата",
-  "nickname": "Скръндзата; „Стария Мот“",
-  "gender": "Мъж",
+  "title": "The Miser",
+  "nickname": "The Miser; \"Old Mott\"",
+  "gender": "Male",
   "age": "68",
-  "archetype": "Алчен",
+  "archetype": "Greedy",
   "rarity": "Rare",
   "status": "Published",
   "tags": [
@@ -31,125 +31,135 @@
     "fearOfLoss": 5
   },
   "origin": {
-    "birthplace": "Солтмарш",
-    "socialStatus": "Един от най-богатите хора в региона, но живее като просяк",
-    "profession": "Лихвар, кредитор на половината град, собственик на къщи и земи"
+    "birthplace": "Saltmarsh",
+    "socialStatus": "One of the richest men in the region, yet lives like a beggar",
+    "profession": "Moneylender, creditor to half the town, owner of houses and land"
   },
   "appearance": {
-    "face": "Сбръчкано, сиво лице, хлътнали бузи, малки остри очи, които следят всяка монета",
-    "hairAndEyes": "Рядка сива коса, неподдържана брада, воднисто-сиви очи",
-    "clothing": "Износено, многократно кърпено палто; в подплатата е зашита кесия и папка с документи",
-    "build": "Слаб, прегърбен, сякаш пази нещо под мишница",
-    "gestures": "Брои монети, дори когато не е негов ход; трепери и мляска, когато трябва да плати",
-    "voice": "Скърцащ, тих глас; често въздиша и се оплаква от бедност",
-    "firstImpression": "Беден старец, който сякаш ще умре от глад, докато не започне да говори за пари",
-    "artistNotes": "в подплатата на палтото си носи папка с полици и записи за дългове, заедно с медальон с портрет на покойната си дъщеря.",
+    "face": "A wrinkled grey face, sunken cheeks, small sharp eyes that follow every coin",
+    "hairAndEyes": "Thin grey hair, an unkempt beard, watery grey eyes",
+    "clothing": "A worn coat patched many times; a purse and a folder of papers sewn into the lining",
+    "build": "Thin, hunched, as if guarding something under his arm",
+    "gestures": "Counts coins even when it is not his turn; trembles and smacks his lips when he has to pay",
+    "voice": "A creaky, quiet voice; sighs often and complains of poverty",
+    "firstImpression": "A poor old man who seems about to starve — until he starts talking about money",
+    "artistNotes": "In his coat lining he carries a folder of bonds and debt records, along with a locket holding a portrait of his late daughter.",
     "portraitHue": 75
   },
   "backstory": {
-    "biography": "Годфри започва като беден чирак при лихвар и натрупва богатство заем след заем, лихва след лихва. Има пари да купи половин град, но живее в студена стая и яде хляб и лук. Половината град му дължи пари, а другата половина се надява никога да не му дължи. Не вярва на банки, на сейфове и на хора, затова носи най-важните си документи у себе си.",
-    "whyHere": "Някой му е казал, че тук може да „удвои всичко“. Не вярва, но не може да понесе мисълта, че някой друг ще го направи вместо него.",
-    "secret": "Че дъщеря му е умряла от треска, защото той не е искал да плати за лекар. Медальонът ѝ е единственото, което не би продал за никаква цена."
+    "biography": "Godfrey started as a poor apprentice to a moneylender and built his fortune loan by loan, interest by interest. He could buy half the town but lives in a cold room eating bread and onions. Half the town owes him money and the other half hopes it never will. He trusts no banks, no safes and no people, so he carries his most important papers on him.",
+    "whyHere": "Someone told him he could \"double everything\" here. He doesn't believe it, but cannot bear the thought of someone else doing it instead.",
+    "secret": "That his daughter died of fever because he would not pay for a doctor. Her locket is the one thing he would never sell at any price."
   },
   "psychology": {
-    "coreTrait": "Алчност",
-    "secondTrait": "Подозрителност",
-    "weakness": "Изпитва физическа болка, когато трябва да плати, и затова пропуска добри възможности",
-    "fear": "Да умре беден",
-    "desire": "Да притежава всичко и всички",
-    "angers": "Длъжници, които не плащат, и прахосници",
-    "regret": "Смъртта на дъщеря си",
-    "moralLimits": "Спазва буквата на всеки договор",
-    "neverWould": "Да опрости дълг",
-    "wouldForReward": "Почти всичко, но само срещу документ"
+    "coreTrait": "Greed",
+    "secondTrait": "Suspicion",
+    "weakness": "Feels physical pain when he has to pay, and so misses good chances",
+    "fear": "Dying poor",
+    "desire": "To own everything and everyone",
+    "angers": "Debtors who don't pay, and spendthrifts",
+    "regret": "His daughter's death",
+    "moralLimits": "Keeps to the letter of every contract",
+    "neverWould": "Forgive a debt",
+    "wouldForReward": "Almost anything, but only against a signed paper"
   },
   "behavior": {
-    "style": "Защитен / пресметлив",
-    "stakes": "Малки и сигурни. Голям залог само ако противникът е отчаян",
-    "deception": "Приема я, ако е изгодна и законна на хартия",
-    "debts": "Обича ги, стига да са чужди. Има точен запис на всеки дълг",
-    "alliances": "Рядко. Съюзи само срещу лихва или документ",
-    "whenAttacks": "Когато противник е слаб и изложен",
-    "whenRetreats": "Когато трябва да плати повече от планираното",
-    "onLoss": "Стене, оплаква се и иска разсрочване",
-    "onWin": "Тихо доволен. Веднага пресмята лихвата",
-    "strategyChange": "Опасност да загуби повече от една трета от богатството си"
+    "style": "Defensive / calculating",
+    "stakes": "Small and safe. Big only if the opponent is desperate",
+    "deception": "Accepts it if it profits and is legal on paper",
+    "debts": "Loves them — as long as they are others'. Keeps an exact record of every one",
+    "alliances": "Rare. Only against interest or a signed paper",
+    "whenAttacks": "When an opponent is weak and exposed",
+    "whenRetreats": "When he has to pay more than planned",
+    "onLoss": "Groans, complains and asks for a deferral",
+    "onWin": "Quietly pleased. Immediately calculates the interest",
+    "strategyChange": "The danger of losing more than a third of his wealth"
   },
   "motives": {
-    "publicGoal": "Да спечели и да даде някой заем с добра лихва",
-    "hiddenGoal": "Да умножи парите си, без да рискува нищо свое",
-    "personalReason": "Алчност, но и страх. Парите са единственото, което му дава чувство за сигурност",
-    "betrayalTrigger": "Ако съюзникът стане по-скъп, отколкото полезен",
-    "helpTrigger": "Само срещу лихва или ако някой засегне спомена за дъщеря му"
+    "publicGoal": "To win and make a loan at good interest",
+    "hiddenGoal": "To multiply his money without risking anything of his own",
+    "personalReason": "Greed, but also fear. Money is the only thing that makes him feel safe",
+    "betrayalTrigger": "If an ally becomes more expensive than useful",
+    "helpTrigger": "Only against interest — or if someone touches the memory of his daughter"
   },
   "speech": {
-    "register": "Скърцащ, дребнав, пълен с числа",
-    "favoriteWords": "„Колко?“, „парите ми“, „падеж“",
-    "avoidedTopics": "Дъщеря си, разходите си",
-    "howLies": "Жалостиво. Представя се за беден",
-    "angerAndFear": "Трепери, гласът му изтънява. При гняв говори за лихви"
+    "register": "Creaky, petty, full of numbers",
+    "favoriteWords": "\"How much?\", \"my money\", \"due date\"",
+    "avoidedTopics": "His daughter, his expenses",
+    "howLies": "Pitifully. Pretends to be poor",
+    "angerAndFear": "Trembles, his voice thins. When angry he talks about interest"
   },
   "mechanics": {
-    "strangeness": "Монетите в кесията му звънтят, дори когато не помръдва — сякаш се броят сами.",
-    "principle": "Не опрощава дълг.",
-    "temptation": "Изпитва физическа болка, когато трябва да плати, и затова пропуска добри възможности",
-    "ability": "Заем: дава 2 злато сега; връщаш 3 в края, или домакинът ти взима карта.",
-    "hostRelation": "Дълг — единственият длъжник, когото Годфри се страхува да не му платят."
+    "strangeness": "The coins in his purse jingle even when he is perfectly still — as if they were counting themselves.",
+    "principle": "Never forgives a debt.",
+    "temptation": "Feels physical pain when he has to pay, and so misses good chances",
+    "ability": "Loan: gives 2 gold now; you repay 3 at the end, or the host takes one of your cards.",
+    "hostRelation": "Debt — the only debtor Godfrey is afraid will not pay him."
   },
   "authorNotes": {
-    "distinctive": "Алчен старец с една човешка слабост: медальона на дъщеря си.",
-    "immutable": "Пестеливостта и медальонът.",
-    "tunable": "Колко скъпо дава заеми и колко лесно рискува."
+    "distinctive": "A greedy old man with one human weakness: his daughter's locket.",
+    "immutable": "The stinginess and the locket.",
+    "tunable": "How dearly he lends and how easily he risks."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Годфри Мот. Не очаквайте подаръци. Нито черпене."
+      "text": "Godfrey Mott. Don't expect gifts. Or drinks."
     },
     {
       "situation": "Win",
-      "text": "Хм. Добре. Добре... Пет процента. Не, шест."
+      "text": "Hm. Good. Good… Five percent. No, six."
     },
     {
       "situation": "Loss",
-      "text": "Ох! Ох, парите ми! Това е кражба!"
+      "text": "Oh! Oh, my money! This is robbery!"
     },
     {
       "situation": "Accused",
-      "text": "Аз? Аз съм беден старец! Вижте ми палтото!"
+      "text": "Me? I'm a poor old man! Look at my coat!"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? Колко ще ми струва? И колко ще ми платите вие?"
+      "text": "An alliance? What will it cost me? And how much will you pay me?"
     },
     {
       "situation": "Betrayal",
-      "text": "Ще ми платите. Всички плащат накрая."
+      "text": "You will pay. Everyone pays in the end."
     },
     {
       "situation": "BigBet",
-      "text": "Не... твърде много е... Добре. Но само веднъж."
+      "text": "No… it's too much… All right. But only once."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Годфри Мот. Има полица за всеки в Солтмарш — и вероятно за някой от вас."
+      "text": "Godfrey Mott. He holds a bond on everyone in Saltmarsh — and probably on one of you."
     },
     {
       "situation": "MetAgain",
-      "text": "Пак ти. Дължиш ли ми нещо? Сигурно."
+      "text": "You again. Do you owe me something? Probably."
+    },
+    {
+      "situation": "Death",
+      "text": "My… locket… don't let them…"
     }
   ],
   "tells": [
     {
       "state": "Afraid",
-      "description": "Трепери и мляска, когато трябва да плати",
+      "description": "Trembles and smacks his lips when he has to pay",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Брои монети, дори когато не е негов ход",
+      "description": "Counts coins even when it is not his turn",
       "fakeable": false,
+      "visibleWithoutDossier": true
+    },
+    {
+      "state": "Lying",
+      "description": "Complains about his poverty even louder",
+      "fakeable": true,
       "visibleWithoutDossier": true
     }
   ],

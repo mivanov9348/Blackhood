@@ -34,35 +34,35 @@ export default function CharacterList() {
   async function exportAll() {
     try {
       const r = await api<{ count: number }>('/api/admin/characters/export-all', { method: 'POST' })
-      setMessage(`Експортирани ${r.count} персонажа в content/characters/.`)
+      setMessage(`Exported ${r.count} characters to content/characters/.`)
     } catch (e) {
-      setMessage(e instanceof Error ? e.message : 'Грешка при експорта.')
+      setMessage(e instanceof Error ? e.message : 'Could not export.')
     }
   }
 
   return (
     <div className="admin">
       <header className="admin__bar">
-        <Link className="link" to="/">← Меню</Link>
-        <h1>Персонажи</h1>
+        <Link className="link" to="/">← The hall</Link>
+        <h1>Characters</h1>
         <div className="admin__actions">
-          <button className="btn btn--small" onClick={exportAll}>Експорт на всички в JSON</button>
-          <button className="btn btn--small" onClick={() => navigate(`/admin/characters/new?kind=Host&code=${nextCode('Host')}`)}>+ Домакин</button>
-          <button className="btn btn--small btn--primary" onClick={() => navigate(`/admin/characters/new?kind=Participant&code=${nextCode('Participant')}`)}>+ Участник</button>
+          <button className="btn btn--small" onClick={exportAll}>Export all to JSON</button>
+          <button className="btn btn--small" onClick={() => navigate(`/admin/characters/new?kind=Host&code=${nextCode('Host')}`)}>+ Host</button>
+          <button className="btn btn--small btn--primary" onClick={() => navigate(`/admin/characters/new?kind=Participant&code=${nextCode('Participant')}`)}>+ Participant</button>
         </div>
       </header>
 
       <div className="admin__filters">
         {(['all', 'Participant', 'Host'] as Filter[]).map((f) => (
           <button key={f} className={filter === f ? 'tab tab--active' : 'tab'} onClick={() => setFilter(f)}>
-            {f === 'all' ? 'Всички' : f === 'Host' ? 'Домакини' : 'Участници'}
+            {f === 'all' ? 'All' : f === 'Host' ? 'Hosts' : 'Participants'}
           </button>
         ))}
-        <input className="admin__search" placeholder="Търси по код, име, титла…" value={query} onChange={(e) => setQuery(e.target.value)} />
+        <input className="admin__search" placeholder="Search by code, name, title…" value={query} onChange={(e) => setQuery(e.target.value)} />
       </div>
 
       {message && <p className="admin__message">{message}</p>}
-      {!items && !message && <p className="loading">Зареждам…</p>}
+      {!items && !message && <p className="loading">Loading…</p>}
 
       <div className="char-grid">
         {shown.map((c) => (
@@ -74,8 +74,8 @@ export default function CharacterList() {
               <span className="char-tile__title">{c.title}</span>
               <div className="char-tile__meta">
                 <span className={`pill pill--${c.rarity.toLowerCase()}`}>{c.rarity}</span>
-                <span className={c.status === 'Published' ? 'pill pill--ok' : 'pill pill--draft'}>{c.status === 'Published' ? 'Публикуван' : 'Чернова'}</span>
-                {c.warningCount > 0 && <span className="pill pill--warn" title="Предупреждения от проверките">⚠ {c.warningCount}</span>}
+                <span className={c.status === 'Published' ? 'pill pill--ok' : 'pill pill--draft'}>{c.status === 'Published' ? 'Published' : 'Draft'}</span>
+                {c.warningCount > 0 && <span className="pill pill--warn" title="Warnings from the checks">⚠ {c.warningCount}</span>}
               </div>
             </div>
           </Link>

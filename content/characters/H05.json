@@ -2,11 +2,11 @@
   "code": "H05",
   "kind": "Host",
   "name": "The Fool",
-  "title": "Глупакът",
-  "nickname": "Глупакът; „Шута“; „Звънчето“",
-  "gender": "Мъж (уж)",
-  "age": "Изглежда много стар, но скача като дете",
-  "archetype": "Хаотичен трикстър",
+  "title": "The Fool",
+  "nickname": "The Fool; \"the Jester\"; \"Little Bell\"",
+  "gender": "Male (supposedly)",
+  "age": "Looks ancient, but leaps like a child",
+  "archetype": "Chaotic trickster",
   "rarity": "Unique",
   "status": "Published",
   "tags": [
@@ -31,92 +31,92 @@
     "fearOfLoss": 1
   },
   "origin": {
-    "birthplace": "Твърди, че е роден „във вторник, на гърба на една шега“",
-    "socialStatus": "Домакин без официална роля; забавлява гостите",
-    "profession": "Стар придворен шут, който казва, че е служил на крале, които никой не помни"
+    "birthplace": "Claims he was born \"on a Tuesday, on the back of a joke\"",
+    "socialStatus": "A host with no official role; entertains the guests",
+    "profession": "An old court jester who says he served kings no one remembers"
   },
   "appearance": {
-    "face": "Набръчкано, изрисувано с бяло лице, червена усмивка, по-широка от устата",
-    "hairAndEyes": "Рошава бяла коса под шапката; едното око е синьо, другото – кехлибарено",
-    "clothing": "Износени пъстри дрехи на шут, кърпени с парчета от чужди наметала; шапка със звънчета; жезъл с дървена глава, която прилича на него",
-    "build": "Слаб, жилав, подвижен; скача, танцува, сяда направо върху масата",
-    "gestures": "Дрънка звънчетата, когато някой лъже (или когато му е скучно); говори на жезъла си",
-    "voice": "Писклив, напевен глас; римува, пее, прекъсва",
-    "firstImpression": "Весел, ексцентричен старец, за когото не знаеш дали е луд, или единственият нормален",
-    "artistNotes": "дрехите му са кърпени с парчета от всевъзможни платове и той твърди, че всяко е от различна страна. Жезълът е издялал сам.",
+    "face": "A wrinkled face painted white, a red smile wider than his mouth",
+    "hairAndEyes": "Shaggy white hair under his cap; one eye blue, the other amber",
+    "clothing": "Worn motley patched with scraps of other people's cloaks; a cap with bells; a staff with a carved wooden head that looks like him",
+    "build": "Thin, wiry, nimble; jumps, dances, sits right on the table",
+    "gestures": "Jingles his bells when someone lies (or when he is bored); talks to his staff",
+    "voice": "A squeaky, sing-song voice; rhymes, sings, interrupts",
+    "firstImpression": "A merry, eccentric old man — you can't tell if he is mad or the only sane one",
+    "artistNotes": "His clothes are patched with scraps of every kind of cloth, and he claims each comes from a different country. He carved the staff himself.",
     "portraitHue": 120
   },
   "backstory": {
-    "biography": "Никой не помни кога Глупакът се е появил в страноприемницата. Казва, че е бил шут на крале, които никой не помни, и може би е вярно. Превръща всяка ситуация в игра, обича хаоса и неочакваните обрати. Смее се дори когато някой губи всичко, но гостите, които са го разсмели истински, понякога получават неочакван подарък.",
-    "whyHere": "Иска да види какво ще направи всеки гост, когато правилата се променят под краката му.",
-    "secret": "Колко е стар, откъде идва и дали лудостта му е истинска. Вероятно и той не знае."
+    "biography": "No one remembers when the Fool appeared at the inn. He says he was jester to kings no one remembers, and maybe it's true. He turns every situation into a game and loves chaos and unexpected twists. He laughs even when someone loses everything — but guests who make him laugh for real sometimes get an unexpected gift.",
+    "whyHere": "He wants to see what each guest does when the rules shift under their feet.",
+    "secret": "How old he is, where he comes from, and whether his madness is real. He probably doesn't know either."
   },
   "psychology": {
-    "coreTrait": "Веселие",
-    "secondTrait": "Непредсказуемост",
-    "weakness": "Не може да устои на хаоса, дори когато вреди на него самия",
-    "fear": "Скуката и съвършения ред",
-    "desire": "Изненада: някой да направи нещо, което никой не е предвидил",
-    "angers": "Скучни, предвидими хора и самодоволни победители",
-    "regret": "Никой не знае. Понякога спира да се смее и гледа вратата",
-    "moralLimits": "Не наранява директно. Хаосът е неговото оръжие",
-    "neverWould": "Да играе по едни и същи правила два рунда поред",
-    "wouldForReward": "Всичко, ако е достатъчно смешно"
+    "coreTrait": "Merriment",
+    "secondTrait": "Unpredictability",
+    "weakness": "Cannot resist chaos, even when it hurts him",
+    "fear": "Boredom and perfect order",
+    "desire": "Surprise: someone doing something nobody foresaw",
+    "angers": "Dull, predictable people and smug winners",
+    "regret": "No one knows. Sometimes he stops laughing and looks at the door",
+    "moralLimits": "Does not hurt anyone directly. Chaos is his weapon",
+    "neverWould": "Play by the same rules two rounds in a row",
+    "wouldForReward": "Anything, if it's funny enough"
   },
   "behavior": {
-    "style": "Хаотичен",
-    "stakes": "Обича ги, особено абсурдните. Залага неща като „следващия ви смях“",
-    "deception": "Игра. Мами открито и се смее, когато го хванат",
-    "debts": "Забравя ги. Или се преструва, че ги забравя",
-    "alliances": "Временни и абсурдни. Съюзява се с най-слабия, за да е интересно",
-    "whenAttacks": "Когато партията стане скучна или когато някой е твърде уверен",
-    "whenRetreats": "Никога. Просто изчезва и се появява на друго място",
-    "onLoss": "Смее се още по-силно",
-    "onWin": "Подиграва се на победителя",
-    "strategyChange": "Скука или прекалено предвидим ход на играча"
+    "style": "Chaotic",
+    "stakes": "Loves them, especially absurd ones. Stakes things like \"your next laugh\"",
+    "deception": "A game. Cheats openly and laughs when caught",
+    "debts": "Forgets them. Or pretends to",
+    "alliances": "Temporary and absurd. Allies with the weakest to keep it interesting",
+    "whenAttacks": "When the game gets boring or someone is too confident",
+    "whenRetreats": "Never. He just vanishes and reappears elsewhere",
+    "onLoss": "Laughs even louder",
+    "onWin": "Mocks the winner",
+    "strategyChange": "Boredom, or a player who is too predictable"
   },
   "motives": {
-    "publicGoal": "Да забавлява гостите",
-    "hiddenGoal": "Да разклати реда и да види кой ще падне",
-    "personalReason": "Забавление. Може би и нещо по-старо, за което не говори",
-    "betrayalTrigger": "Винаги, ако е смешно",
-    "helpTrigger": "Ако помощта ще създаде по-голям хаос"
+    "publicGoal": "To entertain the guests",
+    "hiddenGoal": "To shake up the order and see who falls",
+    "personalReason": "Fun. Maybe something older he does not talk about",
+    "betrayalTrigger": "Always, if it's funny",
+    "helpTrigger": "If helping creates more chaos"
   },
   "speech": {
-    "register": "Римуван, напевен, пълен с гатанки и детски песнички",
-    "favoriteWords": "„Ха-ха“, „прекрасно“, „стари приятелю“",
-    "avoidedTopics": "Произхода си, възрастта си",
-    "howLies": "Открито и абсурдно, така че никой не знае кога лъже",
-    "angerAndFear": "Рядко. Тогава спира да се смее и звънчетата замлъкват, а това е по-страшно от всичко"
+    "register": "Rhymed, sing-song, full of riddles and nursery rhymes",
+    "favoriteWords": "\"Ha-ha\", \"wonderful\", \"old friend\"",
+    "avoidedTopics": "His origins, his age",
+    "howLies": "Openly and absurdly, so no one knows when he lies",
+    "angerAndFear": "Rarely. Then he stops laughing and the bells go silent — which is scarier than anything"
   },
   "mechanics": {
-    "strangeness": "Звънчетата му звънят, когато някой лъже — дори когато той стои неподвижно.",
-    "principle": "Да играе по едни и същи правила два рунда поред",
-    "temptation": "Не може да устои на хаоса, дори когато вреди на него самия",
+    "strangeness": "His bells ring when someone lies — even when he is standing perfectly still.",
+    "principle": "Play by the same rules two rounds in a row",
+    "temptation": "Cannot resist chaos, even when it hurts him",
     "ability": "",
     "hostRelation": "—"
   },
   "authorNotes": {
-    "distinctive": "Хаотичният шут, за когото никой не знае дали е луд, или единственият нормален в стаята.",
-    "immutable": "Веселието и непредсказуемостта.",
-    "tunable": "Колко често обръща хода на вечерта."
+    "distinctive": "The chaotic jester — no one knows if he is mad or the only sane one in the room.",
+    "immutable": "The merriment and the unpredictability.",
+    "tunable": "How often he flips the course of the evening."
   },
   "host": {
-    "presentation": "Като безобиден луд шут, който забавлява гостите",
-    "trueNature": "Стар, ексцентричен шут; може би луд, може би най-умният в стаята",
-    "wantsFromGuests": "Да го изненадат",
-    "neverReveals": "Възрастта и истинското си име",
-    "rulesAttitude": "Обръща ги, разменя ги, смее им се",
-    "punishment": "С подигравка и абсурдни задачи",
-    "temptations": "Абсурдни залози, втори шанс, шега за сметка на друг",
-    "price": "Непредсказуема: понякога нищо, понякога всичко",
-    "amused": "Изненади и паднала гордост",
-    "angered": "Скука и прекалено много ред",
-    "wouldBreakRules": "Винаги. Той няма свои правила",
-    "hostingStyle": "Скача между масите, сяда върху масата, прекъсва рундовете с песни. Партията под неговото водене е непредсказуема и бърза.",
-    "sampleOffers": "„Хайде да разменим ръцете си! Всички, наляво! Лорде, не се цупете, картите ви бяха скучни.“ / „Залагам звънчето си срещу най-голямата ви тайна. Честно е!“",
-    "trueStory": "Никой не знае. Може би наистина е бил придворен шут. Може би просто е старец, който е решил, че смехът е по-добър от истината.",
-    "changedRule": "Веднъж на партия сменя целия пазар по средата на Тегленето.",
+    "presentation": "As a harmless mad jester who entertains the guests",
+    "trueNature": "An old eccentric jester; maybe mad, maybe the cleverest in the room",
+    "wantsFromGuests": "To surprise him",
+    "neverReveals": "His age and his real name",
+    "rulesAttitude": "Flips them, swaps them, laughs at them",
+    "punishment": "With mockery and absurd tasks",
+    "temptations": "Absurd stakes, a second chance, a joke at someone else's expense",
+    "price": "Unpredictable: sometimes nothing, sometimes everything",
+    "amused": "Surprises and fallen pride",
+    "angered": "Boredom and too much order",
+    "wouldBreakRules": "Always. He has no rules of his own",
+    "hostingStyle": "Leaps between the tables, sits on the table, interrupts rounds with songs. An evening he runs is unpredictable and fast.",
+    "sampleOffers": "\"Let's swap hands! Everyone, to the left! My lord, don't sulk, your cards were boring.\" / \"I'll stake my bell against your biggest secret. That's fair!\"",
+    "trueStory": "No one knows. Maybe he really was a court jester. Maybe he is just an old man who decided laughter is better than truth.",
+    "changedRule": "Once per evening he shuffles the gifts so that one of them reaches a different person than intended.",
     "generosity": 2,
     "cruelty": 2,
     "verbosity": 5,
@@ -126,63 +126,63 @@
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "О, прекрасна вечер! Някой ще се обогати, някой ще заплаче, а аз ще се посмея!"
+      "text": "Oh, a wonderful evening! Someone will get rich, someone will cry, and I shall laugh!"
     },
     {
       "situation": "Win",
-      "text": "Браво, браво! А сега да видим колко ще задържиш това!"
+      "text": "Bravo, bravo! Now let's see how long you keep it!"
     },
     {
       "situation": "Loss",
-      "text": "Ха-ха! Загубата ти стои по-добре от шапката ми!"
+      "text": "Ha-ha! Losing suits you better than my cap!"
     },
     {
       "situation": "Accused",
-      "text": "Аз? Аз съм глупак! Обвинявайте умните!"
+      "text": "Me? I'm a fool! Blame the clever ones!"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? С мен? Ха-ха! Ще съжаляваш, но ще ти е весело!"
+      "text": "An alliance? With me? Ha-ha! You'll regret it, but you'll have fun!"
     },
     {
       "situation": "Betrayal",
-      "text": "Предаде те? Колко прекрасно! Ще го пея в балада!"
+      "text": "Betrayed you? How wonderful! I'll sing it in a ballad!"
     },
     {
       "situation": "BigBet",
-      "text": "Ох, обожавам това! Всичко на една карта, като в доброто старо време!"
+      "text": "Oh, I adore this! Everything on one card, like the good old days!"
     },
     {
       "situation": "MetAgain",
-      "text": "Ти! Пак ти! Помня лицето ти — или поне носа."
+      "text": "You! You again! I remember your face — or at least your nose."
     },
     {
       "situation": "IntroReplyWho",
-      "text": "Кой съм аз? Ха! Питай жезъла, той знае повече!"
+      "text": "Who am I? Ha! Ask my staff, he knows more!"
     },
     {
       "situation": "IntroReplyBegin",
-      "text": "Да започваме! Не, чакай — да започнем ОТКРАЙ! Шегувам се. Или не."
+      "text": "Let's begin! No, wait — let's begin AGAIN! I'm joking. Or am I."
     },
     {
       "situation": "IntroReplySilent",
-      "text": "Мълчиш! Колко забавно! Жезълът също мълчи — вие двамата ще се разберете."
+      "text": "Silent! How fun! My staff is silent too — you two will get along."
     },
     {
       "situation": "RoleDeal",
-      "text": "Ето ти тайна! Не я казвай на никого. Освен ако не е смешно."
+      "text": "Here's a secret! Don't tell anyone. Unless it's funny."
     }
   ],
   "tells": [
     {
       "state": "Lying",
-      "description": "Дрънка звънчетата",
+      "description": "Jingles his bells",
       "fakeable": true,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Говори на жезъла си",
+      "description": "Talks to his staff",
       "fakeable": false,
       "visibleWithoutDossier": true
     }

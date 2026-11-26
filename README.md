@@ -1,21 +1,25 @@
 # Blackhood *(работно заглавие)*
 
-Браузърна игра с тайни роли на маса в странна средновековна таверна, по концепцията *The Devil's Game v0.4*.
+Браузърна игра в странна средновековна страноприемница с кръчмарски игри. Главната игра е **Gifts (Дарове)** — анонимни дарове, Убиец и алчен Домакин. Самата игра е изцяло на английски.
 
-📜 **Какво сме направили дотук:** [на български](docs/progress.bg.md) · [in English](docs/progress.en.md)
+📜 **Правила и документация (Word):**
+- Правила на Gifts: [English](docs/Blackhood-Gifts-Rules-EN.docx) · [Български](docs/Blackhood-Gifts-Rules-BG.docx)
+- Документация на проекта: [English](docs/Blackhood-Documentation-EN.docx) · [Български](docs/Blackhood-Documentation-BG.docx)
+- По-ранни бележки (преди Gifts): [BG](docs/progress.bg.md) · [EN](docs/progress.en.md)
 
 ## Структура
 
 | Папка | Какво е | С какво се отваря |
 |---|---|---|
 | `Blackhood.sln` | C# решението | **Visual Studio** |
-| `src/Blackhood.Engine` | Чиста логика на играта: роли, тесте, пазар, начало на партия. Без уеб и без база. | |
-| `src/Blackhood.Data` | EF Core **code-first**: потребители (Identity), партии, персонажи; миграциите са в `Migrations/` | |
-| `src/Blackhood.Api` | ASP.NET Core API: вход, сингълплейър, админ на персонажите | |
-| `client/` | React + Vite + TypeScript | **VS Code** |
-| `content/characters/` | Персонажите като JSON (P01–P13, H01–H05) — пълнят празна база | |
+| `src/Blackhood.Engine` | Чиста логика: `Gifts/` (правила, NPC AI, Домакин, изглед, числа) | |
+| `src/Blackhood.Data` | EF Core **code-first**: потребители + кесия, партии, персонажи; миграциите са в `Migrations/` | |
+| `src/Blackhood.Api` | ASP.NET Core API: вход, таверна, Gifts, админ на персонажите | |
+| `tests/Blackhood.Engine.Tests` | xUnit: правилата + симулация на хиляди вечери AI срещу AI | |
+| `client/` | React + Vite + TypeScript: зала на таверната, Пристигане, маса за Gifts, админ | **VS Code** |
+| `content/characters/` | Персонажите като JSON (P01–P13, H01–H05), на английски — пълнят празна база | |
 | `content/portraits/` | Качените портрети | |
-| `tools/import-sheet/` | Превръща .docx листовете на персонажите в JSON ([README](tools/import-sheet/README.md)) | |
+| `tools/` | Внос на листовете, английски превод, генератор на Word документите (`node tools/word-docs/build.js`) | |
 
 ## Пускане
 

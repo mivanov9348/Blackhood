@@ -1,12 +1,12 @@
 {
   "code": "P01",
   "kind": "Participant",
-  "name": "Лука Еванс",
-  "title": "Надменният лорд",
-  "nickname": "Надменният лорд; „Лорд без земя“ (зад гърба му)",
-  "gender": "Мъж",
+  "name": "Luka Evans",
+  "title": "The Haughty Lord",
+  "nickname": "The Haughty Lord; \"the landless lord\" (behind his back)",
+  "gender": "Male",
   "age": "42",
-  "archetype": "Агресивен",
+  "archetype": "Aggressive",
   "rarity": "Uncommon",
   "status": "Published",
   "tags": [
@@ -32,136 +32,140 @@
     "fearOfLoss": 3
   },
   "origin": {
-    "birthplace": "Родово имение Еванс Хол, северните долини",
-    "socialStatus": "Благородник с титла, но с малко останали земи и много дългове",
-    "profession": "Лорд и придворен; някога влиятелен в двора, днес почти без влияние"
+    "birthplace": "Evans Hall, the ancestral estate in the northern valleys",
+    "socialStatus": "A titled nobleman with little land left and many debts",
+    "profession": "Lord and courtier; once influential at court, now almost without influence"
   },
   "appearance": {
-    "face": "Остър, орлов нос, тънки устни, винаги леко вдигната брадичка; белег от фехтовка на лявата скула",
-    "hairAndEyes": "Тъмноруса коса, грижливо сресана назад; къса подстригана брада; студени сиви очи",
-    "clothing": "Скъп, но вече износен кадифен жакет в бордо; печатен пръстен с герба на рода; ръкавици, които сваля само когато залага",
-    "build": "Висок, строен, стои изправен като на прием в двора",
-    "gestures": "Почуква с пръстена по масата, когато чака; оглежда другите отгоре надолу; хвърля монетите, вместо да ги поставя",
-    "voice": "Висок, отчетлив глас; говори бавно, сякаш диктува; често прекъсва другите",
-    "firstImpression": "Арогантен човек, който очаква всички да станат, когато влезе",
-    "artistNotes": "жакетът е закърпен отвътре, личи само когато седне. Гербът на пръстена е полуизтрит. Когато губи, ръцете му треперят, но той ги крие под масата.",
+    "face": "Sharp aquiline nose, thin lips, chin always slightly raised; a fencing scar on the left cheekbone",
+    "hairAndEyes": "Dark blond hair combed carefully back; short trimmed beard; cold grey eyes",
+    "clothing": "An expensive but worn burgundy velvet jacket; a signet ring with the family crest; gloves he takes off only to gamble",
+    "build": "Tall, lean, stands straight as if at a court reception",
+    "gestures": "Taps his ring on the table while he waits; looks others up and down; tosses coins instead of placing them",
+    "voice": "High, crisp voice; speaks slowly as if dictating; often interrupts",
+    "firstImpression": "An arrogant man who expects everyone to stand when he enters",
+    "artistNotes": "The jacket is patched on the inside — it only shows when he sits. The crest on the ring is half worn away. When he loses, his hands shake, but he hides them under the table.",
     "portraitHue": 345
   },
   "backstory": {
-    "biography": "Лука е наследник на стар род с обширни земи. Години наред живее над възможностите си: балове, коне, подаръци за правилните хора в двора. Когато влиянието му отслабва, кредиторите идват наведнъж и той продава земя след земя, за да запази фасадата. Днес има титла, полупразно имение и много дългове, но продължава да се държи като човек, на когото светът дължи уважение.",
-    "whyHere": "Вярва, че с една голяма победа може да откупи земите си и да си върне мястото в двора. А и не може да откаже игра, на която ще го гледат.",
-    "secret": "Че е почти разорен и всичко, което залага, е взето назаем."
+    "biography": "Luka is heir to an old family with vast lands. For years he lived beyond his means: balls, horses, gifts for the right people at court. When his influence waned the creditors came all at once, and he sold land after land to keep up appearances. Today he has a title, a half-empty manor and many debts, yet he still behaves like a man the world owes respect.",
+    "whyHere": "He believes one great win could buy back his lands and his place at court. And he cannot refuse a game where people will be watching.",
+    "secret": "That he is almost ruined and everything he stakes is borrowed."
   },
   "psychology": {
-    "coreTrait": "Гордост, усещане за превъзходство",
-    "secondTrait": "Агресивна нужда да доминира публично",
-    "weakness": "Не понася да губи пред публика и в такъв момент залага прекалено много",
-    "fear": "Да бъде публично унизен и да се разбере, че е беден",
-    "desire": "Да си върне земите и мястото в двора",
-    "angers": "Да го пренебрегнат, да му възразят простолюдни хора или да му се присмеят",
-    "regret": "Че е пропилял наследството на рода, но никога не би го признал",
-    "moralLimits": "Не нарушава открито правилата на честта пред свидетели. Насаме рядко се спира пред нещо",
-    "neverWould": "Да моли простолюдник за помощ пред публика",
-    "wouldForReward": "Да наруши дадена дума и да продаде дори фамилния си пръстен"
+    "coreTrait": "Pride, a sense of superiority",
+    "secondTrait": "An aggressive need to dominate in public",
+    "weakness": "Cannot bear losing in front of an audience, and then stakes far too much",
+    "fear": "Public humiliation — that people learn he is poor",
+    "desire": "To win back his lands and his place at court",
+    "angers": "Being ignored, contradicted by commoners, or laughed at",
+    "regret": "That he squandered the family inheritance — though he would never admit it",
+    "moralLimits": "Never openly breaks the rules of honour before witnesses. In private he rarely stops at anything",
+    "neverWould": "Beg a commoner for help in public",
+    "wouldForReward": "Break his word, and sell even the family ring"
   },
   "behavior": {
-    "style": "Агресивен",
-    "stakes": "Големи, демонстративни залози. Вдига залога, за да изплаши другите",
-    "deception": "Приема я като инструмент, но мрази да бъде мамен",
-    "debts": "Има много и ги крие. Взема нови заеми лесно, връща ги трудно",
-    "alliances": "Временни и само с хора от „подходящо“ съсловие",
-    "whenAttacks": "Когато има публика или когато някой го е обидил",
-    "whenRetreats": "Почти никога доброволно. Само ако загубата заплашва да разкрие, че е беден",
-    "onLoss": "Става по-агресивен и удвоява залога (tilt)",
-    "onWin": "Хвали се шумно и унижава загубилия",
-    "strategyChange": "Само заплаха тайната му да излезе наяве"
+    "style": "Aggressive",
+    "stakes": "Big, showy stakes. Raises to scare the others",
+    "deception": "A tool he accepts — but he hates being deceived",
+    "debts": "Has many and hides them. Borrows easily, repays reluctantly",
+    "alliances": "Temporary, and only with people of the \"right\" standing",
+    "whenAttacks": "When he has an audience or someone has insulted him",
+    "whenRetreats": "Almost never willingly. Only if a loss threatens to reveal he is poor",
+    "onLoss": "Grows more aggressive and doubles the stake (tilt)",
+    "onWin": "Boasts loudly and humiliates the loser",
+    "strategyChange": "Only the threat of his secret coming out"
   },
   "motives": {
-    "publicGoal": "Да покаже кой е най-силният на масата",
-    "hiddenGoal": "Да спечели достатъчно, за да откупи земите си",
-    "personalReason": "Отчаяние, прикрито като гордост",
-    "betrayalTrigger": "Ако някой заплаши да разкрие, че е беден",
-    "helpTrigger": "Ако някой го защити публично и запази достойнството му"
+    "publicGoal": "To show who is the strongest at the table",
+    "hiddenGoal": "To win enough to buy back his lands",
+    "personalReason": "Desperation disguised as pride",
+    "betrayalTrigger": "If someone threatens to reveal that he is poor",
+    "helpTrigger": "If someone defends him publicly and preserves his dignity"
   },
   "speech": {
-    "register": "правилен, официален, книжовен. Изобилства от титли",
-    "favoriteWords": "„Простолюдие“, „естествено“, „кръвта“, „моят род“",
-    "avoidedTopics": "Парите, земите си, дълговете",
-    "howLies": "Лъже уверено и високомерно, но прекалява с подробностите",
-    "angerAndFear": "Повишава тон и почуква с пръстена. При страх става прекалено учтив"
+    "register": "Correct, formal, bookish. Full of titles",
+    "favoriteWords": "\"Commoners\", \"naturally\", \"the blood\", \"my house\"",
+    "avoidedTopics": "Money, his lands, his debts",
+    "howLies": "Confidently and haughtily, but with too many details",
+    "angerAndFear": "Raises his voice and taps the ring. When afraid he becomes far too polite"
   },
   "mechanics": {
-    "strangeness": "Гербът на пръстена му понякога показва чужд род — този, на когото е заложил земите си. Само той не го забелязва.",
-    "principle": "Да моли простолюдник за помощ пред публика",
-    "temptation": "Не понася да губи пред публика и в такъв момент залага прекалено много",
-    "ability": "Купува тишина: веднъж на партия плаща 2 злато и избран играч мълчи на Масата един рунд.",
-    "hostRelation": "Дълг — вече е взел пари назаем от домакина и се преструва, че не е."
+    "strangeness": "The crest on his ring sometimes shows another house — the one he pawned his lands to. Only he never notices.",
+    "principle": "Beg a commoner for help in public",
+    "temptation": "Cannot bear losing in front of an audience, and then stakes far too much",
+    "ability": "Old money: once per evening his payments to the host stay hidden at dawn.",
+    "hostRelation": "Debt — he has already borrowed from the host and pretends he has not."
   },
   "authorNotes": {
-    "distinctive": "Комбинацията от арогантност и тайна бедност. Колкото повече губи, толкова по-силно се преструва, че не му пука.",
-    "immutable": "Агресивният стил, гордостта и тайната бедност.",
-    "tunable": "Колко силно реагира на подигравки и колко бързо изпада в tilt."
+    "distinctive": "Arrogance plus secret poverty. The more he loses, the harder he pretends not to care.",
+    "immutable": "The aggressive style, the pride, the secret poverty.",
+    "tunable": "How strongly he reacts to mockery and how fast he tilts."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Седнете, приятели. Или поне онези от вас, които знаят как."
+      "text": "Sit down, friends. Or at least those of you who know how."
     },
     {
       "situation": "Win",
-      "text": "Естествено. Кръвта винаги личи."
+      "text": "Naturally. Blood always shows."
     },
     {
       "situation": "Loss",
-      "text": "Сметката е... временно небалансирана. Още един рунд."
+      "text": "The account is… temporarily unbalanced. One more round."
     },
     {
       "situation": "Accused",
-      "text": "Как смееш? Знаеш ли с кого говориш?"
+      "text": "How dare you? Do you know who you are speaking to?"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? С вас? Е, предполагам, че и благородниците понякога имат нужда от слуги."
+      "text": "An alliance? With you? Well, I suppose even noblemen need servants sometimes."
     },
     {
       "situation": "Betrayal",
-      "text": "Ще съжаляваш. Родът Еванс помни."
+      "text": "You will regret this. House Evans remembers."
     },
     {
       "situation": "BigBet",
-      "text": "Удвоявам. Нека видим кой има кураж."
+      "text": "I double. Let us see who has the nerve."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Лорд Лука Еванс. Кръвта му е синя, а гордостта — още по-синя. Не го питайте за земите му."
+      "text": "Lord Luka Evans. His blood is blue, his pride bluer still. Do not ask him about his lands."
     },
     {
       "situation": "MetAgain",
-      "text": "Пак вие. Е, простолюдието е упорито."
+      "text": "You again. Well — commoners are persistent."
+    },
+    {
+      "situation": "Death",
+      "text": "House Evans… does not… end like this."
     }
   ],
   "tells": [
     {
       "state": "Tilted",
-      "description": "Почуква с пръстена по масата",
+      "description": "Taps his ring on the table",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Afraid",
-      "description": "Става прекалено учтив",
+      "description": "Becomes far too polite",
       "fakeable": false,
       "visibleWithoutDossier": false
     },
     {
       "state": "Lying",
-      "description": "Прекалява с подробностите, когато лъже",
+      "description": "Overdoes the details when he lies",
       "fakeable": false,
       "visibleWithoutDossier": false
     },
     {
       "state": "Habit",
-      "description": "Хвърля монетите, вместо да ги поставя",
+      "description": "Tosses coins instead of placing them",
       "fakeable": false,
       "visibleWithoutDossier": true
     }
@@ -170,8 +174,8 @@
     {
       "to": "P03",
       "value": -60,
-      "story": "Лука е бил в двора, който осъди Ноа Торн за Ашфорд — и гласува „виновен“.",
-      "effect": "Спор преди рунд 1; двамата започват с \u002B20 Нажежаване."
+      "story": "Luka sat at the court that condemned Noah Thorn for Ashford — and voted \"guilty\".",
+      "effect": "They argue before the first round; both start with +20 Tilt."
     }
   ]
 }

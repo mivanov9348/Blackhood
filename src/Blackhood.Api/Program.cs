@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 using Blackhood.Api.Characters;
 using Blackhood.Api.Endpoints;
 using Blackhood.Data;
@@ -81,7 +81,8 @@ app.UseAuthorization();
 
 app.MapAuthEndpoints();
 app.MapCharacterEndpoints();
-app.MapSingleplayerEndpoints();
+app.MapTavernEndpoints();
+app.MapGiftsEndpoints();
 app.MapAdminEndpoints();
 
 app.Run();

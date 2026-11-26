@@ -45,6 +45,11 @@ namespace Blackhood.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Gold")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(50);
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -704,16 +709,32 @@ namespace Blackhood.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("BuyIn")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("FinishedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Game")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)")
+                        .HasDefaultValue("Legacy");
 
                     b.Property<string>("Mode")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<int>("Payout")
+                        .HasColumnType("int");
+
                     b.Property<int>("Seed")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Settled")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("StartedAt")
                         .HasColumnType("datetime2");

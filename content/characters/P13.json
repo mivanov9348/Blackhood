@@ -2,11 +2,11 @@
   "code": "P13",
   "kind": "Participant",
   "name": "Elias Rook",
-  "title": "Гробарят",
-  "nickname": "Гробарят; „Последният събеседник“",
-  "gender": "Мъж",
+  "title": "The Gravedigger",
+  "nickname": "The Gravedigger; \"the last companion\"",
+  "gender": "Male",
   "age": "61",
-  "archetype": "Мрачен наблюдател",
+  "archetype": "Grim observer",
   "rarity": "Rare",
   "status": "Published",
   "tags": [
@@ -31,124 +31,128 @@
     "fearOfLoss": 1
   },
   "origin": {
-    "birthplace": "Гробищата на Блекмур",
-    "socialStatus": "Беден и отбягван, но тайно уважаван",
-    "profession": "Гробар цял живот, син и внук на гробари"
+    "birthplace": "The graveyards of Blackmoor",
+    "socialStatus": "Poor and avoided, but secretly respected",
+    "profession": "A gravedigger all his life, son and grandson of gravediggers"
   },
   "appearance": {
-    "face": "Изпито, бледо лице, хлътнали бузи; дълбоки бръчки като изкопани с лопата",
-    "hairAndEyes": "Дълга, рядка бяла коса; бяло перде на лявото око, дясното е светлосиво и пронизващо",
-    "clothing": "Протрито черно наметало, кожени ръкавици, полепнала пръст по ботушите",
-    "build": "Висок, кокалест, леко прегърбен",
-    "gestures": "Оглежда хората, сякаш им взема мярка за ковчег; барабани по масата с бавен ритъм",
-    "voice": "Бавен, нисък, хриплив глас; дълги паузи",
-    "firstImpression": "Мрачен старец, от когото на всички им става неудобно",
-    "artistNotes": "на верижка около врата носи малка стара лопатка, колкото палец, подарък от баща му, също гробар.",
+    "face": "A gaunt, pale face, sunken cheeks; deep lines as if dug with a spade",
+    "hairAndEyes": "Long thin white hair; a white film over the left eye, the right one pale grey and piercing",
+    "clothing": "A threadbare black cloak, leather gloves, earth clinging to his boots",
+    "build": "Tall, bony, slightly stooped",
+    "gestures": "Looks people over as if measuring them for a coffin; drums on the table in a slow rhythm",
+    "voice": "A slow, low, hoarse voice; long pauses",
+    "firstImpression": "A grim old man who makes everyone uncomfortable",
+    "artistNotes": "Around his neck on a chain hangs a tiny old spade the size of a thumb, a gift from his father, also a gravedigger.",
     "portraitHue": 190
   },
   "backstory": {
-    "biography": "Илайъс е погребал повече хора, отколкото повечето са срещнали. Казва, че мъртвите са по-честни от живите, защото нямат какво да крият. Виждал е наследници да плачат пред гроба и да се карат за имота още на път към вкъщи. Не се интересува от пари и не се страхува от смъртта.",
-    "whyHere": "Не богатството. Иска да види как живите се разкриват, когато залогът е голям.",
-    "secret": "Че е сам: няма семейство, няма приятели, само гробове. И че идва на масата, защото тук поне някой му говори."
+    "biography": "Elias has buried more people than most have met. He says the dead are more honest than the living because they have nothing to hide. He has seen heirs weep at the grave and quarrel over the estate on the way home. He cares nothing for money and does not fear death.",
+    "whyHere": "Not wealth. He wants to see how the living reveal themselves when the stakes are high.",
+    "secret": "That he is alone: no family, no friends, only graves. And that he comes to the table because here, at least, someone talks to him."
   },
   "psychology": {
-    "coreTrait": "Мрачна откровеност",
-    "secondTrait": "Безстрашие",
-    "weakness": "Безразличен е към победата и понякога се отказва точно когато може да спечели",
-    "fear": "Да умре и никой да не изкопае гроба му",
-    "desire": "Истината да бъде казана поне веднъж",
-    "angers": "Лъжата над гроба: лицемерни опела и фалшиви сълзи",
-    "regret": "Че е прекарал живота си сред мъртвите, а не сред живите",
-    "moralLimits": "Не лъже. Не обира мъртви за печалба",
-    "neverWould": "Да се закълне в лъжа",
-    "wouldForReward": "Почти нищо. Наградите не го интересуват"
+    "coreTrait": "Grim honesty",
+    "secondTrait": "Fearlessness",
+    "weakness": "Indifferent to winning; sometimes gives up just when he could win",
+    "fear": "Dying with no one to dig his grave",
+    "desire": "For the truth to be told, at least once",
+    "angers": "Lies over a grave: hypocritical eulogies and false tears",
+    "regret": "That he spent his life among the dead, not the living",
+    "moralLimits": "Does not lie. Does not rob the dead for profit",
+    "neverWould": "Swear to a lie",
+    "wouldForReward": "Almost nothing. Rewards do not interest him"
   },
   "behavior": {
-    "style": "Наблюдателен / пасивен",
-    "stakes": "Безразличен към залозите. Залага минимално, за да остане на масата",
-    "deception": "Не мами. Разпознава измамата и понякога я коментира на глас",
-    "debts": "Няма дългове и не дава заеми",
-    "alliances": "Рядко. Само с хора, които са му казали истина",
-    "whenAttacks": "Почти никога. Атакува с думи, не със залози",
-    "whenRetreats": "Когато се отегчи или когато е видял достатъчно",
-    "onLoss": "Без емоция: „Мъртвите не губят.“",
-    "onWin": "Без радост: „Мъртвите не печелят.“",
-    "strategyChange": "Само ако някой му зададе честен въпрос"
+    "style": "Observant / passive",
+    "stakes": "Indifferent to stakes. Bets the minimum to stay at the table",
+    "deception": "Does not cheat. Recognises deception and sometimes says so aloud",
+    "debts": "Has no debts and gives no loans",
+    "alliances": "Rare. Only with people who have told him the truth",
+    "whenAttacks": "Almost never. Attacks with words, not stakes",
+    "whenRetreats": "When he is bored or has seen enough",
+    "onLoss": "Without emotion: \"The dead don't lose.\"",
+    "onWin": "Without joy: \"The dead don't win.\"",
+    "strategyChange": "Only if someone asks him an honest question"
   },
   "motives": {
-    "publicGoal": "Да наблюдава",
-    "hiddenGoal": "Да види поне един човек, който казва истината, когато лъжата би му донесла печалба",
-    "personalReason": "Любопитство и самота",
-    "betrayalTrigger": "Нищо. Не е на ничия страна",
-    "helpTrigger": "Ако човекът е честен с него"
+    "publicGoal": "To watch",
+    "hiddenGoal": "To see at least one person tell the truth when a lie would profit them",
+    "personalReason": "Curiosity and loneliness",
+    "betrayalTrigger": "Nothing. He is on no one's side",
+    "helpTrigger": "If the person is honest with him"
   },
   "speech": {
-    "register": "Мрачен, бавен, с кратки афоризми за смъртта",
-    "favoriteWords": "„Мъртвите...“, „земята“, „всичко свършва“",
-    "avoidedTopics": "Самотата си",
-    "howLies": "Не лъже. Когато не иска да каже нещо, мълчи",
-    "angerAndFear": "Не показва страх. Гневът му е студен и тих"
+    "register": "Grim, slow, short aphorisms about death",
+    "favoriteWords": "\"The dead…\", \"the earth\", \"everything ends\"",
+    "avoidedTopics": "His loneliness",
+    "howLies": "Does not lie. When he doesn't want to say something, he stays silent",
+    "angerAndFear": "Shows no fear. His anger is cold and quiet"
   },
   "mechanics": {
-    "strangeness": "Чува мъртвите. Когато някой на масата ще умре тази нощ, Илайъс вече го гледа по-дълго от другите.",
-    "principle": "Да се закълне в лъжа",
-    "temptation": "Безразличен е към победата и понякога се отказва точно когато може да спечели",
-    "ability": "Последният събеседник: научава ролята на всеки мъртъв преди останалите и може да говори с Призрака.",
-    "hostRelation": "Безразличие — за гробаря домакинът е просто още един, който някой ден ще изкопае."
+    "strangeness": "He hears the dead. When someone at the table will die tonight, Elias already looks at them a little longer.",
+    "principle": "Swear to a lie",
+    "temptation": "Indifferent to winning; sometimes gives up just when he could win",
+    "ability": "The last companion: learns the role of every dead player before the others and can speak with the Ghost.",
+    "hostRelation": "Indifference — to the gravedigger the host is just one more he will dig a grave for someday."
   },
   "authorNotes": {
-    "distinctive": "Мрачен наблюдател, който не иска нищо, и затова е труден за манипулиране.",
-    "immutable": "Безразличието към парите, честността, мрачният хумор.",
-    "tunable": "Колко пасивно играе и колко често коментира на глас."
+    "distinctive": "A grim observer who wants nothing, and is therefore hard to manipulate.",
+    "immutable": "The indifference to money, the honesty, the dark humour.",
+    "tunable": "How passively he plays and how often he comments aloud."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Илайъс Рук. Гробар. Някой ден ще се срещнем пак, професионално."
+      "text": "Elias Rook. Gravedigger. We'll meet again someday — professionally."
     },
     {
       "situation": "Win",
-      "text": "Мъртвите не печелят. Но и аз не съм умрял още."
+      "text": "The dead don't win. But I'm not dead yet."
     },
     {
       "situation": "Loss",
-      "text": "Мъртвите не губят. Затова са спокойни."
+      "text": "The dead don't lose. That's why they're calm."
     },
     {
       "situation": "Accused",
-      "text": "Мъртвите не лъжат. Аз също."
+      "text": "The dead don't lie. Neither do I."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Защо? Аз не искам нищо от вас."
+      "text": "Why? I want nothing from you."
     },
     {
       "situation": "Betrayal",
-      "text": "Очаквано. Живите винаги предават."
+      "text": "Expected. The living always betray."
     },
     {
       "situation": "BigBet",
-      "text": "Безразлично ми е. Всичко свършва в земята."
+      "text": "It's all the same to me. Everything ends in the earth."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Илайъс Рук, гробарят. Вие играете за злато. Той — за компания."
+      "text": "Elias Rook, the gravedigger. You play for gold. He plays for company."
     },
     {
       "situation": "MetAgain",
-      "text": "Още не. Но скоро."
+      "text": "Not yet. But soon."
+    },
+    {
+      "situation": "Death",
+      "text": "Finally… someone else digs."
     }
   ],
   "tells": [
     {
       "state": "Confident",
-      "description": "Барабани по масата с бавен ритъм",
+      "description": "Drums on the table in a slow rhythm",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Оглежда хората, сякаш им взема мярка за ковчег",
+      "description": "Looks people over as if measuring them for a coffin",
       "fakeable": false,
       "visibleWithoutDossier": true
     }
@@ -157,8 +161,8 @@
     {
       "to": "P12",
       "value": -20,
-      "story": "Погребал е дъщерята на Годфри. Знае защо е умряла.",
-      "effect": "Веднъж на партия намеква пред масата, че Годфри крие нещо."
+      "story": "He buried Godfrey's daughter. He knows why she died.",
+      "effect": "Once per evening he hints to the table that Godfrey is hiding something."
     }
   ]
 }

@@ -2,11 +2,11 @@
   "code": "H03",
   "kind": "Host",
   "name": "The Hostess",
-  "title": "Домакинята",
-  "nickname": "Домакинята; „Лейди на свещите“",
-  "gender": "Жена",
-  "age": "Изглежда на около 35, от много години",
-  "archetype": "Изкусителка / утешителка",
+  "title": "The Hostess",
+  "nickname": "The Hostess; \"the Lady of the Candles\"",
+  "gender": "Female",
+  "age": "Has looked about 35 for many years",
+  "archetype": "Temptress / comforter",
   "rarity": "Unique",
   "status": "Published",
   "tags": [
@@ -31,92 +31,92 @@
     "fearOfLoss": 2
   },
   "origin": {
-    "birthplace": "Неизвестно. Говори с акцента на всеки гост, с когото разговаря",
-    "socialStatus": "Домакиня на страноприемницата",
-    "profession": "Някога гостенка, днес управлява залата и гостите"
+    "birthplace": "Unknown. She speaks with the accent of whichever guest she is talking to",
+    "socialStatus": "Hostess of the inn",
+    "profession": "Once a guest; now she runs the hall and the guests"
   },
   "appearance": {
-    "face": "Бледо, красиво лице и непроменяща се усмивка, която не стига до очите",
-    "hairAndEyes": "Гарвановочерна коса, вдигната високо; тъмни, влажни очи, сякаш току-що е плакала",
-    "clothing": "Тъмна кадифена рокля, дълга огърлица от перли, черна дантелена ръкавица само на лявата ръка",
-    "build": "Висока, стройна, движи се плавно между масите",
-    "gestures": "Докосва перлите, когато чуе нечие желание; сяда до гостите, вместо срещу тях",
-    "voice": "Мек, ласкав, интимен глас; говори така, сякаш познава гостите от години",
-    "firstImpression": "Чаровна, тъжна жена, на която искаш да разкажеш всичко",
-    "artistNotes": "перлите в огърлицата са наследство от майка ѝ. Лявата ръкавица крие стар белег от изгаряне, за който никога не говори.",
+    "face": "A pale, beautiful face and an unchanging smile that never reaches her eyes",
+    "hairAndEyes": "Raven-black hair pinned high; dark, moist eyes, as if she has just been crying",
+    "clothing": "A dark velvet gown, a long pearl necklace, a black lace glove on her left hand only",
+    "build": "Tall, slender, glides between the tables",
+    "gestures": "Touches her pearls when she hears someone's wish; sits beside the guests rather than across from them",
+    "voice": "A soft, caressing, intimate voice; speaks as if she has known the guests for years",
+    "firstImpression": "A charming, sad woman you want to tell everything to",
+    "artistNotes": "The pearls were her mother's. The left glove hides an old burn scar she never speaks of.",
     "portraitHue": 330
   },
   "backstory": {
-    "biography": "Преди много години тя пристига в страноприемницата като млада вдовица, която иска само едно: да не бъде сама. Остава като помощничка, после като домакиня, и никога не си тръгва. Видяла е стотици гости да идват с надежда и да си тръгват с празни ръце. Оттогава предлага на хората това, което им липсва най-много: внимание.",
-    "whyHere": "Тук е домът ѝ. Масата е единственото място, където вижда хората такива, каквито са.",
-    "secret": "Че отдавна иска да си тръгне, но няма къде. И че тайно търси гост, който да откаже всяко изкушение, за да повярва, че такива хора съществуват."
+    "biography": "Many years ago she came to the inn as a young widow who wanted only one thing: not to be alone. She stayed as a helper, then as hostess, and never left. She has seen hundreds of guests arrive with hope and leave empty-handed. Since then she offers people what they lack most: attention.",
+    "whyHere": "This is her home. The table is the only place she sees people as they are.",
+    "secret": "That she has long wanted to leave but has nowhere to go. And that she secretly looks for a guest who can refuse every temptation, so she can believe such people exist."
   },
   "psychology": {
-    "coreTrait": "Чар",
-    "secondTrait": "Проницателност и съчувствие",
-    "weakness": "Тъгата я кара понякога да помага на гостите повече, отколкото позволяват правилата",
-    "fear": "Да бъде забравена от всички",
-    "desire": "Свобода, и още веднъж да усети нещо истинско",
-    "angers": "Някой да я съжали или да ѝ се присмее",
-    "regret": "Че изкушава хора, които приличат на нея",
-    "moralLimits": "Не изкушава деца и хора в истинска скръб",
-    "neverWould": "Да разкаже собствената си история",
-    "wouldForReward": "Да разкрие тайна, която руши живот"
+    "coreTrait": "Charm",
+    "secondTrait": "Insight and compassion",
+    "weakness": "Sadness sometimes makes her help guests more than the rules allow",
+    "fear": "Being forgotten by everyone",
+    "desire": "Freedom, and to feel something real once more",
+    "angers": "Being pitied or laughed at",
+    "regret": "That she tempts people who are like her",
+    "moralLimits": "Does not tempt children or people in true grief",
+    "neverWould": "Tell her own story",
+    "wouldForReward": "Reveal a secret that ruins a life"
   },
   "behavior": {
-    "style": "Социален / манипулативен",
-    "stakes": "Не залага. Предлага „услуги“",
-    "deception": "Не лъже, но подбира какво да каже",
-    "debts": "Не дава заеми. Помни услугите",
-    "alliances": "Не прави съюзи, а близост",
-    "whenAttacks": "Когато открие какво липсва на някой гост",
-    "whenRetreats": "Когато гост я съжали или я разпознае",
-    "onLoss": "Тъжна, тиха усмивка",
-    "onWin": "Тъжна, тиха усмивка",
-    "strategyChange": "Гост, който няма видима слабост"
+    "style": "Social / manipulative",
+    "stakes": "Does not stake. Offers \"favours\"",
+    "deception": "Does not lie, but chooses what to say",
+    "debts": "Gives no loans. Remembers favours",
+    "alliances": "Makes no alliances — only closeness",
+    "whenAttacks": "When she discovers what a guest is missing",
+    "whenRetreats": "When a guest pities her or recognises her",
+    "onLoss": "A sad, quiet smile",
+    "onWin": "A sad, quiet smile",
+    "strategyChange": "A guest with no visible weakness"
   },
   "motives": {
-    "publicGoal": "Да направи вечерта приятна за гостите",
-    "hiddenGoal": "Да намери гост, способен да откаже всичко",
-    "personalReason": "Самотата и навикът",
-    "betrayalTrigger": "Ако някой гост ѝ предложи изход от страноприемницата",
-    "helpTrigger": "Ако гостът страда искрено"
+    "publicGoal": "To make the evening pleasant for the guests",
+    "hiddenGoal": "To find a guest who can refuse everything",
+    "personalReason": "Loneliness and habit",
+    "betrayalTrigger": "If a guest offers her a way out of the inn",
+    "helpTrigger": "If the guest suffers sincerely"
   },
   "speech": {
-    "register": "Мек, интимен, ласкав",
-    "favoriteWords": "„Скъпи“, „кажете ми“, „аз разбирам“",
-    "avoidedTopics": "Миналото си, името си",
-    "howLies": "Мило и топло; лъжата е в това, което премълчава",
-    "angerAndFear": "Не показва гняв. При страх пръстите ѝ спират върху перлите"
+    "register": "Soft, intimate, caressing",
+    "favoriteWords": "\"Darling\", \"tell me\", \"I understand\"",
+    "avoidedTopics": "Her past, her name",
+    "howLies": "Sweetly and warmly; the lie is in what she leaves unsaid",
+    "angerAndFear": "Shows no anger. When afraid her fingers stop on the pearls"
   },
   "mechanics": {
-    "strangeness": "Пламъците на свещите се навеждат към нея, когато мине покрай тях.",
-    "principle": "Да разкаже собствената си история",
-    "temptation": "Тъгата я кара понякога да помага на гостите повече, отколкото позволяват правилата",
+    "strangeness": "Candle flames lean towards her as she passes.",
+    "principle": "Tell her own story",
+    "temptation": "Sadness sometimes makes her help guests more than the rules allow",
     "ability": "",
     "hostRelation": "—"
   },
   "authorNotes": {
-    "distinctive": "Тъжна изкусителка, която сама е самотна.",
-    "immutable": "Тъгата, мекотата, тайната ѝ надежда.",
-    "tunable": "Колко лично се обвързва с гостите."
+    "distinctive": "A sad temptress who is lonely herself.",
+    "immutable": "The sadness, the softness, her secret hope.",
+    "tunable": "How personally she gets involved with the guests."
   },
   "host": {
-    "presentation": "Като грижовна, внимателна домакиня",
-    "trueNature": "Самотна жена, която отдавна живее чужд живот",
-    "wantsFromGuests": "Да ѝ разкажат какво им липсва",
-    "neverReveals": "Името си и че иска да си тръгне",
-    "rulesAttitude": "Спазва ги, но понякога ги извива",
-    "punishment": "Не наказва. Просто спира да ги вижда",
-    "temptations": "Информация, утеха, внимание, втори шанс",
-    "price": "Лична: признание, спомен, истина за себе си",
-    "amused": "Искрени хора",
-    "angered": "Грубост и безчувствие",
-    "wouldBreakRules": "Гост, който ѝ напомня за самата нея",
-    "hostingStyle": "Обикаля масата между рундовете, сяда до всеки поотделно и говори тихо. Партията ѝ е разговор, не игра.",
-    "sampleOffers": "„Искате ли да знаете какво мисли той за вас? Само ми разкажете нещо, което не сте казвали на никого.“ / „Мога да ви дам утеха. Не от тях. От себе си.“",
-    "trueStory": "Била е млада вдовица, която искала само да не е сама. Получила е дом, но не и живот. Тайно чака гост, който да откаже всичко.",
-    "changedRule": "Последният в злато получава безплатна оферта всеки рунд — публично.",
+    "presentation": "As a caring, attentive hostess",
+    "trueNature": "A lonely woman who has long lived someone else's life",
+    "wantsFromGuests": "To tell her what they are missing",
+    "neverReveals": "Her name, and that she wants to leave",
+    "rulesAttitude": "Keeps them, but sometimes bends them",
+    "punishment": "Does not punish. She simply stops seeing them",
+    "temptations": "Information, comfort, attention, a second chance",
+    "price": "Personal: a confession, a memory, a truth about yourself",
+    "amused": "Sincere people",
+    "angered": "Rudeness and callousness",
+    "wouldBreakRules": "A guest who reminds her of herself",
+    "hostingStyle": "Walks around the table between rounds, sits beside each guest in turn and speaks quietly. Her evening is a conversation, not a game.",
+    "sampleOffers": "\"Would you like to know what he thinks of you? Just tell me something you have never told anyone.\" / \"I can give you comfort. Not from them. From me.\"",
+    "trueStory": "She was a young widow who only wanted not to be alone. She got a home, but not a life. She secretly waits for a guest who refuses everything.",
+    "changedRule": "The poorest guest gets one free offer every candle — announced to the whole table.",
     "generosity": 5,
     "cruelty": 1,
     "verbosity": 4,
@@ -126,63 +126,63 @@
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Всички искат нещо, скъпи. Само че малцина имат смелостта да си го признаят."
+      "text": "Everyone wants something, darling. Only a few have the courage to admit it."
     },
     {
       "situation": "Win",
-      "text": "Видяхте ли? Понякога желанията се сбъдват."
+      "text": "You see? Sometimes wishes come true."
     },
     {
       "situation": "Loss",
-      "text": "Не се тревожете, скъпи. Загубата често е началото на нещо."
+      "text": "Don't worry, darling. Losing is often the beginning of something."
     },
     {
       "situation": "Accused",
-      "text": "Аз? Аз само слушам, скъпи. Вие сами ми казвате всичко."
+      "text": "Me? I only listen, darling. You tell me everything yourselves."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? Не, скъпи. Аз предлагам нещо по-добро: разбиране."
+      "text": "An alliance? No, darling. I offer something better: understanding."
     },
     {
       "situation": "Betrayal",
-      "text": "Тъжно. Но не и изненадващо."
+      "text": "Sad. But not surprising."
     },
     {
       "situation": "BigBet",
-      "text": "Внимавайте, скъпи. Някои залози не се връщат."
+      "text": "Careful, darling. Some stakes don't come back."
     },
     {
       "situation": "MetAgain",
-      "text": "Ти пак… Знаех, че ще се върнеш."
+      "text": "You again… I knew you would come back."
     },
     {
       "situation": "IntroReplyWho",
-      "text": "Аз ли, скъпи? Само домакинята. Тази, която слуша."
+      "text": "Me, darling? Just the hostess. The one who listens."
     },
     {
       "situation": "IntroReplyBegin",
-      "text": "Толкова бързаш… Седни. Нощта е дълга, а желанията — още по-дълги."
+      "text": "In such a hurry… Sit down. The night is long, and wishes are longer."
     },
     {
       "situation": "IntroReplySilent",
-      "text": "Тишината също е признание, скъпи."
+      "text": "Silence is a confession too, darling."
     },
     {
       "situation": "RoleDeal",
-      "text": "Пази я до сърцето си. Тук всеки има тайна — сега и ти."
+      "text": "Keep it close to your heart. Everyone here has a secret — now you do too."
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Докосва перлите, когато чуе нечие желание",
+      "description": "Touches her pearls when she hears someone's wish",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Habit",
-      "description": "Сяда до гостите, вместо срещу тях",
+      "description": "Sits beside the guests rather than across from them",
       "fakeable": false,
       "visibleWithoutDossier": true
     }

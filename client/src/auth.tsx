@@ -6,6 +6,7 @@ export interface User {
   userName: string
   email: string
   isAdmin: boolean
+  gold: number
 }
 
 interface AuthState {
@@ -14,6 +15,8 @@ interface AuthState {
   login: (userName: string, password: string) => Promise<void>
   register: (userName: string, email: string, password: string) => Promise<void>
   logout: () => Promise<void>
+  /** Update the purse shown in the UI after a game changed it. */
+  setGold: (gold: number) => void
 }
 
 const AuthContext = createContext<AuthState | null>(null)
@@ -42,7 +45,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null)
   }, [])
 
-  return <AuthContext.Provider value={{ user, loading, login, register, logout }}>{children}</AuthContext.Provider>
+  const setGold = useCallback((gold: number) => setUser((u) => (u ? { ...u, gold } : u)), [])
+
+  return <AuthContext.Provider value={{ user, loading, login, register, logout, setGold }}>{children}</AuthContext.Provider>
 }
 
 // eslint-disable-next-line react-refresh/only-export-components

@@ -2,11 +2,11 @@
   "code": "P11",
   "kind": "Participant",
   "name": "Thomas Wycliffe",
-  "title": "Страхливият наследник",
-  "nickname": "Страхливият наследник; „Малкият Уиклиф“",
-  "gender": "Мъж",
+  "title": "The Cowardly Heir",
+  "nickname": "The Cowardly Heir; \"Little Wycliffe\"",
+  "gender": "Male",
   "age": "24",
-  "archetype": "Страхлив, но умен",
+  "archetype": "Cowardly but clever",
   "rarity": "Uncommon",
   "status": "Published",
   "tags": [
@@ -31,124 +31,134 @@
     "fearOfLoss": 5
   },
   "origin": {
-    "birthplace": "Имението Уиклиф, близо до столицата",
-    "socialStatus": "Богат наследник от търговско-благороднически род",
-    "profession": "Наследник, никога не е работил; учил е математика и счетоводство"
+    "birthplace": "The Wycliffe estate near the capital",
+    "socialStatus": "A rich heir of a merchant family that bought its nobility",
+    "profession": "Heir who has never worked; studied mathematics and bookkeeping"
   },
   "appearance": {
-    "face": "Младо, бледо, гладко лице, хапе устни",
-    "hairAndEyes": "Руса къдрава коса, сини уплашени очи",
-    "clothing": "Скъпи дрехи, които не му стоят, кесия, притисната към гърдите, малка тетрадка за сметки",
-    "build": "Слаб, свит, седи на ръба на стола",
-    "gestures": "Пресмята наум и мърда устни; поглежда към вратата",
-    "voice": "Тих, неуверен глас, заеква при натиск",
-    "firstImpression": "Уплашено богато момче, което не трябва да е тук",
-    "artistNotes": "в тетрадката води точен отчет на всички залози на масата. Носи пръстена на баща си, който му е голям.",
+    "face": "A young, pale, smooth face; bites his lips",
+    "hairAndEyes": "Curly blond hair, frightened blue eyes",
+    "clothing": "Expensive clothes that do not fit him, a purse pressed to his chest, a small ledger",
+    "build": "Thin, hunched, sits on the edge of the chair",
+    "gestures": "Calculates in his head and moves his lips; glances at the door",
+    "voice": "A quiet, unsure voice; stammers under pressure",
+    "firstImpression": "A frightened rich boy who should not be here",
+    "artistNotes": "In the ledger he keeps an exact record of every stake at the table. Wears his father's ring, which is too big for him.",
     "portraitHue": 230
   },
   "backstory": {
-    "biography": "Томас е единственият син на богат търговец, който е купил благородническа титла. Баща му е решавал всичко вместо него. Преди месец баща му умира и Томас наследява огромно богатство и много врагове. Не знае на кого да вярва. Умен е, отличен е с числата, но няма смелост да вземе решение.",
-    "whyHere": "Чичо му (който иска наследството) го е изпратил „да се научи да бъде мъж“. Томас подозира, че чичо му иска той да загуби всичко.",
-    "secret": "Че е по-умен, отколкото показва, и води пълна сметка за всички на масата."
+    "biography": "Thomas is the only son of a rich merchant who bought a noble title. His father decided everything for him. A month ago his father died and Thomas inherited a vast fortune and many enemies. He does not know whom to trust. He is clever and excellent with numbers, but has no courage to make a decision.",
+    "whyHere": "His uncle (who wants the inheritance) sent him \"to learn to be a man\". Thomas suspects his uncle wants him to lose everything.",
+    "secret": "That he is cleverer than he shows and keeps a full account of everyone at the table."
   },
   "psychology": {
-    "coreTrait": "Страх",
-    "secondTrait": "Интелигентност",
-    "weakness": "Страхливост",
-    "fear": "Да бъде убит или ограбен",
-    "desire": "Да бъде в безопасност",
-    "angers": "Да бъде пренебрегнат",
-    "regret": "Че не е бил достатъчно добър за баща си",
-    "moralLimits": "Не наранява никого",
-    "neverWould": "Да рискува голямо сам",
-    "wouldForReward": "Да предаде всеки, ако се чувства в опасност"
+    "coreTrait": "Fear",
+    "secondTrait": "Intelligence",
+    "weakness": "Cowardice",
+    "fear": "Being killed or robbed",
+    "desire": "To be safe",
+    "angers": "Being ignored",
+    "regret": "That he was never good enough for his father",
+    "moralLimits": "Hurts no one",
+    "neverWould": "Take a big risk alone",
+    "wouldForReward": "Betray anyone if he feels in danger"
   },
   "behavior": {
-    "style": "Защитен",
-    "stakes": "Малки, внимателни, точно пресметнати",
-    "deception": "Не я използва, но я разпознава по числата",
-    "debts": "Мрази да дължи и плаща веднага",
-    "alliances": "Търси защитник и се привързва силно",
-    "whenAttacks": "Само когато сметките са категорично в негова полза",
-    "whenRetreats": "При първия признак на опасност или заплаха",
-    "onLoss": "Паникьосва се и иска да напусне масата",
-    "onWin": "Облекчение и благодарност към защитника",
-    "strategyChange": "Ако защитникът го изостави или някой го заплаши"
+    "style": "Defensive",
+    "stakes": "Small, careful, precisely calculated",
+    "deception": "Does not use it, but recognises it in the numbers",
+    "debts": "Hates owing and pays at once",
+    "alliances": "Looks for a protector and gets strongly attached",
+    "whenAttacks": "Only when the numbers are clearly in his favour",
+    "whenRetreats": "At the first sign of danger or threat",
+    "onLoss": "Panics and wants to leave the table",
+    "onWin": "Relief and gratitude to his protector",
+    "strategyChange": "If his protector abandons him or someone threatens him"
   },
   "motives": {
-    "publicGoal": "Да не загуби",
-    "hiddenGoal": "Да намери защитник, на когото да може да вярва",
-    "personalReason": "Принуден от чичо си",
-    "betrayalTrigger": "Ако защитникът го изостави",
-    "helpTrigger": "Ако се чувства защитен"
+    "publicGoal": "Not to lose",
+    "hiddenGoal": "To find a protector he can trust",
+    "personalReason": "Forced by his uncle",
+    "betrayalTrigger": "If his protector abandons him",
+    "helpTrigger": "If he feels protected"
   },
   "speech": {
-    "register": "Несигурен, учтив, понякога точен с числата",
-    "favoriteWords": "„Извинете“, „аз... не знам“",
-    "avoidedTopics": "Баща си",
-    "howLies": "Лошо. Заеква",
-    "angerAndFear": "Заеква, побледнява"
+    "register": "Unsure, polite, sometimes precise with numbers",
+    "favoriteWords": "\"Excuse me\", \"I… I don't know\"",
+    "avoidedTopics": "His father",
+    "howLies": "Badly. Stammers",
+    "angerAndFear": "Stammers, turns pale"
   },
   "mechanics": {
-    "strangeness": "Пръстенът на баща му е твърде голям, но никога не пада — колкото и да трепери ръката му.",
-    "principle": "Да рискува голямо сам",
-    "temptation": "Страхливост",
-    "ability": "Счетоводителят: помни всяка карта, взета от пазара, и вижда пълния списък.",
-    "hostRelation": "Страх — най-силният на масата."
+    "strangeness": "His father's ring is far too big, yet it never falls off — however much his hand shakes.",
+    "principle": "Take a big risk alone",
+    "temptation": "Cowardice",
+    "ability": "The Bookkeeper: sees the full list of every gift announced tonight and who received it.",
+    "hostRelation": "Fear — the strongest at the table."
   },
   "authorNotes": {
-    "distinctive": "Страхлив, но умен персонаж, който може да бъде много полезен съюзник.",
-    "immutable": "Страхът и интелигентността.",
-    "tunable": "Колко лесно бяга."
+    "distinctive": "A cowardly but clever character who can be a very useful ally.",
+    "immutable": "The fear and the intelligence.",
+    "tunable": "How easily he runs."
   },
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Аз... аз съм Томас. Уиклиф. Приятно ми е."
+      "text": "I… I'm Thomas. Wycliffe. Pleased to meet you."
     },
     {
       "situation": "Win",
-      "text": "О! Наистина ли? Аз ли спечелих?"
+      "text": "Oh! Really? Did I win?"
     },
     {
       "situation": "Loss",
-      "text": "Знаех си... знаех си, че ще стане така."
+      "text": "I knew it… I knew this would happen."
     },
     {
       "situation": "Accused",
-      "text": "Н-не! Не съм аз!"
+      "text": "N-no! It wasn't me!"
     },
     {
       "situation": "AllianceOffer",
-      "text": "Наистина ли? Ще ме защитите?"
+      "text": "Really? You'll protect me?"
     },
     {
       "situation": "Betrayal",
-      "text": "Но... вие обещахте!"
+      "text": "But… you promised!"
     },
     {
       "situation": "BigBet",
-      "text": "Не... не мога... това е твърде много."
+      "text": "No… I can't… it's too much."
     },
     {
       "situation": "HostIntroduction",
-      "text": "Томас Уиклиф, наследникът. Трепери като лист — но гледайте тетрадката му, не ръцете."
+      "text": "Thomas Wycliffe, the heir. He trembles like a leaf — but watch his ledger, not his hands."
     },
     {
       "situation": "MetAgain",
-      "text": "О… вие. З-здравейте отново."
+      "text": "Oh… you. H-hello again."
+    },
+    {
+      "situation": "Death",
+      "text": "I… I knew it…"
     }
   ],
   "tells": [
     {
       "state": "Calculating",
-      "description": "Пресмята наум и мърда устни",
+      "description": "Calculates in his head and moves his lips",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Afraid",
-      "description": "Поглежда към вратата",
+      "description": "Glances at the door",
+      "fakeable": false,
+      "visibleWithoutDossier": true
+    },
+    {
+      "state": "Lying",
+      "description": "Stammers worse than usual",
       "fakeable": false,
       "visibleWithoutDossier": true
     }

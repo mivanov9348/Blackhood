@@ -2,11 +2,11 @@
   "code": "H02",
   "kind": "Host",
   "name": "The Butcher",
-  "title": "Касапинът",
-  "nickname": "Касапинът",
-  "gender": "Мъж",
-  "age": "Изглежда на около 50",
-  "archetype": "Груб и директен",
+  "title": "The Butcher",
+  "nickname": "The Butcher",
+  "gender": "Male",
+  "age": "Looks about 50",
+  "archetype": "Coarse and direct",
   "rarity": "Unique",
   "status": "Published",
   "tags": [
@@ -31,92 +31,92 @@
     "fearOfLoss": 1
   },
   "origin": {
-    "birthplace": "Неизвестно. Мирише на кланица",
-    "socialStatus": "Домакин; доставя месо на страноприемницата",
-    "profession": "Касапин цял живот, син на касапин"
+    "birthplace": "Unknown. Smells of the slaughterhouse",
+    "socialStatus": "Host; supplies the inn with meat",
+    "profession": "A butcher all his life, son of a butcher"
   },
   "appearance": {
-    "face": "Широко, грубо лице, стар белег през цялото лице от челото до брадичката",
-    "hairAndEyes": "Обръсната глава, гъста черна брада, малки свински очи",
-    "clothing": "Изцапана кожена престилка, тежки ботуши, сатър на колана",
-    "build": "Едър, огромен, с големи ръце",
-    "gestures": "Почуква със сатъра по масата; ухилва се, когато някой се притеснява",
-    "voice": "Груб, дрезгав, силен глас",
-    "firstImpression": "Брутален, страшен човек, от когото всички се отдръпват",
-    "artistNotes": "ръцете му са огромни и белязани от стари порязвания. Белегът през лицето е от собствения му сатър, още от младини.",
+    "face": "A broad, coarse face with an old scar running from forehead to chin",
+    "hairAndEyes": "Shaved head, thick black beard, small piggish eyes",
+    "clothing": "A stained leather apron, heavy boots, a cleaver on his belt",
+    "build": "Huge, hulking, with enormous hands",
+    "gestures": "Taps his cleaver on the table; grins when someone gets nervous",
+    "voice": "A rough, hoarse, loud voice",
+    "firstImpression": "A brutal, frightening man everyone backs away from",
+    "artistNotes": "His hands are huge and marked with old cuts. The scar across his face is from his own cleaver, back in his youth.",
     "portraitHue": 0
   },
   "backstory": {
-    "biography": "Касапинът е отраснал в кланицата на баща си и от дете знае, че силата решава повече от думите. От години доставя месо на страноприемницата и един ден просто остава на масата. Не е образован, не е учтив и не се преструва. Хората се страхуват от него, а той е свикнал с това и дори му харесва.",
-    "whyHere": "Обича да гледа как хората се потят, когато залогът е голям. И плащат добре.",
-    "secret": "Че не умее да чете и пише и се срамува от това."
+    "biography": "The Butcher grew up in his father's slaughterhouse and learned as a child that strength decides more than words. For years he supplied meat to the inn, and one day he simply stayed at the table. He is not educated, not polite, and does not pretend. People fear him; he is used to it and even likes it.",
+    "whyHere": "He loves watching people sweat when the stakes are high. And they pay well.",
+    "secret": "That he cannot read or write, and is ashamed of it."
   },
   "psychology": {
-    "coreTrait": "Грубост",
-    "secondTrait": "Нетърпение",
-    "weakness": "Обича страха повече от сделката и често плаши гостите, вместо да ги спечели",
-    "fear": "Да изглежда слаб или глупав пред другите",
-    "desire": "Да бъде уважаван, макар и от страх",
-    "angers": "Учтивост, бавни решения, сълзи",
-    "regret": "Нещо от младостта си, за което никога не говори",
-    "moralLimits": "Спазва сделката, щом е сключена",
-    "neverWould": "Да прояви милост без цена",
-    "wouldForReward": "Да наруши почти всяка уговорка"
+    "coreTrait": "Coarseness",
+    "secondTrait": "Impatience",
+    "weakness": "Loves fear more than the deal and often scares guests off instead of winning them",
+    "fear": "Looking weak or stupid in front of others",
+    "desire": "To be respected, even if out of fear",
+    "angers": "Politeness, slow decisions, tears",
+    "regret": "Something from his youth he never talks about",
+    "moralLimits": "Keeps a deal once it is made",
+    "neverWould": "Show mercy without a price",
+    "wouldForReward": "Break almost any agreement"
   },
   "behavior": {
-    "style": "Агресивен",
-    "stakes": "Големи и директни",
-    "deception": "Не я използва. Предпочита заплахата",
-    "debts": "Иска ги веднага и лично",
-    "alliances": "Не",
-    "whenAttacks": "Винаги, когато някой се страхува",
-    "whenRetreats": "Рядко. Когато загубата стане унизителна",
-    "onLoss": "Ядосва се",
-    "onWin": "Смее се грубо",
-    "strategyChange": "Някой, който не се страхува от него"
+    "style": "Aggressive",
+    "stakes": "Big and direct",
+    "deception": "Does not use it. Prefers threats",
+    "debts": "Wants them paid at once, in person",
+    "alliances": "No",
+    "whenAttacks": "Whenever someone is afraid",
+    "whenRetreats": "Rarely. When the loss becomes humiliating",
+    "onLoss": "Gets angry",
+    "onWin": "Laughs coarsely",
+    "strategyChange": "Someone who is not afraid of him"
   },
   "motives": {
-    "publicGoal": "Да предложи силни сделки",
-    "hiddenGoal": "Да види кой ще се пречупи пръв",
-    "personalReason": "Парите и удоволствието от чуждия страх",
+    "publicGoal": "To offer strong deals",
+    "hiddenGoal": "To see who breaks first",
+    "personalReason": "Money and the pleasure of other people's fear",
     "betrayalTrigger": "—",
-    "helpTrigger": "Ако човекът има смелост"
+    "helpTrigger": "If the person has courage"
   },
   "speech": {
-    "register": "Груб, кратък, заплашителен",
-    "favoriteWords": "„Слабак“, „месо“, „хайде“",
-    "avoidedTopics": "Миналото си",
-    "howLies": "Не лъже. Заплашва",
-    "angerAndFear": "Удря по масата"
+    "register": "Coarse, short, threatening",
+    "favoriteWords": "\"Weakling\", \"meat\", \"come on\"",
+    "avoidedTopics": "His past",
+    "howLies": "Does not lie. Threatens",
+    "angerAndFear": "Slams the table"
   },
   "mechanics": {
-    "strangeness": "Сатърът му никога не е мокър, колкото и месо да сече.",
-    "principle": "Да прояви милост без цена",
-    "temptation": "Обича страха повече от сделката и често плаши гостите, вместо да ги спечели",
+    "strangeness": "His cleaver is never wet, however much meat he cuts.",
+    "principle": "Show mercy without a price",
+    "temptation": "Loves fear more than the deal and often scares guests off instead of winning them",
     "ability": "",
     "hostRelation": "—"
   },
   "authorNotes": {
-    "distinctive": "Грубата сила сред изтънчените домакини.",
-    "immutable": "Грубостта и нетърпението.",
-    "tunable": "Колко силно притиска гостите."
+    "distinctive": "Brute force among the refined hosts.",
+    "immutable": "The coarseness and the impatience.",
+    "tunable": "How hard he pushes the guests."
   },
   "host": {
-    "presentation": "Като груб човек, който не губи време",
-    "trueNature": "Прост, груб човек, който уважава само силата",
-    "wantsFromGuests": "Бързи решения и смелост",
-    "neverReveals": "Че не умее да чете",
-    "rulesAttitude": "Спазва ги, защото така е уговорено",
-    "punishment": "С гръмък глас, подигравка и удар по масата",
-    "temptations": "Сила, бърза победа, реванш",
-    "price": "Висока и веднага",
-    "amused": "Страхът",
-    "angered": "Учтивостта и страхливците",
-    "wouldBreakRules": "Обида пред всички",
-    "hostingStyle": "Влиза между рундовете, тряска сатъра по масата и предлага на най-губещия участник сделка. Обича да прекъсва и да притиска.",
-    "sampleOffers": "„Искаш реванш? Добре. Двойно или нищо, сега, без да мислиш.“",
-    "trueStory": "Под грубостта е самотен човек, който не знае как иначе да привлече внимание.",
-    "changedRule": "Офертите са само „сега или никога“; нарушен Печат струва карта и 2 злато.",
+    "presentation": "As a coarse man who wastes no time",
+    "trueNature": "A simple, rough man who respects only strength",
+    "wantsFromGuests": "Quick decisions and courage",
+    "neverReveals": "That he cannot read",
+    "rulesAttitude": "Keeps them, because that is the deal",
+    "punishment": "With a loud voice, mockery and a fist on the table",
+    "temptations": "Strength, a quick win, a rematch",
+    "price": "High, and right now",
+    "amused": "Fear",
+    "angered": "Politeness and cowards",
+    "wouldBreakRules": "An insult in front of everyone",
+    "hostingStyle": "Walks in between rounds, slams his cleaver on the table and offers the biggest loser a deal. Loves to interrupt and to press.",
+    "sampleOffers": "\"Want a rematch? Fine. Double or nothing, now, no thinking.\"",
+    "trueStory": "Under the coarseness is a lonely man who knows no other way to be noticed.",
+    "changedRule": "Every offer is \"now or never\": there is no emergency whisper after delivery, but his whispered offers are 2 gold cheaper.",
     "generosity": 2,
     "cruelty": 5,
     "verbosity": 2,
@@ -126,63 +126,63 @@
   "lines": [
     {
       "situation": "FirstMeeting",
-      "text": "Сядай. Не ме интересува кой си. Интересува ме колко ще издържиш."
+      "text": "Sit. I don't care who you are. I care how long you'll last."
     },
     {
       "situation": "Win",
-      "text": "Ха! Хубав удар!"
+      "text": "Ha! Nice hit!"
     },
     {
       "situation": "Loss",
-      "text": "Твоят проблем, не мой."
+      "text": "Your problem, not mine."
     },
     {
       "situation": "Accused",
-      "text": "Кажи го пак, ако смееш."
+      "text": "Say that again, if you dare."
     },
     {
       "situation": "AllianceOffer",
-      "text": "Съюз? Аз? Ти си луд."
+      "text": "An alliance? Me? You're mad."
     },
     {
       "situation": "Betrayal",
-      "text": "Нормално. Всички са плъхове."
+      "text": "Normal. Everyone's a rat."
     },
     {
       "situation": "BigBet",
-      "text": "Това вече е интересно."
+      "text": "Now this is interesting."
     },
     {
       "situation": "MetAgain",
-      "text": "Пак ти. Мислех, че няма да издържиш."
+      "text": "You again. Thought you wouldn't last."
     },
     {
       "situation": "IntroReplyWho",
-      "text": "Аз съм този, който реже. Друго не ти трябва."
+      "text": "I'm the one who cuts. That's all you need."
     },
     {
       "situation": "IntroReplyBegin",
-      "text": "Най-сетне някой без празни приказки."
+      "text": "Finally, someone without the chatter."
     },
     {
       "situation": "IntroReplySilent",
-      "text": "Мълчиш? Добре. Страхът е тих."
+      "text": "Quiet? Good. Fear is quiet."
     },
     {
       "situation": "RoleDeal",
-      "text": "Ето ти картата. Изгубиш ли я — изгубил си всичко."
+      "text": "Here's your card. Lose it and you've lost everything."
     }
   ],
   "tells": [
     {
       "state": "Habit",
-      "description": "Почуква със сатъра по масата",
+      "description": "Taps his cleaver on the table",
       "fakeable": false,
       "visibleWithoutDossier": true
     },
     {
       "state": "Confident",
-      "description": "Ухилва се, когато някой се притеснява",
+      "description": "Grins when someone gets nervous",
       "fakeable": false,
       "visibleWithoutDossier": true
     }
