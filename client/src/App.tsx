@@ -5,6 +5,7 @@ import { Embers } from './components/Embers'
 import CharacterEditor from './pages/admin/CharacterEditor'
 import CharacterList from './pages/admin/CharacterList'
 import AuthPage from './pages/AuthPage'
+import BonesTable from './pages/BonesTable'
 import GiftsTable from './pages/GiftsTable'
 import TavernHall from './pages/TavernHall'
 
@@ -33,6 +34,7 @@ export default function App() {
       <Route path="/login" element={loading ? <Loading /> : user ? <Navigate to="/" replace /> : <AuthPage />} />
       <Route path="/" element={<RequireAuth><TavernHall /></RequireAuth>} />
       <Route path="/gifts/:matchId" element={<RequireAuth><GiftsTable /></RequireAuth>} />
+      <Route path="/bones/:matchId" element={<RequireAuth><BonesTable /></RequireAuth>} />
       <Route path="/admin" element={<RequireAuth admin><CharacterList /></RequireAuth>} />
       <Route path="/admin/characters/new" element={<RequireAuth admin><CharacterEditor /></RequireAuth>} />
       <Route path="/admin/characters/:code" element={<RequireAuth admin><CharacterEditor /></RequireAuth>} />

@@ -70,5 +70,12 @@ sqlcmd -S "(localdb)\MSSQLLocalDB" -E -Q "CREATE DATABASE [Blackhood] ON (FILENA
 | Име | Имейл | Парола | Роля |
 |---|---|---|---|
 | `tester` | `tester@blackhood.test` | `candlelight42` | Admin |
+| `quick` | `quick@blackhood.test` | `1` | — |
+
+В Development паролата при регистрация няма ограничения (може и „1“).
+
+## Логове на игрите
+
+Всяка партия (Gifts и Bones) пише ред по ред в таблицата `GameLogs`: начало с ролите, всеки ход на играча, събитията, грешките, тайните нощни отчети и резултата. Админите ги виждат на `GET /api/admin/logs` и `GET /api/admin/logs/{matchId}`.
 
 Админите виждат линк **Персонажи** в главното меню → `/admin`.

@@ -224,6 +224,11 @@ public static class GiftsGame
         if (accept && p.Gold < o.Price) throw new GiftsRuleException($"You need {o.Price} gold.");
         o.Resolved = true;
         if (!accept) return;
+        if (o.Emergency && m.EmergencyAmuletsSold >= GiftsRules.EmergencyAmuletsPerEvening)
+        {
+            Note(m, p.Seat, "The host shakes his head: no more amulets for the desperate tonight.");
+            return;
+        }
 
         var item = o.Kind switch
         {
@@ -247,6 +252,7 @@ public static class GiftsGame
         p.Gold -= o.Price;
         p.Hand.Add(NewItem(m, item));
         o.Accepted = true;
+        if (o.Emergency) m.EmergencyAmuletsSold++;
         Note(m, p.Seat, $"You paid {o.Price} gold. The host slips you {Article(item)}.");
     }
 
@@ -348,6 +354,8 @@ public static class GiftsGame
         p.SentGiftTonight = true;
         if (p.IsHuman) m.HumanGiftDone = true;
         GiftsAi.MaybeShowLyingTell(m, p, gift);
+        if (p.Role == Role.Assassin && gift.Card?.Type == ItemType.Dagger && m.Candle < GiftsRules.FirstLethalCandle)
+            Note(m, seat, "It is the first candle — your dagger cannot kill tonight. It will only frighten.");
         if (p.IsHuman) Run(m);
     }
 
@@ -555,6 +563,7 @@ public static class GiftsGame
 
     private static void MakeEmergencyOffers(GiftsMatch m)
     {
+        if (m.EmergencyAmuletsSold >= GiftsRules.EmergencyAmuletsPerEvening) return;
         foreach (var p in m.Living.Where(p => (p.ReceivedDaggerTonight || p.ReceivedPoisonTonight) && !p.Has(ItemType.Amulet)))
             GiftsHost.EmergencyOffer(m, p);
     }
@@ -594,6 +603,10 @@ public static class GiftsGame
                     if (weapon is not null) p.Hand.Remove(weapon);
                     broken++;
                     Note(m, p.Seat, "Your amulet cracked in your hand. Something meant to kill you tonight.");
+                    if (from is { } attacker && attacker != p.Seat)
+                        Note(m, attacker, cause == DeathCause.Dagger
+                            ? $"Your dagger found {p.Name} — but an amulet cracked in their hand."
+                            : $"Your poison reached {p.Name} — but an amulet cracked in their hand.");
                     GiftsAi.OnOwnAmuletBroke(m, p, cause);
                     continue;
                 }
@@ -603,6 +616,12 @@ public static class GiftsGame
                 p.DeathCause = cause;
                 died.Add(p.Seat);
                 m.Deaths++;
+                if (from is { } by && by != p.Seat)
+                    Note(m, by, cause == DeathCause.Poison
+                        ? $"Your poison took {p.Name}."
+                        : p.Role == Role.Assassin && m.Players[by].Role == Role.Guest
+                            ? $"Your mirror turned the dagger back. {p.Name} is dead."
+                            : $"Your dagger found {p.Name}. Their candle goes out.");
 
                 if (p.Role == Role.Assassin && from is { } killer && m.Players[killer] is { Role: Role.Guest, Alive: true } slayer)
                 {

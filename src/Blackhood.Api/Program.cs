@@ -28,9 +28,20 @@ builder.Services
     .AddIdentityCore<AppUser>(o =>
     {
         o.User.RequireUniqueEmail = true;
-        o.Password.RequiredLength = 8;
         o.Password.RequireNonAlphanumeric = false;
         o.Password.RequireUppercase = false;
+        if (builder.Environment.IsDevelopment())
+        {
+            // While testing: any password is fine (even "1").
+            o.Password.RequiredLength = 1;
+            o.Password.RequiredUniqueChars = 1;
+            o.Password.RequireDigit = false;
+            o.Password.RequireLowercase = false;
+        }
+        else
+        {
+            o.Password.RequiredLength = 8;
+        }
     })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<BlackhoodDbContext>()
@@ -83,6 +94,8 @@ app.MapAuthEndpoints();
 app.MapCharacterEndpoints();
 app.MapTavernEndpoints();
 app.MapGiftsEndpoints();
+app.MapBonesEndpoints();
 app.MapAdminEndpoints();
+app.MapLogEndpoints();
 
 app.Run();

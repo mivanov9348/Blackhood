@@ -44,6 +44,37 @@ public class GiftsRulesTests
     }
 
     [Fact]
+    public void The_assassin_is_told_what_became_of_each_dagger()
+    {
+        var m = Scenario(assassinSeat: 0);
+        Give(m, 2, ItemType.Amulet);
+        Deliver(m, from: 0, to: 2, ItemType.Dagger); // stopped by an amulet
+        Deliver(m, from: 0, to: 3, ItemType.Dagger); // kills
+        GiftsGame.Dawn(m);
+
+        var notes = m.Notes.Where(n => n.Seat == 0).Select(n => n.Text).ToList();
+        Assert.Contains(notes, t => t.Contains(m.Players[2].Name) && t.Contains("amulet"));
+        Assert.Contains(notes, t => t.Contains(m.Players[3].Name) && t.Contains("candle goes out"));
+    }
+
+    [Fact]
+    public void The_host_sells_only_one_emergency_amulet_per_evening()
+    {
+        var m = Scenario();
+        m.Phase = GiftsPhase.LastWhisper;
+        var a = GiftsGame.AddOffer(m, m.Players[2], OfferKind.Amulet, 5, "now", emergency: true);
+        var b = GiftsGame.AddOffer(m, m.Players[3], OfferKind.Amulet, 5, "now", emergency: true);
+        m.Players[3].Gold = 99;
+        m.Players[3].Traits = new Engine.Traits(FearOfLoss: 5, Greed: 1); // would buy at any price
+        GiftsGame.AcceptOffer(m, 2, a.Id); // continues the evening: the NPC at seat 3 answers its own offer
+
+        Assert.True(b.Resolved);
+        Assert.True(m.Players[2].Has(ItemType.Amulet));
+        Assert.False(m.Players[3].Has(ItemType.Amulet));
+        Assert.Equal(1, m.EmergencyAmuletsSold);
+    }
+
+    [Fact]
     public void A_guest_dagger_is_harmless()
     {
         var m = Scenario();

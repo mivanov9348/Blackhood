@@ -8,8 +8,10 @@ import type { GiftsResponse } from '../game/types'
 import '../hall.css'
 
 interface Patron { code: string; name: string; title: string; portraitHue: number; hasPortrait: boolean; doing: string }
-interface Recent { id: string; startedAt: string; finished: boolean; buyIn: number; payout: number }
-interface Tavern { gold: number; patrons: Patron[]; unfinishedGifts: string | null; recent: Recent[] }
+interface Recent { id: string; game: string; startedAt: string; finished: boolean; buyIn: number; payout: number }
+interface Tavern { gold: number; patrons: Patron[]; unfinishedGifts: string | null; unfinishedBones: string | null; recent: Recent[] }
+
+const gamePath = (game: string, id: string) => (game === 'Bones' ? '/bones/' : '/gifts/') + id
 
 const ambience = [
   'Rain drums on the shutters. Nobody remembers the last time it stopped.',
@@ -43,6 +45,19 @@ export default function TavernHall() {
     const id = window.setInterval(() => setLine((n) => (n + 1) % ambience.length), 9000)
     return () => window.clearInterval(id)
   }, [])
+
+  async function sitDownBones() {
+    setBusy(true)
+    setError(null)
+    try {
+      const r = await api<{ match: { id: string }; profileGold: number }>('/api/bones/matches', { method: 'POST' })
+      setGold(r.profileGold)
+      navigate(`/bones/${r.match.id}`)
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'The cups would not shake.')
+      setBusy(false)
+    }
+  }
 
   async function sitDown() {
     setBusy(true)
@@ -126,13 +141,17 @@ export default function TavernHall() {
             </div>
           </article>
 
-          <article className="table-card table-card--locked">
+          <article className="table-card">
             <div className="table-card__glyph">⚄</div>
             <div className="table-card__body">
               <span className="table-card__where">By the fire</span>
               <h2>Bones</h2>
-              <p>Dice for gold, against a blind veteran who swears he can hear how they land.</p>
-              <span className="soon">Coming soon</span>
+              <p>Four players, dice hidden under cups. Bid how many of a face lie on the table — ones are the Witch’s eye — or call “Liar!”. The last one with dice takes the pot.</p>
+              <p className="table-card__meta">Buy-in: 5 gold · winner takes 20</p>
+              <div className="table-card__actions">
+                {tavern?.unfinishedBones && <button className="btn" onClick={() => navigate(`/bones/${tavern.unfinishedBones}`)}>Return</button>}
+                <button className="btn btn--primary" onClick={sitDownBones} disabled={busy}>Roll the bones</button>
+              </div>
             </div>
           </article>
 
@@ -163,13 +182,13 @@ export default function TavernHall() {
             <ul>
               {tavern.recent.map((r) => (
                 <li key={r.id}>
-                  <span>{new Date(r.startedAt).toLocaleString()}</span>
+                  <span>{r.game} · {new Date(r.startedAt).toLocaleString()}</span>
                   {r.finished ? (
                     <span className={r.payout > r.buyIn ? 'gain' : r.payout < r.buyIn ? 'loss' : ''}>
                       paid {r.buyIn}, took home {r.payout}
                     </span>
                   ) : (
-                    <Link className="link" to={`/gifts/${r.id}`}>unfinished — return</Link>
+                    <Link className="link" to={gamePath(r.game, r.id)}>unfinished — return</Link>
                   )}
                 </li>
               ))}

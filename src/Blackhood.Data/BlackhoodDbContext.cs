@@ -14,6 +14,7 @@ public sealed class BlackhoodDbContext(DbContextOptions<BlackhoodDbContext> opti
     public DbSet<CharacterRelation> CharacterRelations => Set<CharacterRelation>();
     public DbSet<CharacterAsset> CharacterAssets => Set<CharacterAsset>();
     public DbSet<PlayerEncounter> PlayerEncounters => Set<PlayerEncounter>();
+    public DbSet<GameLog> GameLogs => Set<GameLog>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -32,6 +33,16 @@ public sealed class BlackhoodDbContext(DbContextOptions<BlackhoodDbContext> opti
                 .HasForeignKey(m => m.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
             e.HasIndex(m => new { m.UserId, m.StartedAt });
+        });
+
+        builder.Entity<GameLog>(e =>
+        {
+            e.HasIndex(l => new { l.MatchId, l.Seq });
+            e.HasIndex(l => l.At);
+            e.Property(l => l.Game).HasMaxLength(20);
+            e.Property(l => l.Phase).HasMaxLength(30);
+            e.Property(l => l.Kind).HasMaxLength(20);
+            e.Property(l => l.UserId).HasMaxLength(450);
         });
 
         builder.Entity<Character>(e =>

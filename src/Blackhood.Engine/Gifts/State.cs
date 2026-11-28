@@ -176,6 +176,7 @@ public sealed class GiftsMatch
     public GiftsPhase Phase { get; set; } = GiftsPhase.Whisper;
     public int Quota { get; set; }
     public int Deaths { get; set; }
+    public int EmergencyAmuletsSold { get; set; }
 
     public List<GiftsPlayer> Players { get; set; } = [];
     public List<Item> Deck { get; set; } = [];

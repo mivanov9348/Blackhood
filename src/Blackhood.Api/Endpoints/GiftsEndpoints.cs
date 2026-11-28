@@ -2,6 +2,7 @@ using System.Security.Claims;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Blackhood.Api.Characters;
+using Blackhood.Api.GameLogs;
 using Blackhood.Data;
 using Blackhood.Data.Characters;
 using Blackhood.Engine.Gifts;
@@ -83,6 +84,10 @@ public static class GiftsEndpoints
                 else { e.Count++; e.LastMetAt = now; }
             }
 
+            var log = await GameLogWriter.ForAsync(db, match.Id, user.Id, GameKinds.Gifts);
+            GiftsLog.Start(log, match);
+            GiftsLog.Delta(log, match, 0, 0);
+
             await db.SaveChangesAsync();
             return Results.Ok(new GiftsResponse(GiftsView.ForSeat(match, 0), user.Gold, null));
         });
@@ -109,14 +114,23 @@ public static class GiftsEndpoints
             if (match is null) return Results.NotFound();
             if (match.Phase == GiftsPhase.Finished) return Results.BadRequest(new { message = "The evening is over." });
 
+            var log = await GameLogWriter.ForAsync(db, match.Id, user!.Id, GameKinds.Gifts);
+            var (eventsBefore, notesBefore, candleBefore, phaseBefore) = (match.Events.Count, match.Notes.Count, match.Candle, match.Phase);
             try
             {
                 Apply(match, action);
             }
             catch (GiftsRuleException ex)
             {
+                GiftsLog.Error(log, match, action, ex.Message);
+                await db.SaveChangesAsync(); // only the log line — the state was not changed
                 return Results.BadRequest(new { message = ex.Message });
             }
+
+            GiftsLog.Action(log, match, candleBefore, phaseBefore, action, action.Type);
+            GiftsLog.Delta(log, match, eventsBefore, notesBefore);
+            var lastFinished = match.Phase == GiftsPhase.Finished ? match.Candle : match.Candle - 1;
+            if (lastFinished >= candleBefore) GiftsLog.Nights(log, match, candleBefore, lastFinished);
 
             // Pay out once, when the evening ends.
             if (match.Phase == GiftsPhase.Finished && !record!.Settled)
@@ -133,6 +147,7 @@ public static class GiftsEndpoints
                 record.Settled = true;
                 record.FinishedAt = DateTime.UtcNow;
                 user!.Gold += payout;
+                GiftsLog.Result(log, match, payout);
             }
 
             record!.StateJson = Serialize(match);

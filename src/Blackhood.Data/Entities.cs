@@ -21,6 +21,7 @@ public enum MatchMode
 public static class GameKinds
 {
     public const string Gifts = "Gifts";
+    public const string Bones = "Bones";
     /// <summary>Matches from the first prototype (secret roles + market). No longer playable.</summary>
     public const string Legacy = "Legacy";
 }
@@ -44,4 +45,28 @@ public sealed class MatchRecord
     public DateTime StartedAt { get; set; } = DateTime.UtcNow;
     public DateTime? FinishedAt { get; set; }
     public string StateJson { get; set; } = "";
+}
+
+/// <summary>
+/// A play-by-play log line for analysing test games: start (with the secret roles),
+/// every human move, the events it caused, rule errors, and the final result.
+/// </summary>
+public sealed class GameLog
+{
+    public long Id { get; set; }
+    public Guid MatchId { get; set; }
+    public string UserId { get; set; } = "";
+    public string Game { get; set; } = "";
+    /// <summary>Order within the match.</summary>
+    public int Seq { get; set; }
+    public DateTime At { get; set; } = DateTime.UtcNow;
+    /// <summary>Candle (Gifts) or round (Bones) when it happened.</summary>
+    public int Round { get; set; }
+    public string Phase { get; set; } = "";
+    /// <summary>start · action · events · notes · error · result</summary>
+    public string Kind { get; set; } = "";
+    /// <summary>Human-readable summary.</summary>
+    public string Text { get; set; } = "";
+    /// <summary>Optional JSON payload (the action, scores, roles…).</summary>
+    public string? Data { get; set; }
 }

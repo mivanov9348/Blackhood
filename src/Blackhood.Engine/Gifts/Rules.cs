@@ -49,6 +49,8 @@ public static class GiftsRules
     public const int PointingBonus = 5;
     /// <summary>The guest who kills the Assassin (mirror or poison) is paid by the host.</summary>
     public const int AssassinSlayerBonus = 5;
+    /// <summary>The host sells only this many emergency amulets (the "last whisper") per evening.</summary>
+    public const int EmergencyAmuletsPerEvening = 1;
     /// <summary>The first candle is for getting acquainted: the Assassin's daggers are harmless.</summary>
     public const int FirstLethalCandle = 2;
 

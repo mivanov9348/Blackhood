@@ -9,9 +9,9 @@ namespace Blackhood.Api.Endpoints;
 
 public sealed record Patron(string Code, string Name, string Title, int PortraitHue, bool HasPortrait, string Doing);
 
-public sealed record RecentEvening(Guid Id, DateTime StartedAt, bool Finished, int BuyIn, int Payout);
+public sealed record RecentEvening(Guid Id, string Game, DateTime StartedAt, bool Finished, int BuyIn, int Payout);
 
-public sealed record TavernResponse(int Gold, IReadOnlyList<Patron> Patrons, Guid? UnfinishedGifts, IReadOnlyList<RecentEvening> Recent);
+public sealed record TavernResponse(int Gold, IReadOnlyList<Patron> Patrons, Guid? UnfinishedGifts, Guid? UnfinishedBones, IReadOnlyList<RecentEvening> Recent);
 
 public static class TavernEndpoints
 {
@@ -32,13 +32,16 @@ public static class TavernEndpoints
             }).ToList();
 
             var games = await db.Matches.AsNoTracking()
-                .Where(m => m.UserId == user.Id && m.Game == GameKinds.Gifts)
+                .Where(m => m.UserId == user.Id && (m.Game == GameKinds.Gifts || m.Game == GameKinds.Bones))
                 .OrderByDescending(m => m.StartedAt)
-                .Take(5)
-                .Select(m => new RecentEvening(m.Id, m.StartedAt, m.Settled, m.BuyIn, m.Payout))
+                .Take(8)
+                .Select(m => new RecentEvening(m.Id, m.Game, m.StartedAt, m.Settled, m.BuyIn, m.Payout))
                 .ToListAsync();
 
-            return Results.Ok(new TavernResponse(user.Gold, patrons, games.FirstOrDefault(g => !g.Finished)?.Id, games));
+            return Results.Ok(new TavernResponse(user.Gold, patrons,
+                games.FirstOrDefault(g => !g.Finished && g.Game == GameKinds.Gifts)?.Id,
+                games.FirstOrDefault(g => !g.Finished && g.Game == GameKinds.Bones)?.Id,
+                games));
         }).RequireAuthorization();
     }
 }

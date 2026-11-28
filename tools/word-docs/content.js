@@ -66,7 +66,7 @@ const rulesEn = {
       '**The gifts.** Everyone secretly hands the Host one gift (a card, a purse or free bread), names the receiver and announces it with **one word**: Purse, Bread, Wine, Monocle, Closed Door, Amulet or Mirror. You may lie — but you can never announce a Dagger or Poison.',
       '**Delivery.** The Host shuffles the gifts and announces them one by one: *“Agnes, someone sends you Wine.”* The receiver may play a Closed Door or a Mirror; otherwise the gift goes into their hand and only they see it.',
       '**Wine.** Whoever received Wine now learns who sent one gift of their choice.',
-      '**The last whisper.** Whoever just received a dagger or poison (and holds no amulet) gets an emergency offer: *“An amulet — 11 gold. Decide.”*',
+      '**The last whisper.** Whoever just received a dagger or poison (and holds no amulet) gets an emergency offer: *“An amulet — 11 gold. Decide.”* The Host sells only **one** emergency amulet per evening.',
       '**Dawn.** Deaths, broken amulets and every player\'s gold change are revealed, then the heaviest purse and the quota counter.',
     ] },
     { t: 'note', v: 'The first candle is for getting acquainted: the Assassin\'s daggers cannot kill before the second candle. Poison can.' },
@@ -79,6 +79,7 @@ const rulesEn = {
       '**Every death counts towards the quota**, whoever caused it — dagger, poison or mirror. *“The Host counts the candles that go out, not the hands that snuffed them.”*',
       '**Ghosts.** A dead player stays at the table as a ghost. Each night the ghost may point silently at one living player — everyone feels the cold breath — but cannot speak. Nobody knows whether the ghost *knows* or only *guesses*.',
       'The dead do not know who killed them, unless their Wine that night traced exactly the fatal gift.',
+      'The Assassin is told privately what became of each dagger: harmless on the first candle, stopped by an amulet, sent back by a door, or fatal.',
     ] },
 
     { t: 'h1', v: '7. The Host' },
@@ -86,7 +87,7 @@ const rulesEn = {
     { t: 'table', head: ['Offer', 'When', 'Price'], widths: [2, 5, 3], rows: [
       ['Amulet', 'Often after deaths, or after you received a dagger', '6 + 2 per death (+2 after a dagger, +2 late in the evening)'],
       ['Saving the poisoned', 'When poison will kill you at this dawn', 'Amulet price + 3'],
-      ['Emergency amulet', 'Right after you received a dagger or poison', '9 + 2 per death + candle ÷ 2'],
+      ['Emergency amulet', 'Right after you received a dagger or poison — only one per evening', '9 + 2 per death + candle ÷ 2'],
       ['Mirror', 'To the richest, or after a dagger', '8 + candle ÷ 2'],
       ['Poison', 'From the second candle, sometimes', '6 + deaths'],
       ['Closed Door', 'Sometimes, as a discount', '3'],
@@ -128,8 +129,8 @@ const rulesEn = {
     { t: 'h1', v: '10. Balance (simulation)' },
     { t: 'p', v: '3,000 AI-against-AI evenings at a 5-player table with the numbers above:' },
     { t: 'table', head: ['Measure', 'Result'], widths: [5, 3], rows: [
-      ['Assassin wins', '44%'],
-      ['Guests win', '56%'],
+      ['Assassin wins', '46%'],
+      ['Guests win', '54%'],
       ['Assassin killed by a mirror or poison', '≈ 5%'],
       ['Average deaths per evening', '1.4'],
       ['Amulets sold / doors closed / mirrors raised per evening', '3.2 / 2.7 / 0.4'],
@@ -200,7 +201,7 @@ const rulesBg = {
       '**Даровете.** Всеки тайно дава на Домакина един дар (карта, кесия или безплатен хляб), казва на кого е и го обявява с **една дума**: Кесия, Хляб, Вино, Монокъл, Затворена врата, Амулет или Огледало. Можеш да излъжеш — но никога не можеш да обявиш Кама или Отрова.',
       '**Доставката.** Домакинът разбърква даровете и ги обявява един по един: *„Агнес, някой ти праща Вино.“* Получателят може да изиграе Затворена врата или Огледало; иначе дарът отива в ръката му и само той го вижда.',
       '**Виното.** Който е получил Вино, научава кой е пратил един дар по негов избор.',
-      '**Последният шепот.** Който току-що е получил кама или отрова (и няма амулет), получава спешна оферта: *„Амулет — 11 злато. Решавай.“*',
+      '**Последният шепот.** Който току-що е получил кама или отрова (и няма амулет), получава спешна оферта: *„Амулет — 11 злато. Решавай.“* Домакинът продава само **един** спешен амулет на вечер.',
       '**Зазоряване.** Обявяват се смъртите, счупените амулети и промяната в златото на всеки играч, после най-тежката кесия и броячът на квотата.',
     ] },
     { t: 'note', v: 'Първата свещ е за запознанство: камите на Убиеца не могат да убиват преди втората свещ. Отровата може.' },
@@ -213,6 +214,7 @@ const rulesBg = {
       '**Всяка смърт се брои към квотата**, независимо кой я е причинил — кама, отрова или огледало. *„Домакинът брои угасналите свещи, не ръцете, които са ги угасили.“*',
       '**Призраци.** Мъртвият остава на масата като призрак. Всяка нощ може безмълвно да посочи един жив играч — всички усещат студения полъх — но не може да говори. Никой не знае дали призракът *знае*, или само *гадае*.',
       'Мъртвите не знаят кой ги е убил, освен ако Виното им същата нощ не е проследило точно смъртоносния дар.',
+      'Убиецът научава насаме какво е станало с всяка негова кама: безвредна на първата свещ, спряна от амулет, върната от врата или смъртоносна.',
     ] },
 
     { t: 'h1', v: '7. Домакинът' },
@@ -220,7 +222,7 @@ const rulesBg = {
     { t: 'table', head: ['Оферта', 'Кога', 'Цена'], widths: [2, 5, 3], rows: [
       ['Амулет', 'Често след смърти или след като си получил кама', '6 + 2 за всяка смърт (+2 след кама, +2 късно вечерта)'],
       ['Спасение на отровения', 'Когато отровата ще те убие на това зазоряване', 'Цената на амулета + 3'],
-      ['Спешен амулет', 'Веднага след като си получил кама или отрова', '9 + 2 за всяка смърт + свещ ÷ 2'],
+      ['Спешен амулет', 'Веднага след като си получил кама или отрова — само един на вечер', '9 + 2 за всяка смърт + свещ ÷ 2'],
       ['Огледало', 'На най-богатия или след кама', '8 + свещ ÷ 2'],
       ['Отрова', 'От втората свещ, понякога', '6 + смъртите'],
       ['Затворена врата', 'Понякога, с отстъпка', '3'],
@@ -262,8 +264,8 @@ const rulesBg = {
     { t: 'h1', v: '10. Баланс (симулация)' },
     { t: 'p', v: '3000 вечери AI срещу AI на маса с 5 играчи и числата по-горе:' },
     { t: 'table', head: ['Показател', 'Резултат'], widths: [5, 3], rows: [
-      ['Убиецът печели', '44%'],
-      ['Гостите печелят', '56%'],
+      ['Убиецът печели', '46%'],
+      ['Гостите печелят', '54%'],
       ['Убиецът е убит с огледало или отрова', '≈ 5%'],
       ['Средно смърти на вечер', '1,4'],
       ['Продадени амулети / затворени врати / вдигнати огледала на вечер', '3,2 / 2,7 / 0,4'],
